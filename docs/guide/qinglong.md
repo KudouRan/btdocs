@@ -14,12 +14,15 @@ description: 青龙面板运行
 
 ## 使用方式
 
-由于不熟悉，建议直接看青龙面板教程 <https://github.com/whyour/qinglong>
+由于作者并不熟悉，建议直接看青龙面板教程 <https://github.com/whyour/qinglong>
 
 ```bash
 ## 举例
 ql raw https://raw.githubusercontent.com/catlair/BiliTools/gh-release/gh-release/cat_bili_ql.js # 正式版
-ql raw https://raw.githubusercontent.com/catlair/BiliTools/gh-release-dev/gh-release/cat_bili_ql.js # 开发版
+```
+
+```bash
+ ql raw https://raw.githubusercontent.com/catlair/BiliTools/gh-release-dev/gh-release/cat_bili_ql.js # 开发版
 ```
 
 创建一个配置文件

@@ -20,24 +20,20 @@ description: 配置说明
 
 ### 配置介绍（开发查看）
 
-所有配置都登记在 [`types/config.ts`](https://gitee.com/catlair/BiliTools/src/types/config.ts) 文件中
+所有配置都登记在 [`types/config.ts`](https://gitee.com/catlair/BiliTools/blob/main/src/types/config.ts) 文件中
 
-<details>
-<summary>解释：</summary>
+::: details 解释
 
 - `number`: 数字 例如：`123`。
 - `string`: 字符串 例如：`"ojbk"`。
 - `boolean`: 布尔值 `true` 或者 `false`。
 - `[]`: 数组 例如：`number[]` 具体可以是 `[1,2,3]`。
 - `targetLevel?: number;` `?` 表示 `targetLevel` 是可选的配置。
-
-</details>
+  :::
 
 ### 用户配置参考
 
-::: details
-参考配置
-
+::: details 参考配置
 @[code](./config.json5)
 :::
 

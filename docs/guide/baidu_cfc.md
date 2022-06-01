@@ -27,7 +27,7 @@ description: 百度云函数 CFC
 
 入口文件中有如下代码：
 
-```javascript
+```javascript{2}
 exports.handler = handler;
 global.BILITOOLS_CONFIG = null;
 
@@ -36,7 +36,7 @@ var _vm = require('./utils/vm');
 
 配置方式如下：
 
-```javascript
+```javascript{2-7}
 exports.handler = handler;
 global.BILITOOLS_CONFIG = {
   cookie: '',

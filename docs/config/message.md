@@ -16,6 +16,26 @@ description: 消息通知
 | api            | 字符串                    | get 链接模板 例如：`http://xxxx.xxx/{title}/{text}`  |
 | 从青龙面板移植 | [环境变量](#青龙面板相关) |                                                      |
 
+::: details 参考配置
+
+```json5
+{
+  message: {
+    email: {
+      from: 'xxxxxxxxx',
+      to: 'xxxxxxxxx',
+      pass: 'xxxxxxxxx',
+      host: 'smtp.xxx.com',
+      part: 465,
+    },
+    pushplusToken: 'xxxxxxxxxxxxxxx',
+    SCKEY: 'xxxxxxxx',
+  },
+}
+```
+
+:::
+
 ## Email
 
 `[email]`

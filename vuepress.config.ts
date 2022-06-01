@@ -1,5 +1,9 @@
 import { defineUserConfig, defaultTheme } from 'vuepress';
 import { copyCodePlugin } from 'vuepress-plugin-copy-code2';
+import { viteBundler } from '@vuepress/bundler-vite';
+import AutoImport from 'unplugin-auto-import/vite';
+import Components from 'unplugin-vue-components/vite';
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 
 const isProd = process.env.NODE_ENV === 'production';
 const basePath = process.env.BASE_PATH as '/' | `/${string}/`;
@@ -30,14 +34,19 @@ export default defineUserConfig({
         link: '/config/',
       },
       {
-        text: 'Github',
-        link: 'https://github.com/catlair/BiliTools',
-        target: '_blank',
-      },
-      {
-        text: 'Gitee',
-        link: 'https://gitee.com/catlair/BiliTools',
-        target: '_blank',
+        text: '仓库',
+        children: [
+          {
+            text: 'Github',
+            link: 'https://github.com/catlair/BiliTools',
+            target: '_blank',
+          },
+          {
+            text: 'Gitee',
+            link: 'https://gitee.com/catlair/BiliTools',
+            target: '_blank',
+          },
+        ],
       },
       {
         text: '反馈问题',
@@ -83,4 +92,17 @@ export default defineUserConfig({
     },
   }),
   plugins: [copyCodePlugin({})],
+  bundler: viteBundler({
+    viteOptions: {
+      plugins: [
+        AutoImport({
+          resolvers: [ElementPlusResolver()],
+        }),
+        Components({
+          resolvers: [ElementPlusResolver()],
+        }),
+      ],
+    },
+    vuePluginOptions: {},
+  }),
 });

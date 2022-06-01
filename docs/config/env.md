@@ -33,7 +33,9 @@ description: 环境变量
   {
     "message": {
       "PUSH_PLUS_TOKEN": "xxxxxxxx",
-      "pushPlusToken": "xxxxxxxx"
+      "pushPlusToken": "xxxxxxxx",
+      "SCKEY": "xxxxxxxx",
+      "sckey": "xxxxxxxx"
     }
   }
   ```

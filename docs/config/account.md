@@ -13,7 +13,6 @@ description: 配置详情
 | function     | Function [↓↓](./functions.md)       | 详见具体介绍        |                                  |
 | userAgent    | 字符串                              | 固定 Chrome         | 浏览器用户代理 （建议自行配置）  |
 | dailyRunTime | 字符串                              | `17:30:00-23:40:00` | Serveless 随机运行的时间段       |
-| heartRunTime | 字符串                              | `12:00:00-21:00:00` | 同上，不过是直播心跳的时间       |
 | apiDelay     | `[数值, 数值]`或者数值              | `[2, 6]`            | 单位 S，区间中随机，或固定一个值 |
 | coin         | 投币 [↓↓](./functions#投币)         |                     | 投币相关                         |
 | gift         | 礼物[↓↓](./functions#直播间礼物)    |                     | 直播礼物相关                     |
@@ -26,6 +25,14 @@ description: 配置详情
 - cookie 详见 [获取 Cookie 的方法](./get_value.md#获取-cookie-的方法)。
 - userAgent - 内置默认浏览器 UA，但请尽量自行设置。
 - 该浏览器的 UA 为：<code>{{ userAgent }}</code>
+
+## 完整配置参考
+
+::: tip
+由于消息推送较多，且没有默认值，所以下面并没有完全包含所有配置项。
+:::
+
+@[code](./all.json5)
 
 <script setup>
 import { ref } from "vue";

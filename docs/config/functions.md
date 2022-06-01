@@ -15,7 +15,7 @@ description: 功能开关
 | liveSignTask     | `true`  | 直播间签到           |
 | shareAndWatch    | `true`  | 观看和分享视频       |
 | mangaSign        | `false` | 漫画签到（移动端）   |
-| ~~supGroupSign~~ | `false` | 应援团签到（移动端） |
+| supGroupSign     | `false` | 应援团签到（移动端） |
 | liveSendMessage  | `false` | 每日直播间发送弹幕   |
 | charging         | `false` | 给 UP 充电           |
 | getVipPrivilege  | `false` | 获取年度大会员权益   |
@@ -24,10 +24,34 @@ description: 功能开关
 | liveLottery      | `false` | 直播天选时刻         |
 | liveRedPack      | `false` | 直播天选红包         |
 | ~~liveIntimacy~~ | `false` | 牌子亲密度（预设）   |
-| ~~supGroupSign~~ | `false` | 应援团签到（移动端） |
 | ~~liveHeart~~    | `false` | 直播心跳（小心心）   |
 
-- ~~liveHeart 在使用 Serverless 时即使配置为 true，也不会运行。但是在 SCF、FC 等环境中配置 `heart_bili_timer` 触发器即可正常运行，具体情况请参考对应平台的配置文档。若要强制使用请配置 `LIVE_HEART_FORCE` 环境变量为任意值（由此可能导致云函数超时等异常，一概不知）~~。
+::: details 参考写法
+
+```json5
+{
+  function: {
+    silver2Coin: true,
+    addCoins: true,
+    liveSignTask: true,
+    shareAndWatch: true,
+    mangaSign: false,
+    supGroupSign: false,
+    liveSendMessage: false,
+    charging: false,
+    getVipPrivilege: false,
+    giveGift: false,
+    matchGame: false,
+    liveLottery: false,
+    liveRedPack: false,
+    liveIntimacy: false,
+    supGroupSign: false,
+    liveHeart: false,
+  },
+}
+```
+
+:::
 
 ## 投币
 
@@ -42,6 +66,23 @@ description: 功能开关
 | retryNum      | 数值              | `4`    | 投币失败重试次数                               |
 | upperAccMatch | `true`或者`false` | `true` | 自定义投币 UP 时，合作视频的 UP 必须为指定中的 |
 
+::: details 参考写法
+
+```json5
+{
+  coin: {
+    targetLevel: 6,
+    stayCoins: 0,
+    targetCoins: 5,
+    customizeUp: [],
+    retryNum: 4,
+    upperAccMatch: true,
+  },
+}
+```
+
+:::
+
 ## 充电
 
 `[charge]`
@@ -50,6 +91,19 @@ description: 功能开关
 | ---------- | ------ | ------------ | -------------------------- |
 | mid        | 数值   | 自己的 mid   | 充电目标的 mid（默认自己） |
 | presetTime | 数值   | 每月最后一天 | 每月充电的日期             |
+
+::: details 参考写法
+
+```json5
+{
+  charge: {
+    mid: undefined,
+    presetTime: 31,
+  },
+}
+```
+
+:::
 
 ## 竞猜
 
@@ -60,6 +114,20 @@ description: 功能开关
 | coins     | 数值               | `5`    | 每次竞猜的数量                            |
 | selection | 数值               | `1`    | 压赔率低的（正压）大于 0 的数，反之等于 0 |
 | diff      | 数值（可以是小数） | `0.0`  | 赔率需要达到的差距                        |
+
+::: details 参考写法
+
+```json5
+{
+  match: {
+    coins: 5,
+    selection: 1,
+    diff: 0.0,
+  },
+}
+```
+
+:::
 
 ## 天选时刻
 
@@ -73,6 +141,36 @@ description: 功能开关
 | moveTag      | 字符串     | `天选时刻`                                                                                             | 关注的用户统一移动到此                    |
 | pageNum      | 数值       | `2`                                                                                                    | 扫描几页直播间                            |
 
+::: details 参考写法
+
+```json5
+{
+  lottery: {
+    excludeAward: [
+      '舰',
+      '船',
+      '航海',
+      '代金券',
+      '优惠券',
+      '自拍',
+      '照',
+      '写真',
+      '图',
+      '提督',
+      '车车一局',
+      '再来一局',
+      '游戏道具',
+    ],
+    includeAward: ['谢'],
+    blackUid: [65566781, 1277481241, 1643654862, 603676925],
+    moveTag: '天选时刻',
+    pageNum: 2,
+  },
+}
+```
+
+:::
+
 ## 直播间礼物
 
 `[gift]`
@@ -80,3 +178,15 @@ description: 功能开关
 | Key  | 值类型   | 默认值           | 说明                                 |
 | ---- | -------- | ---------------- | ------------------------------------ |
 | mids | 数值数组 | coin.customizeUp | 自定义投喂礼物 UP， 在所填中随机选取 |
+
+::: details 参考写法
+
+```json5
+{
+  gift: {
+    mids: [],
+  },
+}
+```
+
+:::
