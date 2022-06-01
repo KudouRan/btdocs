@@ -68,12 +68,17 @@ export default defineUserConfig({
         children: [
           {
             text: 'Github',
-            link: 'https://gitee.com/catlair/BiliTools/issues',
+            link: 'https://github.com/catlair/BiliTools/issues',
             target: '_blank',
           },
           {
             text: 'Gitee（国内）',
-            link: 'https://github.com/catlair/BiliTools/issues',
+            link: 'https://gitee.com/catlair/BiliTools/issues',
+            target: '_blank',
+          },
+          {
+            text: 'QQ 群等其他方式',
+            link: '/about/',
             target: '_blank',
           },
         ],
