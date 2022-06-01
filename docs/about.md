@@ -1,3 +1,10 @@
+---
+lang: zh-CN
+title: 关于
+description: about
+sidebar: false
+---
+
 ## 联系方式
 
 ### QQ 群
