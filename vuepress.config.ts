@@ -2,10 +2,11 @@ import { defineUserConfig, defaultTheme } from 'vuepress';
 import { copyCodePlugin } from 'vuepress-plugin-copy-code2';
 
 const isProd = process.env.NODE_ENV === 'production';
+const basePath = process.env.BASE_PATH as '/' | `/${string}/`;
 
 export default defineUserConfig({
   lang: 'zh-CN',
-  base: isProd ? '/BiliTools/' : '/',
+  base: isProd ? basePath : '/',
   title: '你好， BiliTools ！',
   description: '这是 BiliTools 文档站点',
   theme: defaultTheme({
