@@ -1,0 +1,1 @@
+const t={key:"v-676a79ac",path:"/guide/video.html",title:"\u89C6\u9891\u53C2\u8003",lang:"zh-CN",frontmatter:{lang:"zh-CN",title:"\u89C6\u9891\u53C2\u8003",description:"\u89C6\u9891\u53C2\u8003"},excerpt:"",headers:[],git:{updatedTime:1654061434e3,contributors:[{name:"KudouRan",email:"kudou.ran@outlook.com",commits:1}]},filePathRelative:"guide/video.md"};export{t as data};
