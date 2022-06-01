@@ -12,10 +12,27 @@ description: 配置说明
 
 ### 配置文件路径
 
-- `config/config.json`
-- `与 index.js 同目录/config/config.json`
-- `index.js` 同级 `config.json`
-- 以上配置后缀改为 `.json5` 同样有效
+满足以下的目录结构的 `config.json{5}` 都是符合要求的配置文件路径，青龙面板，npm 除外。
+
+```bash{11}
+.
+├── config
+│  ├── config.json
+│  └── config.json5
+└── src
+   ├── config
+   │  ├── config.json
+   │  └── config.json5
+   ├── config.json
+   ├── config.json5
+   └── index.js
+```
+
+::: tip 目录树
+或者这样更加生动
+<el-tree :data="data" :props="defaultProps" />
+:::
+
 - 当然你可以不用文件配置，直接使用环境变量 `BILITOOLS_CONFIG`（配置按照要求 [gzip 压缩](https://www.baidufe.com/fehelper/en-decode/)）
 
 ### 配置介绍（开发查看）
@@ -49,3 +66,75 @@ description: 配置说明
 - 本地（如 npm）/docker 推送多个到 scf
 
 其他情况填写多个只会使用第一个, 不用担心
+
+<script setup>
+import 'element-plus/es/components/message/style/css'
+import { ElTree } from 'element-plus'
+  
+const customNodeClass = (data, node) => {
+  if (data.isPenultimate) {
+    return 'is-penultimate';
+  }
+  return null;
+};
+
+const data = [
+  {
+    label: 'config',
+    children: [
+      {
+        label: 'config.json',
+      },
+      {
+        label: 'config.json5',
+      },
+    ],
+  },
+  {
+    label: 'src',
+    children: [
+      {
+        label: 'config',
+        children: [
+          {
+            label: 'config.json',
+          },
+          {
+            label: 'config.json5',
+          },
+        ],
+      },
+      {
+        isPenultimate: true,
+        label: 'index.js',
+      },
+      {
+        label: 'config.json',
+      },
+      {
+        label: 'config.json5',
+      },
+    ],
+  },
+];
+
+const defaultProps = {
+  children: 'children',
+  label: 'label',
+  class: customNodeClass,
+};
+</script>
+
+<style>
+.is-penultimate > .el-tree-node__content {
+  color: red;
+}
+
+.el-tree-node.is-expanded.is-penultimate > .el-tree-node__children {
+  display: flex;
+  flex-direction: row;
+}
+.is-penultimate > .el-tree-node__children > div {
+  width: 25%;
+}
+</style>
