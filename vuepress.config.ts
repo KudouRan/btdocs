@@ -42,16 +42,41 @@ export default defineUserConfig({
             target: '_blank',
           },
           {
-            text: 'Gitee',
+            text: 'Gitee（国内）',
             link: 'https://gitee.com/catlair/BiliTools',
             target: '_blank',
           },
         ],
       },
       {
-        text: '反馈问题',
-        link: 'https://gitee.com/catlair/BiliTools/issues',
-        target: '_blank',
+        text: '工具',
+        children: [
+          {
+            text: 'JSON5 校验',
+            link: 'https://www.lddgo.net/string/json5',
+            target: '_blank',
+          },
+          {
+            text: 'Gzip 压缩',
+            link: 'https://www.baidufe.com/fehelper/en-decode/',
+            target: '_blank',
+          },
+        ],
+      },
+      {
+        text: '问题反馈',
+        children: [
+          {
+            text: 'Github',
+            link: 'https://gitee.com/catlair/BiliTools/issues',
+            target: '_blank',
+          },
+          {
+            text: 'Gitee（国内）',
+            link: 'https://github.com/catlair/BiliTools/issues',
+            target: '_blank',
+          },
+        ],
       },
     ],
     sidebar: {
