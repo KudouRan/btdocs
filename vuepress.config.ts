@@ -10,6 +10,12 @@ export default defineUserConfig({
   title: '你好， BiliTools ！',
   description: '这是 BiliTools 文档站点',
   theme: defaultTheme({
+    editLink: true,
+    repo: 'kudouran/btdocs',
+    docsDir: 'docs',
+    editLinkText: '在 GitHub 上编辑此页',
+    lastUpdatedText: '上次更新',
+    contributorsText: '贡献者',
     navbar: [
       {
         text: '首页',
