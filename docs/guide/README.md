@@ -4,7 +4,7 @@ title: 介绍
 description: 简单介绍
 ---
 
-## 支持功能
+## 支持功能 <Badge type="tip" :text="`版本${tagName}`" vertical="top" />
 
 - [x] 部分方式每日随机时间运行
 - [x] 每日签到/分享/播放
@@ -52,3 +52,9 @@ SCF 将在 6.1 正式取消免费额度，如有需要请停止使用 SCF。[点
 2. 不会以任何方式收集用户 mid、Cookies、关注列表、收藏记录等信息。项目只向 B 站提供 Cookies，请不要将 Cookies 上传到 Github 等**开放平台**以及其他任何**不可信**平台。
 3. 仓库中内置的任何 B 站相关用户信息，都不会影响你的投币、充电、打赏，权利掌握在使用者手中。
 4. 如果您有任何疑问，请提交 issue，我们会尽快给予回复。
+
+<script setup>
+import { useReleasesStore } from '@stores/releases'
+
+const { tagName } = useReleasesStore()
+</script>

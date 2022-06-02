@@ -4,6 +4,7 @@ import { viteBundler } from '@vuepress/bundler-vite';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
+import * as path from 'path';
 
 const isProd = process.env.NODE_ENV === 'production';
 const basePath = process.env.BASE_PATH as '/' | `/${string}/`;
@@ -79,7 +80,6 @@ export default defineUserConfig({
           {
             text: 'QQ 群等其他方式',
             link: '/about/',
-            target: '_blank',
           },
         ],
       },
@@ -139,4 +139,8 @@ export default defineUserConfig({
     },
     vuePluginOptions: {},
   }),
+  alias: {
+    '@imgs': path.resolve(__dirname, './docs/.vuepress/public/images'),
+    '@stores': path.resolve(__dirname, './docs/.vuepress/stores'),
+  },
 });
