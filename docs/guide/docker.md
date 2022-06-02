@@ -14,12 +14,25 @@ description: Docker 运行
 支持现成的配置文件（`config/config.json`）和 gzip 压缩后的配置（`config/config.txt`）  
 优先加载**环境变量**中的 gzip 压缩后的配置
 
+::: details 简单例子
+
+```bash
+cd
+mkdir bilitools
+cd bilitools
+mkdir config
+touch config/config.json
+# 然后将配置放入 config.json 中
+```
+
+:::
+
 ### 本地配置文件
 
 挂载目录即可
 
 ```bash
-docker run -v $(pwd)/config:/usr/src/app/config -i --rm  catlair/bilitools:latest
+docker run -v ~/bilitools/config:/usr/src/app/config -i --rm  catlair/bilitools:latest
 ```
 
 ### 压缩后的配置
@@ -29,3 +42,55 @@ docker run -v $(pwd)/config:/usr/src/app/config -i --rm  catlair/bilitools:lates
 ```bash
 docker run --env BILITOOLS_CONFIG="xxxxxxxxxxxxx" -i --rm  catlair/bilitools:latest
 ```
+
+## 定时运行
+
+更多内容正在完善中，临时方案如下（假设上面的内容已经成功）：
+
+::: details random_run.sh
+
+```bash{12,21}
+#!/bin/bash
+set -e
+function random()
+{
+    min=$1;
+    max=$2-$1;
+    num=$(date +%s+10#%N);
+    ((retnum=num%max+min));
+    echo $retnum;
+}
+# 旧的不去新的不来
+/usr/bin/docker pull catlair/bilitools:latest
+# 等待时间为执行开始后2s - 7200s（2个小时）中随机时间
+a=$1
+b=$2
+[[ ! $1 ]] && a=2
+[[ ! $2 ]] && b=7200
+out=$(random $a $b)s;
+sleep $out
+# 执行 (注意修改路径)
+/usr/bin/docker run -v ~/bilitools/config:/usr/src/app/config -d --rm catlair/bilitools:latest
+```
+
+:::
+
+::: tip 注意
+`/usr/bin/docker` 是执行 `which docker` 获取到的，如果不一样请修改  
+`~/bilitools/config` 请按照需求修改  
+需要执行 `chmod +x random_run.sh` 赋予文件执行权限  
+然后执行 `./random_run.sh 2 3` 来尝试运行（后面的 2 3 表示 2-3s 内随机时间，默认 2-7200s 内随机）
+:::
+
+运行 `crontab -e` 可以添加定时任务，如下：
+
+```bash
+5 9 * * * $HOME/bilitools/random_run.sh 2 7200 >> $HOME/bilitools/logs/cron.log 2>&1
+```
+
+::: tip 注意
+以下语句中的 `5 9 * * *` 意为 09:05:00 执行，执行 `date` 查看系统当前时间和时区（可能你并不是东八区）  
+路径记得更改  
+不知 `crontab -e` 怎么用，你可以将上面命令放入文件 `my_crontab`，然后执行 `crontab my_crontab` （这将覆盖已有的语句）  
+如果没有启动 crontab，请百度/谷歌搜索 crontab 启动，linux 存在不同，但我能力有限，抱歉。
+:::
