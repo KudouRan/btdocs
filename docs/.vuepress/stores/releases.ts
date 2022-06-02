@@ -9,7 +9,7 @@ export const useReleasesStore = defineStore('releases', () => {
     ({ data }) => {
       console.log(data.value);
       console.log(typeof data.value);
-      tagName.value = JSON.parse(data.value).tag_name || tagName.value;
+      tagName.value = JSON.parse(data.value).data.tag_name || tagName.value;
     }
   );
 
