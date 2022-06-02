@@ -55,7 +55,11 @@ LIVE_BUVID=AUTO8016188357987702; bsource=search_baidu; PVID=2
 施工中
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
-const userAgent = ref(window.navigator.userAgent)
+const userAgent = ref('');
+
+onMounted(() => {
+  userAgent.value = navigator.userAgent;
+});
 </script>

@@ -126,12 +126,16 @@ export default defineUserConfig({
     viteOptions: {
       plugins: [
         AutoImport({
-          resolvers: [ElementPlusResolver()],
+          resolvers: [ElementPlusResolver({ importStyle: 'css' })],
         }),
         Components({
-          resolvers: [ElementPlusResolver()],
+          resolvers: [ElementPlusResolver({ importStyle: 'css' })],
         }),
       ],
+      // @ts-ignore
+      ssr: {
+        noExternal: ['element-plus'],
+      },
     },
     vuePluginOptions: {},
   }),

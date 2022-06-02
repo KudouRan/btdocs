@@ -35,7 +35,11 @@ description: 配置详情
 @[code](./all.json5)
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
-const userAgent = ref(window.navigator.userAgent)
+const userAgent = ref('');
+
+onMounted(() => {
+  userAgent.value = navigator.userAgent;
+});
 </script>

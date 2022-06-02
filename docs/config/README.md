@@ -68,9 +68,6 @@ description: 配置说明
 其他情况填写多个只会使用第一个, 不用担心
 
 <script setup>
-import 'element-plus/es/components/message/style/css'
-import { ElTree } from 'element-plus'
-  
 const customNodeClass = (data, node) => {
   if (data.isPenultimate) {
     return 'is-penultimate';
