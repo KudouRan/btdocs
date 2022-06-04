@@ -8,23 +8,22 @@ description: 功能开关
 
 `[config]`
 
-| Key              | 默认值  | 说明                 |
-| ---------------- | ------- | -------------------- |
-| silver2Coin      | `true`  | 银瓜子兑换硬币       |
-| addCoins         | `true`  | 投币                 |
-| liveSignTask     | `true`  | 直播间签到           |
-| shareAndWatch    | `true`  | 观看和分享视频       |
-| mangaSign        | `false` | 漫画签到（移动端）   |
-| supGroupSign     | `false` | 应援团签到（移动端） |
-| liveSendMessage  | `false` | 每日直播间发送弹幕   |
-| charging         | `false` | 给 UP 充电           |
-| getVipPrivilege  | `false` | 获取年度大会员权益   |
-| giveGift         | `false` | 赠送过期礼物         |
-| matchGame        | `false` | 赛事竞猜             |
-| liveLottery      | `false` | 直播天选时刻         |
-| liveRedPack      | `false` | 直播天选红包         |
-| ~~liveIntimacy~~ | `false` | 牌子亲密度（预设）   |
-| ~~liveHeart~~    | `false` | 直播心跳（小心心）   |
+| Key                 | 默认值  | 说明                    |
+| ------------------- | ------- | ----------------------- |
+| silver2Coin         | `true`  | 银瓜子兑换硬币          |
+| addCoins            | `true`  | 投币                    |
+| liveSignTask        | `true`  | 直播间签到              |
+| shareAndWatch       | `true`  | 观看和分享视频          |
+| mangaSign           | `false` | 漫画签到（移动端）      |
+| supGroupSign        | `false` | 应援团签到（移动端）    |
+| ~~liveSendMessage~~ | `false` | （请使用 liveIntimacy） |
+| charging            | `false` | 给 UP 充电              |
+| getVipPrivilege     | `false` | 获取年度大会员权益      |
+| giveGift            | `false` | 赠送过期礼物            |
+| matchGame           | `false` | 赛事竞猜                |
+| liveLottery         | `false` | 直播天选时刻            |
+| liveRedPack         | `false` | 直播天选红包            |
+| liveIntimacy        | `false` | 牌子亲密度（预设）      |
 
 ::: details 参考写法
 
@@ -37,7 +36,6 @@ description: 功能开关
     shareAndWatch: true,
     mangaSign: false,
     supGroupSign: false,
-    liveSendMessage: false,
     charging: false,
     getVipPrivilege: false,
     giveGift: false,
@@ -46,7 +44,6 @@ description: 功能开关
     liveRedPack: false,
     liveIntimacy: false,
     supGroupSign: false,
-    liveHeart: false,
   },
 }
 ```
@@ -133,13 +130,15 @@ description: 功能开关
 
 `[lottery]`
 
-| Key          | 值类型     | 默认值                                                                                                 | 说明                                      |
-| ------------ | ---------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------------- |
-| excludeAward | 字符串数组 | `["舰","船","航海","代金券","优惠券","自拍","照","写真","图","提督","车车一局","再来一局","游戏道具"]` | 奖品描述不能包含，比如“自拍一张”将被跳过  |
-| includeAward | 字符串数组 | `["谢"]`                                                                                               | 奖品描述包含，如果满足则跳过 excludeAward |
-| blackUid     | 数值数组   | `[65566781, 1277481241, 1643654862, 603676925]`                                                        | up 黑名单（up 的 id，不是房间号）         |
-| moveTag      | 字符串     | `天选时刻`                                                                                             | 关注的用户统一移动到此                    |
-| pageNum      | 数值       | `2`                                                                                                    | 扫描几页直播间                            |
+| Key          | 值类型           | 默认值                                                                                                 | 说明                                      |
+| ------------ | ---------------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------------- |
+| excludeAward | 字符串数组       | `["舰","船","航海","代金券","优惠券","自拍","照","写真","图","提督","车车一局","再来一局","游戏道具"]` | 奖品描述不能包含，比如“自拍一张”将被跳过  |
+| includeAward | 字符串数组       | `["谢"]`                                                                                               | 奖品描述包含，如果满足则跳过 excludeAward |
+| blackUid     | 数值数组         | `[65566781, 1277481241, 1643654862, 603676925]`                                                        | up 黑名单（up 的 id，不是房间号）         |
+| moveTag      | 字符串           | `天选时刻`                                                                                             | 关注的用户统一移动到此                    |
+| pageNum      | 数值             | `2`                                                                                                    | 扫描几页直播间                            |
+| isMoveTag    | 布尔             | `true`                                                                                                 | 否将天选时刻关注 UP 移动到分组            |
+| actFollowMsg | `read`或者 `del` | `'read'`                                                                                               | 关注时产生的回复的处理方式                |
 
 ::: details 参考写法
 
@@ -163,8 +162,10 @@ description: 功能开关
     ],
     includeAward: ['谢'],
     blackUid: [65566781, 1277481241, 1643654862, 603676925],
+    isMoveTag: true,
     moveTag: '天选时刻',
     pageNum: 2,
+    actFollowMsg: 'read',
   },
 }
 ```
@@ -190,3 +191,18 @@ description: 功能开关
 ```
 
 :::
+
+## 粉丝亲密度
+
+`[intimacy]`
+
+| Key             | 值类型           | 默认值 | 说明                                     |
+| --------------- | ---------------- | ------ | ---------------------------------------- |
+| liveSendMessage | 布尔             | `true` | 直播弹幕（+100，点亮灰牌子）             |
+| liveShare       | 布尔             | `true` | 分享直播（+100 \* 5）                    |
+| liveLike        | 布尔             | `true` | 点赞直播间 (+200 \* 3)                   |
+| whiteList       | **房间 id** 数组 | `[]`   | 只操作此列表中的（优先级高于 blackList） |
+| blackList       | **房间 id** 数组 | `[]`   | 操作全部，但排除其中的                   |
+
+- 布尔值，`true` 表示开启，`false` 表示关闭
+- **房间 id**（房间号） 并未用户主站 ID

@@ -29,10 +29,13 @@ touch config/config.json
 
 ### 本地配置文件
 
-挂载目录即可
+挂载目录即可，config 为配置目录，logs 为运行日志目录。
 
 ```bash
-docker run -v ~/bilitools/config:/usr/src/app/config -i --rm  catlair/bilitools:latest
+docker run \
+    -v ~/bilitools/config:/usr/src/app/config \
+    -v ~/bilitools/logs:/usr/src/app/logs \
+    -i --rm catlair/bilitools:latest
 ```
 
 ### 压缩后的配置
@@ -40,7 +43,10 @@ docker run -v ~/bilitools/config:/usr/src/app/config -i --rm  catlair/bilitools:
 使用环境变量的方式
 
 ```bash
-docker run --env BILITOOLS_CONFIG="xxxxxxxxxxxxx" -i --rm  catlair/bilitools:latest
+docker run \
+    --env BILITOOLS_CONFIG="xxxxxxxxxxxxx" \
+    -v ~/bilitools/logs:/usr/src/app/logs \
+    -i --rm  catlair/bilitools:latest
 ```
 
 ## 定时运行

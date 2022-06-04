@@ -9,9 +9,9 @@ description: 华为云函数 FG
 [Gitee 备份下载地址](https://gitee.com/catlair/BiliTools/releases/)
 
 加速下载：
-<https://ghproxy.com/https://github.com/catlair/BiliTools/releases/download/v0.4.5/baidu_cfc.zip>
+<https://{{ghproxy}}/https://github.com/catlair/BiliTools/releases/download/{{tagName}}/baidu_cfc.zip>
 
-把 v0.4.5 替换成最新版本号即可
+把 {{tagName}} 替换成最新版本号即可
 
 文件下载的 baidu_cfc.zip，但是配置方式除了百度的，也可以参考 SCF 的创建 config.json
 
@@ -26,3 +26,10 @@ description: 华为云函数 FG
 设置超时时间
 
 ![fg-timeout](/images/fg-timeout.png)
+
+<script setup>
+import { useReleasesStore } from '@stores/releases'
+
+const { tagName } = useReleasesStore()
+const ghproxy = __GLOBAL_GHPROXY__
+</script>

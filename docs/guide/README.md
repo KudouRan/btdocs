@@ -4,7 +4,7 @@ title: 介绍
 description: 简单介绍
 ---
 
-## 支持功能 <Badge type="tip" :text="`版本${tagName}`" vertical="top" />
+## 支持功能 <Badge v-if="isRefreshed" type="tip" :text="`版本${tagName}`" vertical="top" />
 
 - [x] 部分方式每日随机时间运行
 - [x] 每日签到/分享/播放
@@ -53,8 +53,18 @@ SCF 将在 6.1 正式取消免费额度，如有需要请停止使用 SCF。[点
 3. 仓库中内置的任何 B 站相关用户信息，都不会影响你的投币、充电、打赏，权利掌握在使用者手中。
 4. 如果您有任何疑问，请提交 issue，我们会尽快给予回复。
 
-<script setup>
+<script setup lang="ts">
 import { useReleasesStore } from '@stores/releases'
+import { useFetch } from '@vueuse/core';
 
-const { tagName } = useReleasesStore()
+const { tagName, isRefreshed } = useReleasesStore()
+
+if (!isRefreshed) {
+  useFetch<string>('https://btdocs.vercel.app/api/releases').then(
+    ({ data }) => {
+      tagName.value = JSON.parse(data.value).data.tag_name || tagName.value;
+      isRefreshed.value = true;
+    }
+  );
+}
 </script>

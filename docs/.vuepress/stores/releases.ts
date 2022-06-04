@@ -4,14 +4,14 @@ import { ref } from 'vue';
 
 export const useReleasesStore = defineStore('releases', () => {
   const tagName = ref('v0.5.0');
+  const isRefreshed = ref(false);
 
   useFetch<string>('https://btdocs.vercel.app/api/releases').then(
     ({ data }) => {
-      console.log(data.value);
-      console.log(typeof data.value);
       tagName.value = JSON.parse(data.value).data.tag_name || tagName.value;
+      isRefreshed.value = true;
     }
   );
 
-  return { tagName };
+  return { tagName, isRefreshed };
 });

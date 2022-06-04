@@ -143,4 +143,7 @@ export default defineUserConfig({
     '@imgs': path.resolve(__dirname, './docs/.vuepress/public/images'),
     '@stores': path.resolve(__dirname, './docs/.vuepress/stores'),
   },
+  define: {
+    __GLOBAL_GHPROXY__: 'ghproxy.com',
+  },
 });

@@ -9,9 +9,9 @@ description: 华为 AGC 云函数
 [Gitee 备份下载地址](https://gitee.com/catlair/BiliTools/releases/)
 
 加速下载：
-<https://ghproxy.com/https://github.com/catlair/BiliTools/releases/download/v0.4.7/huawei_agc.zip>
+<https://{{ghproxy}}/https://github.com/catlair/BiliTools/releases/download/{{tagName}}/huawei_agc.zip>
 
-把 v0.4.7 替换成最新版本号即可
+把 {{ tagName }} 替换成最新版本号即可
 
 ## 2. 新增 AGC CF
 
@@ -52,3 +52,10 @@ description: 华为 AGC 云函数
 记得开启触发器
 
 ![fc-create-trigger](/images/agc-trigger-open.png)
+
+<script setup>
+import { useReleasesStore } from '@stores/releases'
+
+const { tagName } = useReleasesStore()
+const ghproxy = __GLOBAL_GHPROXY__
+</script>
