@@ -5,6 +5,8 @@ import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 import * as path from 'path';
+import { path as vuepressPath } from '@vuepress/utils';
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
 
 const isProd = process.env.NODE_ENV === 'production';
 const basePath = process.env.BASE_PATH as '/' | `/${string}/`;
@@ -121,7 +123,15 @@ export default defineUserConfig({
       ],
     },
   }),
-  plugins: [copyCodePlugin({})],
+  plugins: [
+    copyCodePlugin({}),
+    registerComponentsPlugin({
+      componentsDir: vuepressPath.resolve(
+        __dirname,
+        './docs/.vuepress/components'
+      ),
+    }),
+  ],
   bundler: viteBundler({
     viteOptions: {
       plugins: [

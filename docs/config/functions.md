@@ -206,3 +206,19 @@ description: 功能开关
 
 - 布尔值，`true` 表示开启，`false` 表示关闭
 - **房间 id**（房间号） 并未用户主站 ID
+
+::: details 参考写法
+
+```json5
+{
+  intimacy: {
+    liveSendMessage: true,
+    liveShare: true,
+    liveLike: true,
+    whiteList: [],
+    blackList: [],
+  },
+}
+```
+
+:::

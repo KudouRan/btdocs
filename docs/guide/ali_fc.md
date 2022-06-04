@@ -56,6 +56,10 @@ exports.handler = require('@catlair/bilitools').fc_handler();
 
 最后参考图中位置，添加配置文件，再点击部署
 
+### 代码自动更新
+
+<ServerlessCommon/>
+
 ## 随机时间运行（可选）
 
 liveHeart 必选

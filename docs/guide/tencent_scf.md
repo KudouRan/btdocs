@@ -51,6 +51,10 @@ exports.main_handler = require('@catlair/bilitools').scf_handler();
 
 最后参考图中位置，添加配置文件
 
+### 代码自动更新
+
+<ServerlessCommon/>
+
 ## 新建配置文件并测试是否可用
 
 **部署后**点击运行，查看是否运行成功，如若失败，请根据输出内容修改后重试
