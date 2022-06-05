@@ -13,7 +13,7 @@ description: 页面的描述
 如果已经安装了 node14 及以上可以跳过此步骤。
 :::
 
-## 1. npm 包 <Badge type="tip" text="推荐" vertical="top" />
+## 1. npm 包 <Badge type="tip" text="推荐" vertical="top" /> <TestedVersion type="npm" />
 
 在 cmd 或者 terminal 中运行以下命令
 
@@ -32,7 +32,7 @@ bilitools -c ./config.json
 npm install -g @catlair/bilitools
 ```
 
-## 2. 直接运行
+## 2. 直接运行 <TestedVersion type="local-index" />
 
 现提供打包好的代码，使用 node 直接运行。在以下任一链接下载 `index.js`
 

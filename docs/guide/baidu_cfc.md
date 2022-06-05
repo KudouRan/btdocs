@@ -4,7 +4,7 @@ title: 百度云函数 CFC
 description: 百度云函数 CFC
 ---
 
-## 1. 下载最新版的 [baidu_cfc.zip 压缩包](https://github.com/catlair/BiliTools/releases/latest)
+## 1. 下载最新版的 [baidu_cfc.zip 压缩包](https://github.com/catlair/BiliTools/releases/latest) <TestedVersion type="cfc" />
 
 [Gitee 备份下载地址](https://gitee.com/catlair/BiliTools/releases/)
 

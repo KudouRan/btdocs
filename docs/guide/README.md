@@ -60,7 +60,8 @@ SCF 正式取消免费额度，学生还可以 1 元购买 1 年包。
 4. 如果您有任何疑问，请提交 issue，我们会尽快给予回复。
 
 <script setup lang="ts">
-import { useReleasesStore } from '@stores/releases'
+import { storeToRefs } from 'pinia';
+import { useReleasesStore } from '@stores/releases';
 
-const { tagName, isRefreshed } = useReleasesStore()
+const { tagName, isRefreshed } = storeToRefs(useReleasesStore());
 </script>

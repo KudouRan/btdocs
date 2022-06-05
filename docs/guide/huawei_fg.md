@@ -4,7 +4,7 @@ title: 华为云函数 FG
 description: 华为云函数 FG
 ---
 
-## 1. 下载最新版的 [baidu_cfc.zip 压缩包](https://github.com/catlair/BiliTools/releases/latest)
+## 1. 下载最新版的 [baidu_cfc.zip 压缩包](https://github.com/catlair/BiliTools/releases/latest) <TestedVersion type="fg" />
 
 [Gitee 备份下载地址](https://gitee.com/catlair/BiliTools/releases/)
 
@@ -28,8 +28,9 @@ description: 华为云函数 FG
 ![fg-timeout](/images/fg-timeout.png)
 
 <script setup>
-import { useReleasesStore } from '@stores/releases'
+import { storeToRefs } from 'pinia';
+import { useReleasesStore } from '@stores/releases';
 
-const { tagName } = useReleasesStore()
+const { tagName } = storeToRefs(useReleasesStore());
 const ghproxy = __GLOBAL_GHPROXY__
 </script>

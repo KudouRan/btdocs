@@ -4,7 +4,7 @@ title: 腾讯云函数 SCF
 description: 腾讯云函数 SCF
 ---
 
-## 新增 scf
+## 新增 scf <TestedVersion type="scf" />
 
 [点击进入云函数控制台](https://console.cloud.tencent.com/scf)
 

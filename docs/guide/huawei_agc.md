@@ -4,7 +4,7 @@ title: 华为 AGC 云函数
 description: 华为 AGC 云函数
 ---
 
-## 1. 下载最新版的 [huawei_agc.zip 压缩包](https://github.com/catlair/BiliTools/releases/latest)
+## 1. 下载最新版的 [huawei_agc.zip 压缩包](https://github.com/catlair/BiliTools/releases/latest) <TestedVersion type="agc" />
 
 [Gitee 备份下载地址](https://gitee.com/catlair/BiliTools/releases/)
 
@@ -54,8 +54,9 @@ description: 华为 AGC 云函数
 ![fc-create-trigger](/images/agc-trigger-open.png)
 
 <script setup>
-import { useReleasesStore } from '@stores/releases'
+import { storeToRefs } from 'pinia';
+import { useReleasesStore } from '@stores/releases';
 
-const { tagName } = useReleasesStore()
+const { tagName } = storeToRefs(useReleasesStore());
 const ghproxy = __GLOBAL_GHPROXY__
 </script>

@@ -4,7 +4,7 @@ title: 阿里云函数 FC
 description: 阿里云函数 FC
 ---
 
-## 新增 fc
+## 新增 fc <TestedVersion type="fc" />
 
 [点击进入云函数控制台](https://fcnext.console.aliyun.com/cn-chengdu/services)
 

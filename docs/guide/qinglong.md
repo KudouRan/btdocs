@@ -4,12 +4,12 @@ title: 青龙面板运行
 description: 青龙面板运行
 ---
 
+## 说明 <TestedVersion type="ql" />
+
 - form [#49](https://github.com/catlair/BiliTools/issues/49)
 
-现在已经支持多账号了（需要更新青龙面板到最新，测试使用 `v2.10.13`），并且对之前做了调整。
-
 - 文件名 `cat_bili_ql.js`
-- 默认配置文件名 `cat_bili_config.json`
+- 默认配置文件名 `cat_bili_config.json`，或 `.json5`
 - 配置文件名也可以通过环境变量 `BILITOOLS_FILE_NAME` 指定，后缀 `.json` 可以省略
 
 ## 使用方式
@@ -18,11 +18,7 @@ description: 青龙面板运行
 
 ```bash
 ## 举例
-ql raw https://raw.githubusercontent.com/catlair/BiliTools/gh-release/gh-release/cat_bili_ql.js # 正式版
-```
-
-```bash
- ql raw https://raw.githubusercontent.com/catlair/BiliTools/gh-release-dev/gh-release/cat_bili_ql.js # 开发版
+ql raw https://raw.githubusercontent.com/catlair/BiliTools/gh-release/gh-release/cat_bili_ql.js
 ```
 
 创建一个配置文件
@@ -36,9 +32,13 @@ ql raw https://raw.githubusercontent.com/catlair/BiliTools/gh-release/gh-release
 
 ## 安装依赖
 
+当前版本，无需安装依赖，可以直接使用
+
+::: details 老版本
 自行添加 Node 依赖 `axios`
 
 ![Node 依赖](/images/ql_deps.png)
+:::
 
 ## 多账号的使用
 

@@ -524,6 +524,15 @@
     "@vuepress/utils" "2.0.0-beta.46"
     execa "^5.1.1"
 
+"@vuepress/plugin-google-analytics@^2.0.0-beta.46":
+  version "2.0.0-beta.46"
+  resolved "https://registry.npmmirror.com/@vuepress/plugin-google-analytics/-/plugin-google-analytics-2.0.0-beta.46.tgz#73117df5e1e1a851df53833abf9d790b7568096c"
+  integrity sha512-T0ejeE0nv3I8F2xsVYdiSOC9sip5iEjh1FRup/kRBJKZc7hwr2HP/AHDzT/MhK/CRjRhStUfwh59vv3w4eP5Vg==
+  dependencies:
+    "@vuepress/client" "2.0.0-beta.46"
+    "@vuepress/core" "2.0.0-beta.46"
+    "@vuepress/utils" "2.0.0-beta.46"
+
 "@vuepress/plugin-medium-zoom@2.0.0-beta.46":
   version "2.0.0-beta.46"
   resolved "https://registry.npmmirror.com/@vuepress/plugin-medium-zoom/-/plugin-medium-zoom-2.0.0-beta.46.tgz#d9ee1a1855b1892e32c1a453520e1909d9361c55"

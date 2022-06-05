@@ -7,6 +7,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 import * as path from 'path';
 import { path as vuepressPath } from '@vuepress/utils';
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
 
 const isProd = process.env.NODE_ENV === 'production';
 const basePath = process.env.BASE_PATH as '/' | `/${string}/`;
@@ -49,6 +50,16 @@ export default defineUserConfig({
             link: 'https://gitee.com/catlair/BiliTools',
             target: '_blank',
           },
+          {
+            text: 'Dockerhub',
+            link: 'https://hub.docker.com/repository/docker/catlair/bilitools',
+            target: '_blank',
+          },
+          {
+            text: 'npm package',
+            link: 'https://www.npmjs.com/package/@catlair/bilitools',
+            target: '_blank',
+          },
         ],
       },
       {
@@ -62,6 +73,11 @@ export default defineUserConfig({
           {
             text: 'Gzip 压缩',
             link: 'https://www.baidufe.com/fehelper/en-decode/',
+            target: '_blank',
+          },
+          {
+            text: 'CORN 在线工具',
+            link: 'http://cron.ciding.cc/',
             target: '_blank',
           },
         ],
@@ -82,6 +98,36 @@ export default defineUserConfig({
           {
             text: 'QQ 群等其他方式',
             link: '/about/',
+          },
+        ],
+      },
+      {
+        text: '官网指路',
+        children: [
+          {
+            text: '阿里云函数 FC',
+            link: 'https://www.aliyun.com/product/fc/',
+            target: '_blank',
+          },
+          {
+            text: '腾讯云函数 SCF',
+            link: 'https://cloud.tencent.com/product/scf',
+            target: '_blank',
+          },
+          {
+            text: '华为 AppGallery Connect',
+            link: 'https://developer.huawei.com/consumer/cn/service/josp/agc/index.html#/',
+            target: '_blank',
+          },
+          {
+            text: '华为 FunctionGraph',
+            link: 'https://www.huaweicloud.com/product/functiongraph.html',
+            target: '_blank',
+          },
+          {
+            text: 'Github Actions',
+            link: 'https://docs.github.com/cn/actions',
+            target: '_blank',
           },
         ],
       },
@@ -130,6 +176,9 @@ export default defineUserConfig({
         __dirname,
         './docs/.vuepress/components'
       ),
+    }),
+    googleAnalyticsPlugin({
+      id: 'G-B2XSE83VR6',
     }),
   ],
   bundler: viteBundler({
