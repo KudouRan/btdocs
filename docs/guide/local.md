@@ -46,3 +46,37 @@ npm install -g @catlair/bilitools
 ```bash
 node index.js
 ```
+
+## windows 下定时运行
+
+linux 还是推荐用 crontab 来定时运行，windows 下也可以使用系统任务，这里提供另一种方式。
+
+下载 `cron_bilitools.exe`
+
+<https://{{ghproxy}}/https://github.com/catlair/cron/releases/download/v0.0.0/cron_bilitools.tar.gz>
+
+首先把文件移动到合适的地方，之后就不要再移动了（移动后重新操作），所以不推荐放在桌面。
+
+- 创建一个快捷方式
+
+![win_create_link](@imgs/win_create_link.png)
+
+- 右键属性，给快捷方式路径后面添加一些参数
+
+`cron_bilitools.exe -help` 就能看到参数信息了  
+`-config=./config/config.json` （必须）配置文件的路径  
+`-time=08:08:08` （可选）每天运行时间，默认为 08:08:00  
+`-start=false` （可选）是否立即执行，默认为 false，设置 `true` 电脑开机立即启动
+
+![win_setting_args](@imgs/win_setting_args.png)
+
+- 将快捷方式移动到开机启动项
+  ```bash
+     %systemdrive%%homepath%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+  ```
+
+![win_start](@imgs/win_start.png)
+
+<script setup>
+const ghproxy = __GLOBAL_GHPROXY__
+</script>
