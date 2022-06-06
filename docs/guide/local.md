@@ -49,7 +49,7 @@ node index.js
 
 ## windows 下定时运行
 
-linux 还是推荐用 crontab 来定时运行，windows 下也可以使用系统任务，这里提供另一种方式。
+linux 还是推荐用 crontab 来定时运行，windows 下也可以使用系统任务，这里提供另一种方式（依赖方式 1，请确认方式 1 能够运行）。
 
 下载 `cron_bilitools.exe`
 
