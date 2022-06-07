@@ -6,7 +6,8 @@
   // 通用 api 延迟时间（s）
   apiDelay: [2, 6],
   // b 站 cookie （登录信息）
-  cookie: 'xxxxx',
+  // prettier-ignore
+  cookie: "xxxxx",
   // 配置运行的功能
   function: {
     // 瓜子兑换硬币
