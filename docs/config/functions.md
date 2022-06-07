@@ -93,7 +93,6 @@ description: 功能开关
 ```json5
 {
   charge: {
-    mid: undefined,
     presetTime: 31,
   },
 }

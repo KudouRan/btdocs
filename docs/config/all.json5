@@ -6,7 +6,7 @@
   // 通用 api 延迟时间（s）
   apiDelay: [2, 6],
   // b 站 cookie （登录信息）
-  cookie: 'xxxxxxxx',
+  cookie: 'xxxxx',
   // 配置运行的功能
   function: {
     // 瓜子兑换硬币
@@ -40,19 +40,19 @@
   message: {
     // 邮箱
     email: {
-      from: 'xxxxxxxxx',
-      to: 'xxxxxxxxx',
-      pass: 'xxxxxxxxx',
+      from: '',
+      to: '',
+      pass: '',
       host: 'smtp.163.com',
       part: 465,
     },
     // push+
-    pushplusToken: 'xxxxxxxxxxxxxxx',
+    pushplusToken: '',
     // server 酱
-    SCKEY: 'xxxxxxxx',
+    SCKEY: '',
     // ... 更多省略
     // 自定义
-    api: 'http://xxxx.xxx/{title}/{text}',
+    api: '',
   },
   // 投币相关
   coin: {
@@ -72,7 +72,7 @@
   // 充电
   charge: {
     // 对象，默认自己
-    mid: undefined,
+    // mid: 0,
     // 充电时间
     presetTime: 31,
   },

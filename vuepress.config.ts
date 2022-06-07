@@ -115,6 +115,11 @@ export default defineUserConfig({
             target: '_blank',
           },
           {
+            text: '百度云函数 CFC',
+            link: 'https://cloud.baidu.com/product/cfc.html',
+            target: '_blank',
+          },
+          {
             text: '华为 AppGallery Connect',
             link: 'https://developer.huawei.com/consumer/cn/service/josp/agc/index.html#/',
             target: '_blank',
