@@ -53,7 +53,9 @@ linux 还是推荐用 crontab 来定时运行，windows 下也可以使用系统
 
 下载 `cron_bilitools.exe`
 
-<https://{{ghproxy}}/https://github.com/catlair/cron/releases/download/v0.0.0/cron_bilitools.tar.gz>
+<MyLink :href="downloadUrl"></MyLink>
+
+把 {{ tagName }} 替换成最新的 tag 名称
 
 首先把文件移动到合适的地方，之后就不要再移动了（移动后重新操作），所以不推荐放在桌面。
 
@@ -79,4 +81,6 @@ linux 还是推荐用 crontab 来定时运行，windows 下也可以使用系统
 
 <script setup>
 const ghproxy = __GLOBAL_GHPROXY__
+const tagName = 'v0.0.0'
+const downloadUrl = `https://${ghproxy}/https://github.com/catlair/cron/releases/download/${tagName}/cron_bilitools.tar.gz`
 </script>

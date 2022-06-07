@@ -9,7 +9,7 @@ description: 华为云函数 FG
 [Gitee 备份下载地址](https://gitee.com/catlair/BiliTools/releases/)
 
 加速下载：
-<https://{{ghproxy}}/https://github.com/catlair/BiliTools/releases/download/{{tagName}}/baidu_cfc.zip>
+<MyLink :href="downloadUrl"></MyLink>
 
 把 {{tagName}} 替换成最新版本号即可
 
@@ -33,4 +33,5 @@ import { useReleasesStore } from '@stores/releases';
 
 const { tagName } = storeToRefs(useReleasesStore());
 const ghproxy = __GLOBAL_GHPROXY__
+const downloadUrl = `https://${ghproxy}/https://github.com/catlair/BiliTools/releases/download/${tagName.value}/baidu_cfc.zip`
 </script>

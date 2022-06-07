@@ -22,7 +22,7 @@ description: 功能开关
 | giveGift            | `false` | 赠送过期礼物            |
 | matchGame           | `false` | 赛事竞猜                |
 | liveLottery         | `false` | 直播天选时刻            |
-| liveRedPack         | `false` | 直播天选红包            |
+| ~~liveRedPack~~     | `false` | ~~直播天选红包~~        |
 | liveIntimacy        | `false` | 牌子亲密度（预设）      |
 
 ::: details 参考写法
@@ -42,7 +42,6 @@ description: 功能开关
     matchGame: false,
     liveLottery: false,
     liveRedPack: false,
-    liveIntimacy: false,
     supGroupSign: false,
   },
 }

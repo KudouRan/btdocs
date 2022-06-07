@@ -9,9 +9,9 @@ description: 百度云函数 CFC
 [Gitee 备份下载地址](https://gitee.com/catlair/BiliTools/releases/)
 
 加速下载：
-<https://ghproxy.com/https://github.com/catlair/BiliTools/releases/download/v0.4.5/baidu_cfc.zip>
+<MyLink :href="downloadUrl"></MyLink>
 
-把 v0.4.5 替换成最新版本号即可
+把 {{tagName}} 替换成最新版本号即可
 
 详细过程略，请参考 [手动部署到 SCF](./action_scf.md)
 
@@ -47,3 +47,12 @@ global.BILITOOLS_CONFIG = {
 
 var _vm = require('./utils/vm');
 ```
+
+<script setup>
+import { storeToRefs } from 'pinia';
+import { useReleasesStore } from '@stores/releases';
+
+const { tagName } = storeToRefs(useReleasesStore());
+const ghproxy = __GLOBAL_GHPROXY__
+const downloadUrl = `https://${ghproxy}/https://github.com/catlair/BiliTools/releases/download/${tagName.value}/baidu_cfc.zip`
+</script>

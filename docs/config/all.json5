@@ -32,7 +32,7 @@
     // 直播天选时刻
     liveLottery: false,
     // 直播天选红包
-    liveRedPack: false,
+    // liveRedPack: false,
     // 粉丝牌等级
     liveIntimacy: false,
   },

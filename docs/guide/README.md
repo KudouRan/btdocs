@@ -6,7 +6,7 @@ description: 简单介绍
 
 ## 支持功能 <Badge v-if="isRefreshed" type="tip" :text="`版本${tagName}`" vertical="top" />
 
-- [x] 部分方式每日随机时间运行
+- [x] 部分方式每日随机时间运行 <Badge type="tip" text="推荐" vertical="middle" />
 - [x] 每日签到/分享/播放
 - [x] 直播签到
 - [x] 漫画签到
@@ -19,11 +19,11 @@ description: 简单介绍
 - [x] 自动使用 B 币券充电
 - [x] 直播赠送即将过期的礼物（为确保安全，只赠送辣条和小心心）
 - [x] 多账号独立配置
-- [x] 直播天选时刻（测试）
-- [x] 直播礼物红包（测试）
+- [x] 直播天选时刻（测试） <Badge type="warning" text="慎用" vertical="middle" />
+- [x] ~~直播礼物红包（测试）~~
 - [x] 粉丝勋章/亲密度（测试）
 - [ ] 支持 Docker 、腾讯 SCF 、阿里 FC、百度 CFC、华为 FG、青龙面板等方式运行，支持执行消息推送
-- [ ] 代码自动在线更新，发包任你发
+- [ ] 代码自动在线更新，发包任你发 <Badge type="tip" text="推荐" vertical="middle" />
 - [ ] ~~风纪委员 headless 版（不支持 scf）见 [bili-task-puppeteer](https://github.com/catlair/bili-task-puppeteer)~~（没有资格）
 
 ## 使用说明
@@ -34,9 +34,11 @@ description: 简单介绍
 
 SCF 正式取消免费额度，学生还可以 1 元购买 1 年包。
 
+请不要使用直播礼物红包 `liveRedPack`，经过测试发现，并不是参与即可获取红包，b 站可能存在其他机制。
+
 ## 更新
 
-新增天选时刻、红包，支持自动读取/删除关注消息。
+新增天选时刻、~~红包~~，支持自动读取/删除关注消息。
 
 直播获取小心心改版，且取消直播间弹幕功能，使用 `粉丝勋章/亲密度（测试）`替代。
 

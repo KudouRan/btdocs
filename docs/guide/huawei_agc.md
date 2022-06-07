@@ -9,7 +9,7 @@ description: 华为 AGC 云函数
 [Gitee 备份下载地址](https://gitee.com/catlair/BiliTools/releases/)
 
 加速下载：
-<https://{{ghproxy}}/https://github.com/catlair/BiliTools/releases/download/{{tagName}}/huawei_agc.zip>
+<MyLink :href="downloadUrl"></MyLink>
 
 把 {{ tagName }} 替换成最新版本号即可
 
@@ -59,4 +59,5 @@ import { useReleasesStore } from '@stores/releases';
 
 const { tagName } = storeToRefs(useReleasesStore());
 const ghproxy = __GLOBAL_GHPROXY__
+const downloadUrl = `https://${ghproxy}/https://github.com/catlair/BiliTools/releases/download/${tagName.value}/huawei_agc.zip`
 </script>

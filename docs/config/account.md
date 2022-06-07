@@ -19,6 +19,7 @@ description: 配置详情
 | charge       | 充电 [↓↓](./functions#充电)         |                     | 充电相关                         |
 | match        | 竞猜 [↓↓](./functions#竞猜)         |                     | 竞猜相关                         |
 | lottery      | 天选时刻 [↓↓](./functions#天选时刻) |                     | 天选时刻相关                     |
+| intimacy     | 亲密度 [↓↓](./functions#粉丝亲密度) |                     | 粉丝亲密度相关                   |
 
 **重要配置说明**
 
