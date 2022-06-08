@@ -42,6 +42,8 @@ ql raw https://raw.githubusercontent.com/catlair/BiliTools/gh-release/gh-release
 
 ## 多账号的使用
 
+多账户配置见 [配置文件](/config/README.md)
+
 设置多个任务即可运行多帐号，这样做主要是把不同号的运行时间错开（不会有人几十个号还用这吧）
 
 ![ql_item](/images/ql_item.png)

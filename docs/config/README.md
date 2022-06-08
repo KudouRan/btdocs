@@ -8,7 +8,7 @@ description: 配置说明
 
 - 配置使用的 `json5`，兼容 `json` 且更加灵活，可以支持 `注释`。
 - 务必使用 <https://www.lddgo.net/string/json5> 校验 json5 格式。
-- 压缩配置地址（选择 gzip 压缩）：<https://www.baidufe.com/fehelper/en-decode/>（使用环境变量时所需）
+- 我希望你能把必看的看完，不想看的请直接滚，而不说别人的咋样，整个程序都是我写的，没有第二个人帮忙，我不是你爹娘别他妈骂娘。用 `josn` 不知道双引号，用 `yaml` 不知道缩进，你啥都不知你用个屁啊。
 
 ### 配置文件路径
 
@@ -54,11 +54,11 @@ description: 配置说明
 @[code](./config.json5)
 :::
 
-多用户配置参考 [config.example.json5](https://gitee.com/catlair/BiliTools/blob/main/config/config.example.json5)
-
 单用户配置参考 [config.single.json](https://gitee.com/catlair/BiliTools/blob/main/config/config.single.json)
 
-注：多用户就是单用户数组。
+多用户配置参考 [config.example.json5](https://gitee.com/catlair/BiliTools/blob/main/config/config.example.json5)
+
+注：多用户就是单用户数组，如果 `{}` 是单用户，那么多用户配置就是 `[{},{},{}]`，里面的详细配置都是一样的。
 
 **多用户配置只用于部分情况，并不是所有都支持**
 
