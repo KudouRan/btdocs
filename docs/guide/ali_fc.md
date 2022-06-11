@@ -22,8 +22,6 @@ description: 阿里云函数 FC
 
 ### 触发器配置
 
-- 直播心跳的触发器名必须为`heart_bili_timer`，否则无法调用
-
 ![fc-create-trigger](/images/fc-create-trigger.png)
 
 ### 高级配置
@@ -61,8 +59,6 @@ exports.handler = require('@catlair/bilitools').fc_handler();
 <ServerlessCommon/>
 
 ## 随机时间运行（可选）
-
-liveHeart 必选
 
 获取 ARM ID 和 KEY
 

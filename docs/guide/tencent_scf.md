@@ -69,6 +69,4 @@ exports.main_handler = require('@catlair/bilitools').scf_handler();
 
 ![create-trigger](/images/create-trigger.png)
 
-- 直播心跳的触发器名必须为`heart_bili_timer`，否则无法调用
-
 ![create-trigger](/images/scf-trigger-config.png)

@@ -16,7 +16,6 @@
       getVipPrivilege: false,
       giveGift: false,
       liveLottery: false,
-      liveHeart: false,
     }, // 注意结束需要逗号
     message: {
       email: {
