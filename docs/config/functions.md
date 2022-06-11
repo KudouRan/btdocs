@@ -198,16 +198,17 @@ description: 功能开关
 
 `[intimacy]`
 
-| Key             | 值类型           | 默认值 | 说明                                     |
-| --------------- | ---------------- | ------ | ---------------------------------------- |
-| liveSendMessage | 布尔             | `true` | 直播弹幕（+100，点亮灰牌子）             |
-| liveShare       | 布尔             | `true` | 分享直播（+100 \* 5）                    |
-| liveLike        | 布尔             | `true` | 点赞直播间 (+200 \* 3)                   |
-| whiteList       | **房间 id** 数组 | `[]`   | 只操作此列表中的（优先级高于 blackList） |
-| blackList       | **房间 id** 数组 | `[]`   | 操作全部，但排除其中的                   |
+| Key             | 值类型           | 默认值  | 说明                                     |
+| --------------- | ---------------- | ------- | ---------------------------------------- |
+| liveSendMessage | 布尔             | `true`  | 直播弹幕（+100，点亮灰牌子）             |
+| liveShare       | 布尔             | `true`  | 分享直播（+100 \* 5）                    |
+| liveLike        | 布尔             | `true`  | 点赞直播间 (+200 \* 3)                   |
+| liveHeart       | 布尔             | `false` | 观看直播 (+100 \* 1)                     |
+| whiteList       | **用户 id** 数组 | `[]`    | 只操作此列表中的（优先级高于 blackList） |
+| blackList       | **用户 id** 数组 | `[]`    | 操作全部，但排除其中的                   |
 
 - 布尔值，`true` 表示开启，`false` 表示关闭
-- **房间 id**（房间号） 并未用户主站 ID
+- **用户 id**（主站的 id） 并非主播直播间 ID
 
 ::: details 参考写法
 
@@ -217,6 +218,7 @@ description: 功能开关
     liveSendMessage: true,
     liveShare: true,
     liveLike: true,
+    liveHeart: false,
     whiteList: [],
     blackList: [],
   },

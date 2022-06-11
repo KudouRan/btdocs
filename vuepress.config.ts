@@ -80,6 +80,16 @@ export default defineUserConfig({
             link: 'http://cron.ciding.cc/',
             target: '_blank',
           },
+          {
+            text: '获取安卓 APK 登录',
+            link: 'https://github.com/catlair/blogin/',
+            target: '_blank',
+          },
+          {
+            text: '简易 CORN 定时任务',
+            link: 'https://github.com/catlair/cron/',
+            target: '_blank',
+          },
         ],
       },
       {

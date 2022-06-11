@@ -10,7 +10,20 @@ description: 配置说明
 - 务必使用 <https://www.lddgo.net/string/json5> 校验 json5 格式。
 - 我希望你能把必看的看完，没看完就问，不给予回答，请换个程序用，别找我。
 
-### 配置文件路径
+## 用户配置参考
+
+::: details 多用户参考配置，可以复制修改后使用
+@[code](./all.json5)
+:::
+
+**多用户配置只用于部分情况，并不是所有都支持**
+
+- 本地（如 npm）/docker 运行多个用户
+- 本地（如 npm）/docker 推送多个到 scf
+
+其他情况填写多个只会使用第一个, 不用担心
+
+## 配置文件路径
 
 满足以下的目录结构的 `config.json{5}` 都是符合要求的配置文件路径，青龙面板，npm 除外。
 
@@ -34,38 +47,6 @@ description: 配置说明
 :::
 
 - 当然你可以不用文件配置，直接使用环境变量 `BILITOOLS_CONFIG`（配置按照要求 [gzip 压缩](https://www.baidufe.com/fehelper/en-decode/)）
-
-### 配置介绍（开发查看）
-
-所有配置都登记在 [`types/config.ts`](https://gitee.com/catlair/BiliTools/blob/main/src/types/config.ts) 文件中
-
-::: details 解释
-
-- `number`: 数字 例如：`123`。
-- `string`: 字符串 例如：`"ojbk"`。
-- `boolean`: 布尔值 `true` 或者 `false`。
-- `[]`: 数组 例如：`number[]` 具体可以是 `[1,2,3]`。
-- `targetLevel?: number;` `?` 表示 `targetLevel` 是可选的配置。
-  :::
-
-### 用户配置参考
-
-::: details 参考配置
-@[code](./config.json5)
-:::
-
-单用户配置参考 [config.single.json](https://gitee.com/catlair/BiliTools/blob/main/config/config.single.json)
-
-多用户配置参考 [config.example.json5](https://gitee.com/catlair/BiliTools/blob/main/config/config.example.json5)
-
-注：多用户就是单用户数组，如果 `{}` 是单用户，那么多用户配置就是 `[{},{},{}]`，里面的详细配置都是一样的。
-
-**多用户配置只用于部分情况，并不是所有都支持**
-
-- 本地（如 npm）/docker 运行多个用户
-- 本地（如 npm）/docker 推送多个到 scf
-
-其他情况填写多个只会使用第一个, 不用担心
 
 <script setup>
 const customNodeClass = (data, node) => {
