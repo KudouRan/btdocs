@@ -14,16 +14,17 @@ description: 功能开关
 | addCoins            | `true`  | 投币                    |
 | liveSignTask        | `true`  | 直播间签到              |
 | shareAndWatch       | `true`  | 观看和分享视频          |
-| mangaSign           | `false` | 漫画签到（移动端）      |
-| supGroupSign        | `false` | 应援团签到（移动端）    |
-| ~~liveSendMessage~~ | `false` | （请使用 liveIntimacy） |
+| supGroupSign        | `false` | 应援团签到              |
 | charging            | `false` | 给 UP 充电              |
-| getVipPrivilege     | `false` | 获取年度大会员权益      |
+| getVipPrivilege     | `false` | 获取大会员权益          |
 | giveGift            | `false` | 赠送过期礼物            |
 | matchGame           | `false` | 赛事竞猜                |
 | liveLottery         | `false` | 直播天选时刻            |
+| liveIntimacy        | `false` | 牌子亲密度              |
+| mangaTask           | `false` | 漫画任务                |
+| ~~mangaSign~~       | `false` | （请使用 mangaTask）    |
 | ~~liveRedPack~~     | `false` | ~~直播天选红包~~        |
-| liveIntimacy        | `false` | 牌子亲密度（预设）      |
+| ~~liveSendMessage~~ | `false` | （请使用 liveIntimacy） |
 
 ::: details 参考写法
 
@@ -34,7 +35,7 @@ description: 功能开关
     addCoins: true,
     liveSignTask: true,
     shareAndWatch: true,
-    mangaSign: false,
+    mangaTask: false,
     supGroupSign: false,
     charging: false,
     getVipPrivilege: false,
@@ -83,17 +84,17 @@ description: 功能开关
 
 `[charge]`
 
-| Key        | 值类型 | 默认值       | 说明                       |
-| ---------- | ------ | ------------ | -------------------------- |
-| mid        | 数值   | 自己的 mid   | 充电目标的 mid（默认自己） |
-| presetTime | 数值   | 每月最后一天 | 每月充电的日期             |
+| Key        | 值类型   | 默认值     | 说明                                                     |
+| ---------- | -------- | ---------- | -------------------------------------------------------- |
+| mid        | 数值     | 自己的 mid | 充电目标的 mid（默认自己）                               |
+| presetTime | 数值数组 | `[10, 20]` | 每月充电的日期，每月最后一天必定运行，此外默认 10，20 号 |
 
 ::: details 参考写法
 
 ```json5
 {
   charge: {
-    presetTime: 31,
+    presetTime: [10, 20],
   },
 }
 ```
@@ -221,6 +222,48 @@ description: 功能开关
     liveHeart: false,
     whiteList: [],
     blackList: [],
+  },
+}
+```
+
+:::
+
+## 漫画任务
+
+`[manga]`
+
+| Key         | 值类型     | 默认值 | 说明                                                                                           |
+| ----------- | ---------- | ------ | ---------------------------------------------------------------------------------------------- |
+| sign        | 布尔       | `true` | 漫画签到任务                                                                                   |
+| buy         | 布尔       | `true` | 是否使用即将过期的漫读券                                                                       |
+| mc          | 数组数组   | `[]`   | 购买漫画 id（优先级高）                                                                        |
+| name        | 字符串数组 | `[]`   | 购买漫画名称（优先级中）                                                                       |
+| love        | 布尔       | `true` | 购买追漫（优先级低）                                                                           |
+| buyInterval | 数值       | `6`    | 执行购买漫画间隔时间（单位天），默认 6，即每月 1，7，13，19，25。设置为 0 表示关闭，1 表示每天 |
+| buyWeek     | 数值数组   | `[3]`  | 星期几执行购买漫画，默认星期 3，和上面的 buyInterval 不冲突                                    |
+
+- 布尔值，`true` 表示开启，`false` 表示关闭
+- mc 获取：<https://manga.bilibili.com/detail/mc29195> 这篇漫画的 mcId 就是 `29195`
+
+::: details 参考写法
+
+```json5
+{
+  manga: {
+    // 签到
+    sign: true,
+    // 购买漫画
+    buy: false,
+    // 购买漫画 id（优先级高）
+    mc: [29195],
+    // 购买漫画名称（优先级中）
+    name: ['两不疑'],
+    // 购买追漫（优先级低）
+    love: true,
+    // 执行购买漫画间隔时间（单位天），设置为 0 表示关闭，1 表示每天
+    buyInterval: 6,
+    // 星期几执行购买漫画（与 buyInterval 都有效）
+    buyWeek: [3],
   },
 }
 ```

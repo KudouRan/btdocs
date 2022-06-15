@@ -20,14 +20,14 @@
       liveSignTask: true,
       // 分享和观看
       shareAndWatch: true,
-      // 漫画签到
-      mangaSign: false,
+      // 漫画任务
+      mangaTask: false,
       // 应援团签到
       supGroupSign: false,
       // 充电
       charging: false,
       // 获取 vip 权益
-      getVipPrivilege: false,
+      getVipPrivilege: true,
       // 直播赠送礼物
       giveGift: false,
       // 赛事竞猜
@@ -74,8 +74,8 @@
     charge: {
       // 对象，默认自己
       // mid: 0,
-      // 充电时间
-      presetTime: 31,
+      /** 充电预设时间，哪一天？ */
+      presetTime: [10, 20],
     },
     // 赛事竞猜
     match: {
@@ -140,6 +140,23 @@
       whiteList: [],
       // 黑名单
       blackList: [],
+    },
+    // 漫画
+    manga: {
+      // 签到
+      sign: true,
+      // 购买漫画
+      buy: false,
+      // 购买漫画 id（优先级高）
+      mc: [],
+      // 购买漫画名称（优先级中）
+      name: [],
+      // 购买追漫（优先级低）
+      love: true,
+      // 执行购买漫画间隔时间（单位天）
+      buyInterval: 6,
+      // 星期几执行购买漫画
+      buyWeek: [3],
     },
   },
   // 配置第二个用户，和上面一样的配置，
