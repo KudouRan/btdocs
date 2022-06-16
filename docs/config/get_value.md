@@ -52,7 +52,11 @@ LIVE_BUVID=AUTO8016188357987702; bsource=search_baidu; PVID=2
 
 ## 手机端 access_key
 
-施工中
+目前暂时不需要 access_key，但是以后可能会用到，所以这里提供一个获取方法。
+
+<https://github.com/catlair/blogin/>
+
+在线地址: <https://blogin-catlair.vercel.app/api> 由于技术原因，在线地址服务器在美国等地，如果介意请不要使用。
 
 <script setup>
 import { ref, onMounted } from "vue";

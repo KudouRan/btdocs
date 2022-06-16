@@ -57,6 +57,8 @@ linux 还是推荐用 crontab 来定时运行，windows 下也可以使用系统
 
 把 {{ tagName }} 替换成最新的 tag 名称，且只演示了 windows amd64 的版本，其他平台请自行下载。
 
+<https://github.com/catlair/cron/releases>
+
 首先把文件移动到合适的地方，之后就不要再移动了（移动后重新操作），所以不推荐放在桌面。
 
 - 创建一个快捷方式
@@ -65,7 +67,6 @@ linux 还是推荐用 crontab 来定时运行，windows 下也可以使用系统
 
 - 右键属性，给快捷方式路径后面添加一些参数
 
-`cron_bilitools.exe -help` 就能看到参数信息了  
 `-config=./config/config.json` （必须）配置文件的路径  
 `-time=08:08:08` （可选）每天运行时间，默认为 08:08:00  
 `-start=false` （可选）是否立即执行，默认为 false，设置 `true` 电脑开机立即启动
@@ -82,6 +83,6 @@ linux 还是推荐用 crontab 来定时运行，windows 下也可以使用系统
 
 <script setup>
 const ghproxy = __GLOBAL_GHPROXY__
-const tagName = 'v0.0.1'
-const downloadUrl = `https://${ghproxy}/https://github.com/catlair/cron/releases/download/${tagName}/cron_bilitools_amd64.tar.gz`
+const tagName = 'v0.0.2'
+const downloadUrl = `https://${ghproxy}/https://github.com/catlair/cron/releases/download/${tagName}/cron_windows_amd64.tar.gz`
 </script>

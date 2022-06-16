@@ -6,7 +6,7 @@ description: 功能开关
 
 ## 功能配置
 
-`[config]`
+`[function]`
 
 | Key                 | 默认值  | 说明                    |
 | ------------------- | ------- | ----------------------- |
@@ -25,6 +25,8 @@ description: 功能开关
 | ~~mangaSign~~       | `false` | （请使用 mangaTask）    |
 | ~~liveRedPack~~     | `false` | ~~直播天选红包~~        |
 | ~~liveSendMessage~~ | `false` | （请使用 liveIntimacy） |
+
+注：只有将这些值设置为 `true` 才会生效，如果设置为 `false` ，具体的配置再怎么样也不会去执行。
 
 ::: details 参考写法
 

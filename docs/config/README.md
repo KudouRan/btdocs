@@ -48,6 +48,16 @@ description: 配置说明
 
 - 当然你可以不用文件配置，直接使用环境变量 `BILITOOLS_CONFIG`（配置按照要求 [gzip 压缩](https://www.baidufe.com/fehelper/en-decode/)）
 
+## 安全问题
+
+请不要把配置上传到 Github 公开仓库等公开平台，特别是使用 Github Action 的。
+
+所有人都可以直接在 Github 上搜索的，甚至有硬核会员年度大会员还有 10 万粉丝的账号上传到 Github。别人拿到你的 cookie，除了改密码换绑提现之外可以做任何事情。
+
+理论上你除了 b 站任何人都可能会对你的账号造成影响，但是不信我你怎么用呢 😄😄😄。
+
+![bili_jct](@imgs/bili_jct.png)
+
 <script setup>
 const customNodeClass = (data, node) => {
   if (data.isPenultimate) {

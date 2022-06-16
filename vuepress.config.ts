@@ -93,7 +93,7 @@ export default defineUserConfig({
         ],
       },
       {
-        text: '问题反馈',
+        text: '关于和反馈',
         children: [
           {
             text: 'Github',

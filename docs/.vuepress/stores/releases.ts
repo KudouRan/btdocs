@@ -3,7 +3,7 @@ import { useFetch } from '@vueuse/core';
 import { ref } from 'vue';
 
 export const useReleasesStore = defineStore('releases', () => {
-  const tagName = ref('v0.5.0');
+  const tagName = ref('v0.5.7');
   const isRefreshed = ref(false);
 
   useFetch<string>('https://btdocs.vercel.app/api/releases').then(

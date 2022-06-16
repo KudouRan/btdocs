@@ -4,12 +4,17 @@ title: 介绍
 description: 简单介绍
 ---
 
+::: tip 参与贡献
+如果对与此文档有补充、改进意见或者修改，每个页面都可以直接点击末尾的`在 GitHub 上编辑此页`。非常感谢！
+:::
+
 ## 支持功能 <Badge v-if="isRefreshed" type="tip" :text="`版本${tagName}`" vertical="top" />
 
 - [x] 部分方式每日随机时间运行 <Badge type="tip" text="推荐" vertical="middle" />
 - [x] 每日签到/分享/播放
 - [x] 直播签到
 - [x] 漫画签到
+- [ ] 自动使用即将过期的漫读券
 - [x] 每日自动投币（指定数量）
 - [x] 银瓜子兑换硬币
 - [x] 应援团签到
@@ -17,13 +22,13 @@ description: 简单介绍
 - [x] 直播间弹幕（每日首次获得 100 亲密度，自动点亮灰色勋章）
 - [x] 领取年度大会员权益/B 币券（无测试条件，更新为每日检测）
 - [x] 自动使用 B 币券充电
-- [x] 直播赠送即将过期的礼物（为确保安全，只赠送辣条和小心心）
+- [x] 直播赠送即将过期的礼物
 - [x] 多账号独立配置
 - [x] 直播天选时刻（测试） <Badge type="warning" text="慎用" vertical="middle" />
-- [x] ~~直播礼物红包（测试）~~
 - [x] 粉丝勋章/亲密度（测试）
-- [ ] 支持 Docker 、腾讯 SCF 、阿里 FC、百度 CFC、华为 FG、青龙面板等方式运行，支持执行消息推送
-- [ ] 代码自动在线更新，发包任你发 <Badge type="tip" text="推荐" vertical="middle" />
+- [x] 支持 Docker 、腾讯 SCF 、阿里 FC、百度 CFC、华为 FG、青龙面板等方式运行，支持执行消息推送
+- [x] 代码自动在线更新，发包任你发 <Badge type="tip" text="推荐" vertical="middle" />
+- [ ] ~~直播礼物红包（测试）~~
 - [ ] ~~风纪委员 headless 版（不支持 scf）见 [bili-task-puppeteer](https://github.com/catlair/bili-task-puppeteer)~~（没有资格）
 
 ## 使用说明
@@ -31,8 +36,6 @@ description: 简单介绍
 配置方式见顶部导航栏，点击配置。
 
 ### 重要提示
-
-SCF 正式取消免费额度，学生还可以 1 元购买 1 年包。
 
 请不要使用直播礼物红包 `liveRedPack`，经过测试发现，并不是参与即可获取红包，b 站可能存在其他机制。
 

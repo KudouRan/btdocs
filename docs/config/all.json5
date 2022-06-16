@@ -7,7 +7,7 @@
     dailyRunTime: '17:30:00-23:40:00',
     // 通用 api 延迟时间（s）
     apiDelay: [2, 6],
-    // b 站 cookie （登录信息）
+    // b 站 cookie （登录信息）可能需要双引号
     // prettier-ignore
     cookie: "xxxxx",
     // 配置运行的功能

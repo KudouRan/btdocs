@@ -17,15 +17,15 @@ const props = defineProps<{
 
 const testedMap = {
   scf: '0.5.0',
-  fc: '0.5.0',
+  fc: '0.5.7',
   cfc: '0.4.0',
   agc: '0.4.0',
   fg: '0.4.0',
-  npm: '0.5.0',
-  docker: '0.5.0',
+  npm: '0.5.7',
+  docker: '0.5.3',
   ql: '0.5.0',
   action: '',
-  'local-index': '0.4.0',
+  'local-index': '0.5.7',
 };
 
 const testedVeriosn = testedMap[props.type];
