@@ -33,7 +33,13 @@ description: 简单介绍
 
 ## 使用说明
 
-配置方式见顶部导航栏，点击配置。
+配置方式见顶部导航栏，点击配置[或者点击这里跳转](../config/)。
+
+为了方便管理，能使用 npm 包的地方都将使用 npm 包。目前还不支持的（平台原因）仅有：
+
+百度云函数、华为云函数（包括 FG、AGC）
+
+所有老方式都是支持的，但是建议使用 npm 包的方式。
 
 ### 重要提示
 
@@ -55,7 +61,7 @@ description: 简单介绍
 - [catlair/bili-task-puppeteer](https://github.com/catlair/bili-task-puppeteer)
 - [lzghzr/TampermonkeyJS](https://github.com/lzghzr/TampermonkeyJS)
 - [whyour/qinglong](https://github.com/whyour/qinglong)
-- [RayWangQvQ/BiliBiliToolPro](https://github.com/RayWangQvQ/BiliBiliToolPro) （推荐转用）
+- [RayWangQvQ/BiliBiliToolPro](https://github.com/RayWangQvQ/BiliBiliToolPro)
 
 ## 责任声明
 

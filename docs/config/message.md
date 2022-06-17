@@ -11,7 +11,7 @@ description: 消息通知
 | Key            | 值类型                    | 说明                                                     |
 | -------------- | ------------------------- | -------------------------------------------------------- |
 | br             | 换行符                    | 主要配合 api 使用，有的 api 换行是`\n`，有的是需要`\n\n` |
-| email          | Email [↓↓](#email)        |                                                          |
+| email          | [点击了解](#email)        |                                                          |
 | pushplusToken  | 字符串                    | [官网](http://www.pushplus.plus/)获取 token              |
 | api            | 字符串或对象              | 自定义推送 API，[详见](#自定义推送-api)                  |
 | 从青龙面板移植 | [环境变量](#青龙面板相关) |                                                          |
@@ -21,6 +21,7 @@ description: 消息通知
 ```json5
 {
   message: {
+    br: '\n',
     email: {
       from: 'xxxxxxxxx',
       to: 'xxxxxxxxx',

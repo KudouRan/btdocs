@@ -6,8 +6,8 @@ description: Docker 运行
 
 ## 说明 <TestedVersion type="docker" />
 
-仓库中包含了相关文件，可自行构建运行  
-成品镜像 `catlair/bilitools` [dockerhub 地址](https://registry.hub.docker.com/repository/docker/catlair/bilitools)
+仓库中包含了相关文件，可自行构建运行。  
+成品镜像 [`catlair/bilitools`](https://registry.hub.docker.com/repository/docker/catlair/bilitools)（现在的 Docker 只是安装了一个 npm 包而已，存在意义不大）
 
 ## 配置文件
 
@@ -53,6 +53,8 @@ docker run \
 
 更多内容正在完善中，临时方案如下（假设上面的内容已经成功）：
 
+创建一个文件，内容如下：
+
 ::: details random_run.sh
 
 ```bash{12,21}
@@ -82,9 +84,9 @@ sleep $out
 :::
 
 ::: tip 注意
+新建这个文件后，需要执行 `chmod +x random_run.sh` 赋予文件执行权限。  
 `/usr/bin/docker` 是执行 `which docker` 获取到的，如果不一样请修改。  
 `~/bilitools/config` 请按照需求修改。  
-新建这个文件后，需要执行 `chmod +x random_run.sh` 赋予文件执行权限。  
 然后执行 `./random_run.sh 2 3` 来尝试运行（后面的 2 3 表示 2-3s 内随机时间，默认 2-7200s 内随机）。
 :::
 
@@ -97,7 +99,7 @@ sleep $out
 ::: tip 注意
 以下语句中的 `5 9 * * *` 意为 09:05:00 执行，执行 `date` 查看系统当前时间和时区（可能你并不是东八区）。  
 路径记得更改（如果需要）。  
-不知 `crontab -e` 怎么用，你可以将上面命令放入文件 `my_crontab`，然后执行 `crontab my_crontab` （这将覆盖已有的语句）。  
+不知 `crontab -e` 怎么用，你可以将上面命令放入文件 `my_crontab`，然后执行 `crontab my_crontab` （这将覆盖已有的语句，所以不推荐）。  
 如果没有启动 crontab，请百度/谷歌搜索 crontab 启动，linux 存在不同，但我能力有限，抱歉。
 :::
 

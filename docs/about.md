@@ -7,6 +7,8 @@ sidebar: false
 
 ## 赞助
 
+备注昵称，将出现在感谢列表中。
+
 <el-button v-for="button in buttons" :key="button.text" :type="button.type" text @click="changeZZUrl(button)">{{ button.text }}</el-button>
 
 <img :class="zzClass" :src="zzUrl" alt="zz_three"/>

@@ -8,6 +8,7 @@ description: 配置说明
 
 - 配置使用的 `json5`，兼容 `json` 且更加灵活，可以支持 `注释`。
 - 务必使用 <https://www.lddgo.net/string/json5> 校验 json5 格式。
+- Gzip 压缩地址（有说明时才用，一般都不需要用）<https://www.baidufe.com/fehelper/en-decode/>
 - 我希望你能把必看的看完，没看完就问，不给予回答，请换个程序用，别找我。
 
 ## 用户配置参考

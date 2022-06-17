@@ -39,7 +39,7 @@ description: 华为 AGC 云函数
 
 环境变量名为 [`BILITOOLS_CONFIG`](../config/env.md)
 
-配置就是 gzip 压缩后的，可以在此处压缩，[压缩详见](../config/)
+配置就是 gzip 压缩后的，可以在此处压缩，[压缩详见](https://www.baidufe.com/fehelper/en-decode/)
 
 ![环境变量配置](/images/agc-base-env.png)
 
