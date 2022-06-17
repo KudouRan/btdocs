@@ -4,7 +4,9 @@ title: 本地直接运行
 description: 页面的描述
 ---
 
-## 安装环境（必要）
+## 本地直接运行文档
+
+Node.js 首先需要本地的运行环境：
 
 - [下载 Node.js 长期维护版](https://nodejs.org/zh-cn/)
 - [安装到系统](https://www.runoob.com/nodejs/nodejs-install-setup.html)

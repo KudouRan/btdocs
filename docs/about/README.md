@@ -17,15 +17,19 @@ sidebar: false
 
 ### QQ 群
 
+扫码加入群，密码 catlair 最后一个字母：
+
 ![qq群](/images/qq_group.png)
 
-### issue
+## 参考项目
 
-见到导航栏
+感谢以下项目提供的参考：
 
-### 邮箱
-
-见 Github 个人页
+- [SocialSisterYi/bilibili-API-collect](https://github.com/SocialSisterYi/bilibili-API-collect)
+- [catlair/bili-task-puppeteer](https://github.com/catlair/bili-task-puppeteer)
+- [lzghzr/TampermonkeyJS](https://github.com/lzghzr/TampermonkeyJS)
+- [whyour/qinglong](https://github.com/whyour/qinglong)
+- [RayWangQvQ/BiliBiliToolPro](https://github.com/RayWangQvQ/BiliBiliToolPro)
 
 ## 说明
 

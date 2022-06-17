@@ -4,7 +4,7 @@ title: Github Action
 description: Github Action
 ---
 
-## 说明 <TestedVersion type="action" />
+## Github Action <TestedVersion type="action" />
 
 不直接提供使用 Action 运行的方法  
 体验后请尽快删除仓库  

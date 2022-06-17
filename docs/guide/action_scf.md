@@ -4,7 +4,7 @@ title: Action 自动部署到 SCF
 description: Action 自动部署到 SCF
 ---
 
-## 说明
+## Action SCF 文档
 
 已经废弃<Badge type="warning" text="警告" vertical="top" />
 

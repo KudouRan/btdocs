@@ -4,7 +4,9 @@ title: 华为云函数 FG
 description: 华为云函数 FG
 ---
 
-## 1. 下载最新版的 [baidu_cfc.zip 压缩包](https://github.com/catlair/BiliTools/releases/latest) <TestedVersion type="fg" />
+## 华为云函数 FG 文档 <TestedVersion type="fg" />
+
+下载最新版的 [baidu_cfc.zip 压缩包](https://github.com/catlair/BiliTools/releases/latest)
 
 [Gitee 备份下载地址](https://gitee.com/catlair/BiliTools/releases/)
 

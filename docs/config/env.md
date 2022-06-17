@@ -4,7 +4,7 @@ title: 环境变量
 description: 环境变量
 ---
 
-## 值
+## 环境变量文档
 
 | 名字                       | 说明                                                                 |
 | -------------------------- | -------------------------------------------------------------------- |
@@ -19,11 +19,12 @@ description: 环境变量
 | ~~SCF_MEMORY_SIZE~~        | scf 中运行的内存大小（默认 128M，范围为 64 以及 128 的 1-24 整数倍） |
 | ~~BILITOOLS_FILE_NAME~~    | ~~给配置文件命名，主要为了防止青龙面板的配置冲突~~                   |
 
-## 青龙面板相关
+## 来自青龙面板
 
 > 下列环境变量来自 `青龙面板`
 >
 > 具体介绍看这里 <https://github.com/whyour/qinglong/blob/develop/sample/config.sample.sh>
+> 支持 serverChan（Server 酱）、Telegram（Telegram）、Wechat（微信）等
 
 支持以下三种方式填写：
 

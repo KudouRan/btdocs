@@ -4,7 +4,7 @@ title: Docker 运行
 description: Docker 运行
 ---
 
-## 说明 <TestedVersion type="docker" />
+## Docker 文档 <TestedVersion type="docker" />
 
 仓库中包含了相关文件，可自行构建运行。  
 成品镜像 [`catlair/bilitools`](https://registry.hub.docker.com/repository/docker/catlair/bilitools)（现在的 Docker 只是安装了一个 npm 包而已，存在意义不大）

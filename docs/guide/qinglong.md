@@ -4,7 +4,7 @@ title: 青龙面板运行
 description: 青龙面板运行
 ---
 
-## 说明 <TestedVersion type="ql" />
+## 青龙面板文档 <TestedVersion type="ql" />
 
 - 文件名 `cat_bili_ql.js`
 - 默认配置文件名 `cat_bili_config.json`，或 `.json5`

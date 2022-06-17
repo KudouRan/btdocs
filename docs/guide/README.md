@@ -55,24 +55,55 @@ description: 简单介绍
 
 支持获取在线代码运行，部署一次即可长期更新（逻辑不变的情况下），添加环境变量 `USE_NETWORK_CODE` 尝试，百度云不支持环境变量，可以在附加消息中添加 `USE_NETWORK_CODE` 字段。值为字符串，可以是任意值，但不能为空。
 
-## 参考项目
+## 赞助
 
-- [SocialSisterYi/bilibili-API-collect](https://github.com/SocialSisterYi/bilibili-API-collect)
-- [catlair/bili-task-puppeteer](https://github.com/catlair/bili-task-puppeteer)
-- [lzghzr/TampermonkeyJS](https://github.com/lzghzr/TampermonkeyJS)
-- [whyour/qinglong](https://github.com/whyour/qinglong)
-- [RayWangQvQ/BiliBiliToolPro](https://github.com/RayWangQvQ/BiliBiliToolPro)
+备注昵称，将出现在感谢列表中。
 
-## 责任声明
+<el-button v-for="button in buttons" :key="button.text" :type="button.type" text @click="changeZZUrl(button)">{{ button.text }}</el-button>
 
-1. bug 是不可避免的，我们尽量减少 bug 所带来得损失，**但这并不意味着我们要为此负责**，选择权在您，望周知。
-2. 不会以任何方式收集用户 mid、Cookies、关注列表、收藏记录等信息。项目只向 B 站提供 Cookies，请不要将 Cookies 上传到 Github 等**开放平台**以及其他任何**不可信**平台。
-3. 仓库中内置的任何 B 站相关用户信息，都不会影响你的投币、充电、打赏，权利掌握在使用者手中。
-4. 如果您有任何疑问，请提交 issue，我们会尽快给予回复。
+<img :class="zzClass" :src="zzUrl" alt="zz_three"/>
 
 <script setup lang="ts">
+import zz_three from '@imgs/zz_three.png';
+import zz_alipay from '@imgs/zz_alipay.png';
+import zz_weixin from '@imgs/zz_weixin.png';
+import zz_qq from '@imgs/zz_qq.png';
+import { ref } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useReleasesStore } from '@stores/releases';
 
 const { tagName, isRefreshed } = storeToRefs(useReleasesStore());
+
+
+const zzUrls = {
+  all: zz_three,
+  alipay: zz_alipay,
+  weixin: zz_weixin,
+  qq: zz_qq,
+}
+const zzUrl = ref(zz_three);
+const zzClass = ref('');
+
+const buttons = [
+  { type: 'primary', text: '全部' , url: 'all'},
+  { type: 'primary', text: '支付宝', url: 'alipay' },
+  { type: 'primary', text: '微信' , url: 'weixin'},
+  { type: 'primary', text: 'QQ' , url: 'qq'},
+] as const
+
+function changeZZUrl(button) {
+  zzUrl.value = zzUrls[button.url];
+  if (button.url === 'all') {
+    zzClass.value = '';
+  } else {
+    zzClass.value = 'zz'
+  }
+}
 </script>
+
+<style>
+img.zz{
+  display: block;
+  width: 400px;
+}
+</style>

@@ -4,7 +4,7 @@ title: 消息通知
 description: 消息通知
 ---
 
-## Message 配置项
+## 消息推送
 
 `[message]`
 
@@ -52,7 +52,7 @@ description: 消息通知
 - 网易邮箱请参考 [什么是 POP3、SMTP 和 IMAP?](http://help.163.com/09/1223/14/5R7P6CJ600753VB8.html?servCode=6010376)
 - QQ 邮箱请参考 [如何打开 POP3/SMTP/IMAP 功能？](https://service.mail.qq.com/cgi-bin/help?subtype=1&&no=166&&id=28)
 
-## 青龙面板相关
+## 来自青龙面板
 
 例如 serverChan 直接使用的青龙面板
 

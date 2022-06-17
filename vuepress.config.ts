@@ -176,7 +176,7 @@ export default defineUserConfig({
             '/config/README.md',
             '/config/get_value.md',
             '/config/account.md',
-            '/config/functions.md',
+            '/config/func.md',
             '/config/message.md',
             '/config/github_secrets.md',
             '/config/env.md',
