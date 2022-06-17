@@ -8,6 +8,7 @@ import * as path from 'path';
 import { path as vuepressPath } from '@vuepress/utils';
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
+import { docsearchPlugin } from '@vuepress/plugin-docsearch';
 
 const isProd = process.env.NODE_ENV === 'production';
 const basePath = process.env.BASE_PATH as '/' | `/${string}/`;
@@ -186,6 +187,12 @@ export default defineUserConfig({
   }),
   plugins: [
     copyCodePlugin({}),
+    // @ts-ignore
+    docsearchPlugin({
+      appId: '4HX8QKEWIN',
+      apiKey: '753d7939116dbb6824909b0b0345864b',
+      indexName: 'btvercel',
+    }),
     registerComponentsPlugin({
       componentsDir: vuepressPath.resolve(
         __dirname,
