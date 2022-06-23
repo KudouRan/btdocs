@@ -16,8 +16,8 @@ const basePath = process.env.BASE_PATH as '/' | `/${string}/`;
 export default defineUserConfig({
   lang: 'zh-CN',
   base: isProd ? basePath : '/',
-  title: '你好， BiliTools ！',
-  description: '这是 BiliTools 文档站点',
+  title: 'BiliTools 使用说明',
+  description: '这是 BiliTools 使用说明文档站点',
   theme: defaultTheme({
     editLink: true,
     repo: 'kudouran/btdocs',
@@ -51,12 +51,12 @@ export default defineUserConfig({
         children: [
           {
             text: 'Github',
-            link: 'https://github.com/catlair/BiliTools',
+            link: 'https://github.com/Kudouran/BiliTools',
             target: '_blank',
           },
           {
             text: 'Gitee（国内）',
-            link: 'https://gitee.com/catlair/BiliTools',
+            link: 'https://gitee.com/Kudouran/BiliTools',
             target: '_blank',
           },
           {
@@ -95,7 +95,7 @@ export default defineUserConfig({
             target: '_blank',
           },
           {
-            text: '简易 CORN 定时任务',
+            text: '简易 CORN 定时任务工具',
             link: 'https://github.com/catlair/cron/',
             target: '_blank',
           },
@@ -106,12 +106,12 @@ export default defineUserConfig({
         children: [
           {
             text: 'Github',
-            link: 'https://github.com/catlair/BiliTools/issues',
+            link: 'https://github.com/Kudouran/BiliTools/issues',
             target: '_blank',
           },
           {
             text: 'Gitee（国内）',
-            link: 'https://gitee.com/catlair/BiliTools/issues',
+            link: 'https://gitee.com/Kudouran/BiliTools/issues',
             target: '_blank',
           },
           {

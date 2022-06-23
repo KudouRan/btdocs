@@ -34,24 +34,9 @@ bilitools -c ./config.json
 npm install -g @catlair/bilitools
 ```
 
-## 2. 直接运行 <TestedVersion type="local-index" />
-
-现提供打包好的代码，使用 node 直接运行。在以下任一链接下载 `index.js`
-
-- <https://gitee.com/catlair/BiliTools/releases>
-- <https://gitee.com/catlair/BiliTools/tree/gh-release/gh-release>
-- <https://github.com/catlair/BiliTools/releases>
-- <https://github.com/catlair/BiliTools/tree/gh-release/gh-release>
-
-本地中，在 `index.js` 同级目录下创建 `config.json` 并完善配置，同级目录下运行：
-
-```bash
-node index.js
-```
-
 ## windows 下定时运行
 
-linux 还是推荐用 crontab 来定时运行，windows 下也可以使用系统任务，这里提供另一种方式（依赖方式 1，请确认方式 1 能够运行）。
+linux 还是推荐用 crontab 来定时运行，windows 下也可以使用系统任务，这里提供另一种方式（依赖 npm 方式，请确认上面的方式能够运行）。
 
 下载 `cron_bilitools.exe`
 
