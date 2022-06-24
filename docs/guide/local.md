@@ -42,7 +42,7 @@ linux 还是推荐用 crontab 来定时运行，windows 下也可以使用系统
 
 <MyLink :href="downloadUrl"></MyLink>
 
-把 {{ tagName }} 替换成最新的 tag 名称，且只演示了 windows amd64 的版本，其他平台请自行下载。
+把 {{ tagName }} 替换成最新的 tag 名称，且只演示了 windows amd64（x64） 的版本，其他平台请自行下载。
 
 <https://github.com/catlair/cron/releases>
 
@@ -56,17 +56,23 @@ linux 还是推荐用 crontab 来定时运行，windows 下也可以使用系统
 
 `-config=./config/config.json` （必须）配置文件的路径  
 `-time=08:08:08` （可选）每天运行时间，默认为 08:08:00  
-`-start=false` （可选）是否立即执行，默认为 false，设置 `true` 电脑开机立即启动
+`-start=false` （可选）是否立即执行，默认为 false，设置 `true` 电脑开机立即启动  
 `-once=false` （可选）每天只执行一次，默认为 false，设置 `true` 只执行一次（避免多次开关机多次运行）
 
 ![win_setting_args](@imgs/win_setting_args.png)
 
 - 将快捷方式移动到开机启动项
   ```bash
-     %systemdrive%%homepath%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+  %systemdrive%%homepath%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
   ```
 
 ![win_start](@imgs/win_start.png)
+
+## 参考视频
+
+windows 下的定时运行方式，可以参考这个视频：
+
+<BilibiliVideo bv="BV1Na411W7nk"/>
 
 <script setup>
 const ghproxy = __GLOBAL_GHPROXY__
