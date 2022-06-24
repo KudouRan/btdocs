@@ -72,6 +72,12 @@ exports.handler = require('@catlair/bilitools').fc_handler();
 
 ![/images/ali-ram-new](/images/ali-ram-new.png)
 
-将 ID 和 KEY 添加到云函数的配置中（[位置参考](#高级配置)）
+![/images/ali-new-access](/images/ali-new-access.png)
+
+将 `ALI_SECRET_ID` 和 `ALI_SECRET_KEY` 添加到云函数的配置中（[位置参考](#高级配置)）
 
 ![fc-ali-sercret](/images/fc-ali-secret.png)
+
+## 视频参考
+
+<BilibiliVideo bv="BV1VU4y1Q7zz"/>
