@@ -14,7 +14,9 @@ description: 青龙面板运行
 
 安装 Node 依赖（侧边栏中依赖管理）
 
-`@catlair/bilitools`
+```txt
+@catlair/bilitools
+```
 
 然后拉取青龙面板运行的代码
 
@@ -36,6 +38,18 @@ ql raw https://raw.githubusercontent.com/Kudouran/BiliTools/main/tools/bilitools
 
   </CodeGroupItem>
 
+  <CodeGroupItem title="手动">
+
+```js
+require('@catlair/bilitools').ql();
+```
+
+手动创建一个 `bilitools_npm.js` 文件，并且把上面的代码拷贝进去
+
+然后手动创建一个任务， `task bilitools_npm.js`
+
+  </CodeGroupItem>
+
 </CodeGroup>
 
 创建一个配置文件
@@ -46,6 +60,16 @@ ql raw https://raw.githubusercontent.com/Kudouran/BiliTools/main/tools/bilitools
 或者使用环境变量
 
 ![环境变量](https://user-images.githubusercontent.com/81743795/148545529-73c95e3d-219f-4bf9-b266-7ad03bd9e9be.png)
+
+## 更新 npm 包
+
+自动更新如下所示：
+
+![ql_update](/images/ql_update.png)
+
+```bash
+pnpm add -g @catlair/bilitools
+```
 
 ## 参考视频
 
