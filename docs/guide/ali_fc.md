@@ -81,3 +81,7 @@ exports.handler = require('@catlair/bilitools').fc_handler();
 ## 视频参考
 
 <BilibiliVideo bv="BV1VU4y1Q7zz"/>
+
+## 配置文件
+
+<ConfigPath />

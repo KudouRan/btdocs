@@ -79,3 +79,7 @@ const ghproxy = __GLOBAL_GHPROXY__
 const tagName = 'v0.0.2'
 const downloadUrl = `https://${ghproxy}/https://github.com/catlair/cron/releases/download/${tagName}/cron_windows_amd64.tar.gz`
 </script>
+
+## 配置文件
+
+<ConfigPath />

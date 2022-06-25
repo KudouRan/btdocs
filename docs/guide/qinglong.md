@@ -74,3 +74,7 @@ pnpm add -g @catlair/bilitools
 ## 参考视频
 
 <BilibiliVideo bv="BV1fB4y1i7hL" />
+
+## 配置文件
+
+<ConfigPath indexName="bilitools_npm" configName="cat_bili_config"/>
