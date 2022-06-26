@@ -12,7 +12,7 @@
 │  ├── {{configName}}.json
 │  └── {{configName}}.json5
 └── src
-   ├── {{configName}}
+   ├── config
    │  ├── {{configName}}.json
    │  └── {{configName}}.json5
    ├── {{configName}}.json
