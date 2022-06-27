@@ -22,6 +22,7 @@ description: 功能开关
 | liveLottery         | `false` | 直播天选时刻            |
 | liveIntimacy        | `false` | 牌子亲密度              |
 | mangaTask           | `false` | 漫画任务                |
+| bigPoint            | `false` | 大会员领取大积分        |
 | ~~mangaSign~~       | `false` | （请使用 mangaTask）    |
 | ~~liveRedPack~~     | `false` | ~~直播天选红包~~        |
 | ~~liveSendMessage~~ | `false` | （请使用 liveIntimacy） |
@@ -46,6 +47,7 @@ description: 功能开关
     liveLottery: false,
     liveRedPack: false,
     supGroupSign: false,
+    bigPoint: false,
   },
 }
 ```
@@ -234,15 +236,15 @@ description: 功能开关
 
 `[manga]`
 
-| Key         | 值类型     | 默认值 | 说明                                                                                           |
-| ----------- | ---------- | ------ | ---------------------------------------------------------------------------------------------- |
-| sign        | 布尔       | `true` | 漫画签到任务                                                                                   |
+| Key         | 值类型     | 默认值  | 说明                                                                                           |
+| ----------- | ---------- | ------- | ---------------------------------------------------------------------------------------------- |
+| sign        | 布尔       | `true`  | 漫画签到任务                                                                                   |
 | buy         | 布尔       | `false` | 是否使用即将过期的漫读券                                                                       |
-| mc          | 数组数组   | `[]`   | 购买漫画 id（优先级高）                                                                        |
-| name        | 字符串数组 | `[]`   | 购买漫画名称（优先级中）                                                                       |
-| love        | 布尔       | `true` | 购买追漫（优先级低）                                                                           |
-| buyInterval | 数值       | `6`    | 执行购买漫画间隔时间（单位天），默认 6，即每月 1，7，13，19，25。设置为 0 表示关闭，1 表示每天 |
-| buyWeek     | 数值数组   | `[3]`  | 星期几执行购买漫画，默认星期 3，和上面的 buyInterval 不冲突                                    |
+| mc          | 数组数组   | `[]`    | 购买漫画 id（优先级高）                                                                        |
+| name        | 字符串数组 | `[]`    | 购买漫画名称（优先级中）                                                                       |
+| love        | 布尔       | `true`  | 购买追漫（优先级低）                                                                           |
+| buyInterval | 数值       | `6`     | 执行购买漫画间隔时间（单位天），默认 6，即每月 1，7，13，19，25。设置为 0 表示关闭，1 表示每天 |
+| buyWeek     | 数值数组   | `[3]`   | 星期几执行购买漫画，默认星期 3，和上面的 buyInterval 不冲突                                    |
 
 - 布尔值，`true` 表示开启，`false` 表示关闭
 - mc 获取：<https://manga.bilibili.com/detail/mc29195> 这篇漫画的 mcId 就是 `29195`。[获取方式](#漫画-id)

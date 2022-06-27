@@ -26,6 +26,7 @@ description: 简单介绍
 - [x] 多账号独立配置
 - [x] 直播天选时刻（测试） <Badge type="warning" text="慎用" vertical="middle" />
 - [x] 粉丝勋章/亲密度（测试）
+- [ ] 大会员领取大积分（测试）<Badge type="warning" text="新增" vertical="middle" />
 - [x] 支持 Docker 、腾讯 SCF 、阿里 FC、百度 CFC、华为 FG、青龙面板等方式运行，支持执行消息推送
 - [x] 代码自动在线更新，发包任你发 <Badge type="tip" text="推荐" vertical="middle" />
 - [ ] ~~直播礼物红包（测试）~~
@@ -46,6 +47,13 @@ description: 简单介绍
 请不要使用直播礼物红包 `liveRedPack`，经过测试发现，并不是参与即可获取红包，b 站可能存在其他机制。
 
 ## 更新
+
+::: tip v0.5.220627
+<Badge type="tip" text="新增" vertical="middle" />新增大会员领取大积分，函数名 <code>bigPoint</code>。目前存在问题，暂时不支持领取会员购浏览 10s（+10 积分）。故每日可领取签到 5/10、观看视频（40）、浏览界面（20），共计 65+ 积分。
+<br>
+<br>
+<Badge type="warning" text="调整" vertical="middle" />年度大会员部分代金券只有 15 天有效期，所以取消自动领取，避免需要时过期。
+:::
 
 新增天选时刻、~~红包~~，支持自动读取/删除关注消息。
 
