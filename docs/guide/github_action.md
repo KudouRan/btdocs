@@ -47,7 +47,7 @@ jobs:
         run: sudo timedatectl set-timezone 'Asia/Shanghai'
       # 运行
       - name: Run APP
-        timeout-minutes: ${{secrets.TIMEOUT_MINUTES || 15}} # 超时时间(分钟)
+        timeout-minutes: ${{secrets.TIMEOUT_MINUTES || 60}} # 超时时间(分钟)
         run: |
           sudo docker run \
            --env BILITOOLS_CONFIG="${{ secrets.BILITOOLS_CONFIG }}" \
@@ -61,13 +61,21 @@ jobs:
 
 ![提交](/images/125164475-efec1c00-e1c4-11eb-940b-aedb953e61b7.png)
 
-配置文件 通过此链接获取 [点击这里](https://catlair.gitee.io/bili-tools-docs-deploy/#/users/)
+## 修改配置
+
+[点击获取配置详情和参考配置](../config/README.md)
+
+为了配置安全，应该将配置复制到此处并进行 **GZIP 压缩** <https://www.baidufe.com/fehelper/en-decode/>
+
+将压缩后的配置复制到项目的 secrets 中
 
 ![配置](/images/125164733-4a39ac80-e1c6-11eb-99be-9e07668874a3.png)
 
 填写配置
 
-![bili_config](/images/125164820-c0d6aa00-e1c6-11eb-8d97-4ccabf40e096.png)
+名字是 `BILITOOLS_CONFIG`，值是你压缩后的配置。
+
+![bili_config](/images/gha_secret.png)
 
 运行 Action
 
