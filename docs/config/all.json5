@@ -36,6 +36,8 @@
       liveLottery: false,
       // 粉丝牌等级
       liveIntimacy: false,
+      // 大会员大积分
+      bigPoint: false,
     },
     // 消息推送
     message: {
