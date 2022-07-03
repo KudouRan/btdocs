@@ -274,6 +274,7 @@ export default defineUserConfig({
   alias: {
     '@imgs': path.resolve(__dirname, './docs/.vuepress/public/images'),
     '@stores': path.resolve(__dirname, './docs/.vuepress/stores'),
+    '@utils': path.resolve(__dirname, './docs/.vuepress/utils'),
   },
   define: {
     __GLOBAL_GHPROXY__: 'ghproxy.com',

@@ -8,7 +8,8 @@ export const useReleasesStore = defineStore('releases', () => {
 
   useFetch<string>('https://btdocs.vercel.app/api/releases').then(
     ({ data }) => {
-      tagName.value = JSON.parse(data.value).data.tag_name || tagName.value;
+      tagName.value =
+        JSON.parse(data.value as any).data.tag_name || tagName.value;
       isRefreshed.value = true;
     }
   );

@@ -44,6 +44,31 @@ LIVE_BUVID=AUTO8016188357987702; bsource=search_baidu; PVID=2
 
 ![chrome-net-bnav](/images/chrome-net-bnav.png)
 
+::: danger 注意
+在使用 Chromium 类的浏览器时复制时一定要选中**复制**，而不是使用自带的**复制值**功能。
+:::
+
+选中值，点击右键，选择 `复制`或者按键 `Ctrl + C`，得到结果会被编码（如下例）。
+
+```
+SESSDATA=b2817085%2C1672313089%2C25294%2A71; PVID=3; b_timer=%7B%22ffp%22%3A%7B%22333.851.fp.risk_B0835BF0%22%3A%22181C34B87E8%22%2C%22777.5.0.0.fp.risk_B0835BF0%22%3A%22181C352F104%22%7D%7D
+```
+
+点击项，点击右键，选择 `复制值`，得到结果并没有被编码（如下举例），这个添加到配置中是会导致 json5 格式错误的，并且部分接口数据也会异常。
+
+```
+SESSDATA=b281131,167123189,1235294*21; PVID=3; b_timer={"ffp":{"333.851.fp.risk_B0835BF0":"181C34B87E8","777.5.0.0.fp.risk_B0835BF0":"181C352F104"}}
+```
+
+当然你可以把其放到这里进行编码
+
+<el-space>
+<el-input v-model="cookie" placeholder="请输入 Cookie"></el-input>
+<el-button @click="encodeCookieClick">点击编码</el-button>
+</el-space>
+
+<code v-if="newCookie">{{ newCookie }}</code>
+
 ## 自动获取 UserAgent
 
 当前浏览器的 UserAgent 如下：
@@ -58,12 +83,21 @@ LIVE_BUVID=AUTO8016188357987702; bsource=search_baidu; PVID=2
 
 在线地址: <https://blogin-catlair.vercel.app/api> 由于技术原因，在线地址服务器在美国等地，如果介意请不要使用。
 
+> 在和 cookie 同级的地方配置 accessKey （是写成 accessKey，不是 access_key），部分接口会优先使用 accessKey 例如大积分任务。
+
 <script setup>
 import { ref, onMounted } from "vue";
+import { encodeCookie } from '@utils/cookie';
 
 const userAgent = ref('');
+const cookie = ref('');
+const newCookie = ref('');
 
 onMounted(() => {
   userAgent.value = navigator.userAgent;
 });
+
+function encodeCookieClick(){
+  newCookie.value = encodeCookie(cookie.value);
+}
 </script>
