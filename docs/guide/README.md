@@ -46,16 +46,14 @@ description: 简单介绍
 
 请不要使用直播礼物红包 `liveRedPack`，经过测试发现，并不是参与即可获取红包，b 站可能存在其他机制。
 
-::: warning
-cookie 会自动更新，在解决了，在解决了进度 0。
-
-大积分部分账号出现非法访问，在解决了，在解决了进度 0。
+::: danger cookie 重要提示（关于频繁失效）
+请务必查看 Cookie 的获取[点击这里跳转](../config/get_value.md)
 :::
 
 ## 更新
 
 ::: tip v0.5.220628
-<Badge type="tip" text="新增" vertical="middle" />新增大会员领取大积分，函数名 <code>bigPoint</code>。故每日可领取签到 5/10、观看视频（20 \* 2）、浏览界面（10 \* 3），共计 75+ 积分。
+<Badge type="tip" text="新增" vertical="middle" />新增大会员领取大积分，函数名 <code>bigPoint</code>。故每日可领取签到 5/10、观看视频（20 _ 2）、浏览界面（10 _ 3），共计 75+ 积分。
 <br>
 <br>
 <Badge type="warning" text="调整" vertical="middle" />年度大会员部分代金券只有 15 天有效期，所以取消自动领取，避免需要时过期。

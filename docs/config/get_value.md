@@ -23,6 +23,18 @@ CURRENT_FNVAL=80; blackside_state=1; rpdid=|(kmJYYJ)lkR0J'uYu)llkJYJ; _dfcaptcha
 LIVE_BUVID=AUTO8016188357987702; bsource=search_baidu; PVID=2
 ```
 
+**为了避免 cookie 被刷新失效**，你应该使用隐式窗口重新登录哔站，并获取新的 cookie。
+
+隐私窗口打开方式（举例）：
+
+![隐私窗口](@imgs/br_ys.png)
+
+获取成功后应该直接关闭隐私窗口，而不是退出你的哔站账号，那样 cookie 立马失效。
+
+如下图所示，**这是错误的**，某些人喜欢退出后再登录第二个账号，这样第一个账号的 cookie 就会失效。你应该直接关闭隐私窗口，然后再打开一个新的隐私窗口。
+
+![bili_exit](@imgs/bili_exit.png)
+
 ### Firefox
 
 任意方式进入 b 站（搜索，收藏夹，地址访问等）
