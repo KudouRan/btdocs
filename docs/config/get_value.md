@@ -23,7 +23,7 @@ CURRENT_FNVAL=80; blackside_state=1; rpdid=|(kmJYYJ)lkR0J'uYu)llkJYJ; _dfcaptcha
 LIVE_BUVID=AUTO8016188357987702; bsource=search_baidu; PVID=2
 ```
 
-**为了避免 cookie 被刷新失效**（例如你时常喜欢使用浏览器访问b站，那就不要直接复制它的 cookie，因为目前存在 cookie 刷新的情况，你保留的就是失效了），你应该使用隐式窗口重新登录哔站，并获取新的 cookie。
+**为了避免 cookie 被刷新失效**（例如你时常使用浏览器访问b站，那就不要直接复制它的 cookie，因为目前存在 cookie 自动刷新的情况，你保留的就会失效了），你应该使用隐私窗口重新登录哔站，并获取新的 cookie。
 
 隐私窗口打开方式（举例）：
 
