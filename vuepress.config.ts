@@ -76,7 +76,7 @@ export default defineUserConfig({
         children: [
           {
             text: 'JSON5 校验',
-            link: 'https://www.lddgo.net/string/json5',
+            link: 'https://verytoolz.com/json5-validator.html',
             target: '_blank',
           },
           {

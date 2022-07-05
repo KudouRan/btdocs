@@ -7,7 +7,7 @@ description: 配置说明
 ## 配置相关
 
 - 配置使用的 `json5`，兼容 `json` 且更加灵活，可以支持 `注释`。
-- 务必使用 <https://www.lddgo.net/string/json5> 校验 json5 格式。
+- 务必使用 <https://verytoolz.com/json5-validator.html> 校验 json5 格式（校验不通过无法继续使用）。
 - Gzip 压缩地址（有说明时才用，一般都不需要用）<https://www.baidufe.com/fehelper/en-decode/>
 - 我希望你能把必看的看完（比如后一章的[必要值获取](./get_value.md)，没看完就问，不给予回答，请换个程序用，别找我。
 
@@ -21,9 +21,11 @@ description: 配置说明
 @[code](./prue.json5)
 :::
 
-**多用户配置只用于部分情况，并不是所有都支持**
+**多用户配置只用于部分情况，并不是所有都支持** （云函数不支持）
 
 不支持的情况填写多个只会使用第一个, 不用担心
+
+如果你就是想要单用户配置，把里面的一个拿出不就好了 `[{},{},{}]` 拿出 `{}`。
 
 ## 配置文件路径
 
