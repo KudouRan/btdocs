@@ -68,8 +68,10 @@ require('@catlair/bilitools').ql();
 ![ql_update](/images/ql_update.png)
 
 ```bash
-pnpm add -g @catlair/bilitools
+pnpm remove -g @catlair/bilitools && pnpm add -g @catlair/bilitools
 ```
+
+PS: 可以不执行 `pnpm remove -g @catlair/bilitools`，不过前一个版本就会一直保留在磁盘中。
 
 ## 参考视频
 

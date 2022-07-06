@@ -23,7 +23,7 @@ CURRENT_FNVAL=80; blackside_state=1; rpdid=|(kmJYYJ)lkR0J'uYu)llkJYJ; _dfcaptcha
 LIVE_BUVID=AUTO8016188357987702; bsource=search_baidu; PVID=2
 ```
 
-**为了避免 cookie 被刷新失效**（例如你时常使用浏览器访问b站，那就不要直接复制它的 cookie，因为目前存在 cookie 自动刷新的情况，你保留的就会失效了），你应该使用隐私窗口重新登录哔站，并获取新的 cookie。
+**为了避免 cookie 被刷新失效**（例如你时常使用浏览器访问 b 站，那就不要直接复制它的 cookie，因为目前存在 cookie 自动刷新的情况，你保留的就会失效了），你应该使用隐私窗口重新登录哔站，并获取新的 cookie。
 
 隐私窗口打开方式（举例）：
 
@@ -37,7 +37,7 @@ LIVE_BUVID=AUTO8016188357987702; bsource=search_baidu; PVID=2
 
 ### Firefox
 
-任意方式进入 b 站（搜索，收藏夹，地址访问等）
+打开浏览器隐私窗口，任意方式进入 b 站（搜索，收藏夹，地址访问等），登录账号。  
 按 F12 （或者右键 --> 检查）打开开发者工具，切换到`网络` ( `network` )  
 点击重新载入（或者按 F5，Ctrl + R 等）刷新页面
 
@@ -49,7 +49,7 @@ LIVE_BUVID=AUTO8016188357987702; bsource=search_baidu; PVID=2
 
 ### Chrome/Chromium
 
-任意方式进入 b 站（搜索，收藏夹，地址访问等）  
+打开浏览器隐私窗口，任意方式进入 b 站（搜索，收藏夹，地址访问等），登录账号。  
 按 F12 （或者右键 --> 检查）打开开发者工具，切换到 `网络` ( `network` )  
 点击重新载入（或者按 F5，Ctrl + R 等）刷新页面  
 点击某一个请求（通常为 nav ）
