@@ -69,8 +69,8 @@
       targetCoins: 5,
       // 自定义 up
       customizeUp: [],
-      // 重试次数
-      retryNum: 4,
+      // 当获取已投币数量失败，假设已投币数量
+      todayCoins: 0,
       // 是否只投指定 up
       upperAccMatch: true,
     },
