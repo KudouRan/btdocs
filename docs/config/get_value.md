@@ -4,7 +4,7 @@ title: 必要值获取（必看）
 description: 必要值获取（必看）
 ---
 
-## 获取 Cookie 的方法
+## PC 获取 Cookie 的方法
 
 以 PC 端浏览器举例（推荐使用 Firefox/Chrome/Chromium Edge）
 
@@ -80,6 +80,14 @@ SESSDATA=b281131,167123189,1235294*21; PVID=3; b_timer={"ffp":{"333.851.fp.risk_
 </el-space>
 
 <code v-if="newCookie">{{ newCookie }}</code>
+
+## 移动端获取 cookie
+
+推荐使用 `alook` 浏览器，可以直接在应用商城下载，或者在 [官网](https://www.alookweb.com/) 下载。
+
+如果有类似的浏览器，欢迎说明。
+
+[操作详情点击](./get_cookie_mobile.md)
 
 ## 自动获取 UserAgent
 
