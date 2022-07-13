@@ -29,6 +29,7 @@ description: 简单介绍
 - [ ] 大会员领取大积分（测试）<Badge type="warning" text="新增" vertical="middle" />
 - [x] 支持 Docker 、腾讯 SCF 、阿里 FC、百度 CFC、华为 FG、青龙面板等方式运行，支持执行消息推送
 - [x] 代码自动在线更新，发包任你发 <Badge type="tip" text="推荐" vertical="middle" />
+- [x] 风纪委员（迁移，测试中），来自 [dd178/BILI_judgement](https://github.com/dd178/BILI_judgement/blob/master/judgement.py)，（我们不生产代码，我们只是代码的搬运工），慎用，如有不良后果，概不负责。
 - [ ] ~~直播礼物红包（测试）~~
 - [ ] ~~风纪委员 headless 版（不支持 scf）见 [bili-task-puppeteer](https://github.com/catlair/bili-task-puppeteer)~~（没有资格）
 
@@ -52,18 +53,30 @@ description: 简单介绍
 
 ## 更新
 
+::: tip v0.5.220711
+<Badge type="tip" text="新增" vertical="middle" /> 新增风纪委员，函数名 <code>judgement</code>。慎用，如有不良后果，概不负责。
+<br>
+<Badge type="warning" text="修复" vertical="middle" /> Cookie URL 编码问题（部分接口对编码有要求），Cookie 格式兼容性问题（内容空格间隔，后置分号等）。
+<br>
+<Badge type="warning" text="修复" vertical="middle" /> 投币时获取稿件出错的问题，以及部分用户关注列表稿件太少导致多次投币失败的问题。
+<br>
+<Badge type="tip" text="优化" vertical="middle" /> SetCookie 获取。
+<br>
+:::
+
 ::: tip v0.5.220628
 <Badge type="tip" text="新增" vertical="middle" />新增大会员领取大积分，函数名 <code>bigPoint</code>。故每日可领取签到 5/10、观看视频（20 _ 2）、浏览界面（10 _ 3），共计 75+ 积分。
 <br>
-<br>
-<Badge type="warning" text="调整" vertical="middle" />年度大会员部分代金券只有 15 天有效期，所以取消自动领取，避免需要时过期。
 :::
 
-新增天选时刻、~~红包~~，支持自动读取/删除关注消息。
+风纪委员（迁移，测试中），来自 [dd178/BILI_judgement](https://github.com/dd178/BILI_judgement/blob/master/judgement.py)，hash：[b74ebc81fb47d98b7008ccd662ab0c5c9e94707c](https://github.com/dd178/BILI_judgement/commit/b74ebc81fb47d98b7008ccd662ab0c5c9e94707c)（我们不生产代码，我们只是代码的搬运工），对原本的代码做了以下修改：
+
+- 完善了 api 的部分 header 信息。
+- 增加了当获取参考观点数量不足时，跳过接受案件，而是继续下一个案件（mode2 会保留案件）。
+- 将投票内容为空的日志补全。
+- 改变代码风格。
 
 直播获取小心心改版，且取消直播间弹幕功能，使用 `粉丝勋章/亲密度（测试）` 替代。
-
-领取年度大会员权益/B 币券，更新为每日检测，适应新规则。
 
 支持获取在线代码运行，部署一次即可长期更新（逻辑不变的情况下），添加环境变量 `USE_NETWORK_CODE` 尝试，百度云不支持环境变量，可以在附加消息中添加 `USE_NETWORK_CODE` 字段。值为字符串，可以是任意值，但不能为空。
 
@@ -74,6 +87,12 @@ description: 简单介绍
 <el-button v-for="button in buttons" :key="button.text" :type="button.type" text @click="changeZZUrl(button)">{{ button.text }}</el-button>
 
 <img :class="zzClass" :src="zzUrl" alt="zz_three"/>
+
+### QQ 群
+
+扫码加入群，密码 catlair 最后一个字母：
+
+![qq群](/images/qq_group.png)
 
 <script setup lang="ts">
 import zz_three from '@imgs/zz_three.png';

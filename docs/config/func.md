@@ -23,6 +23,7 @@ description: 功能开关
 | liveIntimacy        | `false` | 牌子亲密度              |
 | mangaTask           | `false` | 漫画任务                |
 | bigPoint            | `false` | 大会员领取大积分        |
+| judgement           | `false` | 风纪委员                |
 | ~~mangaSign~~       | `false` | （请使用 mangaTask）    |
 | ~~liveRedPack~~     | `false` | ~~直播天选红包~~        |
 | ~~liveSendMessage~~ | `false` | （请使用 liveIntimacy） |
@@ -48,6 +49,7 @@ description: 功能开关
     liveRedPack: false,
     supGroupSign: false,
     bigPoint: false,
+    judgement: false,
   },
 }
 ```
@@ -268,6 +270,34 @@ description: 功能开关
     buyInterval: 6,
     // 星期几执行购买漫画（与 buyInterval 都有效）
     buyWeek: [3],
+  },
+}
+```
+
+:::
+
+## 风纪委员
+
+`[jury]`
+
+| Key        | 值类型   | 默认值   | 说明                                                                                                                                                       |
+| ---------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| mode       | 数值     | `1`      | 选择模式，1 为获取案件后有观点就参考观点，没有就投默认，2 为获取案件后有观点就参考观点，没有就先暂存案件 id 跳过，等案件池空了获取不到观点后再倒回去投默认 |
+| vote       | 数组数组 | `[0, 1]` | 默认投票，0 为好，1 为普通，2 为差，3 为无法判断,填多个为随机投票，填一个为固定投票，可以填写多个增加概率，例如 `[0, 0, 1]` 投好是普通的两倍概率           |
+| once       | 布尔     | `true`   | true 为审满案件后退出，false 为获取不到新案件后退出                                                                                                        |
+| opinionMin | 数值     | `3`      | 获取到其他用户观点后，如果最多项数量没有超过 opinionMin 则判当成参考不足处理。（避免只有一个人投差就直接更跟投差）                                         |
+
+- 布尔值，`true` 表示开启，`false` 表示关闭
+
+::: details 参考写法
+
+```json5
+{
+  manga: {
+    mode: 1,
+    vote: [0, 1],
+    once: true,
+    opinionMin: 3,
   },
 }
 ```
