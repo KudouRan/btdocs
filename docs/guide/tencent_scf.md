@@ -70,3 +70,13 @@ exports.main_handler = require('@catlair/bilitools').scf_handler();
 ![create-trigger](/images/create-trigger.png)
 
 ![create-trigger](/images/scf-trigger-config.png)
+
+## 视频参考
+
+帮忙录录？
+
+<!-- <BilibiliVideo bv="BV1VU4y1Q7zz"/> -->
+
+## 配置文件
+
+<ConfigPath />

@@ -72,7 +72,7 @@ description: 简单介绍
 风纪委员（迁移，测试中），来自 [dd178/BILI_judgement](https://github.com/dd178/BILI_judgement/blob/master/judgement.py)，hash：[b74ebc81fb47d98b7008ccd662ab0c5c9e94707c](https://github.com/dd178/BILI_judgement/commit/b74ebc81fb47d98b7008ccd662ab0c5c9e94707c)（我们不生产代码，我们只是代码的搬运工），对原本的代码做了以下修改：
 
 - 完善了 api 的部分 header 信息。
-- 增加了当获取参考观点数量不足时，跳过接受案件，而是继续下一个案件（mode2 会保留案件）。
+- 增加两次任务直接的一点随机延时。
 - 将投票内容为空的日志补全。
 - 改变代码风格。
 
