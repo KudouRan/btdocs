@@ -8,6 +8,10 @@ description: 简单介绍
 如果对与此文档有补充、改进意见或者修改，每个页面都可以直接点击末尾的`在 GitHub 上编辑此页`。非常感谢！
 :::
 
+::: tip 参与贡献
+如果喜欢请为 <https://github.com/KudouRan/BiliTools> 点个 star，关注才能不迷路。非常感谢！
+:::
+
 ## 支持功能 <Badge v-if="isRefreshed" type="tip" :text="`版本${tagName}`" vertical="top" />
 
 - [x] 部分方式每日随机时间运行 <Badge type="tip" text="推荐" vertical="middle" />
@@ -82,6 +86,10 @@ description: 简单介绍
 
 ## 赞助
 
+最好也是最简单的赞助就是为 <https://github.com/KudouRan/BiliTools> 点个 star，关注才能不迷路。非常感谢！
+
+当然你也可以请作者喝杯奶茶，吃根油条（虽然目前为 0.00000 元）
+
 备注昵称，将出现在感谢列表中。
 
 <el-button v-for="button in buttons" :key="button.text" :type="button.type" text @click="changeZZUrl(button)">{{ button.text }}</el-button>
@@ -90,7 +98,7 @@ description: 简单介绍
 
 ### QQ 群
 
-扫码加入群，密码 catlair 最后一个字母：
+扫码加入群，密码 catlair 最后一个字母（群号：759694670）：
 
 ![qq群](/images/qq_group.png)
 
