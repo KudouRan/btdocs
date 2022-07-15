@@ -97,11 +97,21 @@ SESSDATA=b281131,167123189,1235294*21; PVID=3; b_timer={"ffp":{"333.851.fp.risk_
 
 ## 手机端 access_key
 
+### 扫码获取
+
 目前暂时不需要 access_key，但是以后可能会用到，所以这里提供一个获取方法。
 
 <https://github.com/catlair/blogin/>
 
 在线地址: <https://blogin-catlair.vercel.app/api> 由于技术原因，在线地址服务器在美国等地，如果介意请不要使用。
+
+### 通过浏览器 cookie 获取
+
+缺点是无法获取 refresh_token，导致无法刷新 access_key。
+
+[操作详情点击](./get_access_key_pc.md)
+
+### 说明
 
 > 在和 cookie 同级的地方配置 accessKey （是写成 accessKey，不是 access_key），部分接口会优先使用 accessKey 例如大积分任务。
 
