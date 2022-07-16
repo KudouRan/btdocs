@@ -19,6 +19,7 @@ description: 功能开关
 | getVipPrivilege     | `false` | 获取大会员权益          |
 | giveGift            | `false` | 赠送过期礼物            |
 | matchGame           | `false` | 赛事竞猜                |
+| batchUnfollow       | `false` | 取消关注（lottery）     |
 | liveLottery         | `false` | 直播天选时刻            |
 | liveIntimacy        | `false` | 牌子亲密度              |
 | mangaTask           | `false` | 漫画任务                |
@@ -40,6 +41,7 @@ description: 功能开关
     liveSignTask: true,
     shareAndWatch: true,
     mangaTask: false,
+    batchUnfollow: false,
     supGroupSign: false,
     charging: false,
     getVipPrivilege: false,
@@ -205,14 +207,14 @@ description: 功能开关
 
 `[intimacy]`
 
-| Key             | 值类型           | 默认值  | 说明                                     |
-| --------------- | ---------------- | ------- | ---------------------------------------- |
-| liveSendMessage | 布尔             | `true`  | 直播弹幕（+100，点亮灰牌子）             |
-| liveShare       | 布尔             | `true`  | 分享直播（+100 \* 5）                    |
-| liveLike        | 布尔             | `true`  | 点赞直播间 (+200 \* 3)                   |
-| liveHeart       | 布尔             | `false` | 观看直播 (+100 \* 1)                     |
-| whiteList       | **用户 id** 数组 | `[]`    | 只操作此列表中的（优先级高于 blackList） |
-| blackList       | **用户 id** 数组 | `[]`    | 操作全部，但排除其中的                   |
+| Key             | 值类型           | 默认值  | 说明                                                                                                     |
+| --------------- | ---------------- | ------- | -------------------------------------------------------------------------------------------------------- |
+| liveSendMessage | 布尔             | `true`  | 直播弹幕（+100，点亮灰牌子）                                                                             |
+| liveLike        | 布尔             | `true`  | 点赞直播间 (+100)                                                                                        |
+| liveHeart       | 布尔             | `false` | 观看直播 (+100 \* n)                                                                                     |
+| limitFeed       | 数值             | `1500`  | 每日亲密度上限 （系统为 1500），越小则 liveHeart 执行时间越少，反之越长，可以超过 1500，多做点可能更稳妥 |
+| whiteList       | **用户 id** 数组 | `[]`    | 只操作此列表中的（优先级高于 blackList）                                                                 |
+| blackList       | **用户 id** 数组 | `[]`    | 操作全部，但排除其中的                                                                                   |
 
 - 布尔值，`true` 表示开启，`false` 表示关闭
 - **用户 id**（主站的 id） 并非主播直播间 ID，[获取方式](#用户-id)
@@ -223,9 +225,9 @@ description: 功能开关
 {
   intimacy: {
     liveSendMessage: true,
-    liveShare: true,
     liveLike: true,
     liveHeart: false,
+    limitFeed: 1500,
     whiteList: [],
     blackList: [],
   },
@@ -285,7 +287,7 @@ description: 功能开关
 | mode       | 数值     | `1`      | 选择模式，1 为获取案件后有观点就参考观点，没有就投默认，2 为获取案件后有观点就参考观点，没有就先暂存案件 id 跳过，等案件池空了获取不到观点后再倒回去投默认 |
 | vote       | 数组数组 | `[0, 1]` | 默认投票，0 为好，1 为普通，2 为差，3 为无法判断,填多个为随机投票，填一个为固定投票，可以填写多个增加概率，例如 `[0, 0, 1]` 投好是普通的两倍概率           |
 | once       | 布尔     | `true`   | true 为审满案件后退出，false 为获取不到新案件后退出                                                                                                        |
-| opinionMin | 数值     | `3`      | 获取到其他用户观点后，如果最多项数量没有超过 opinionMin 则判当成参考不足处理。（避免只有一个人投差就直接更跟投差）                                         |
+| opinionMin | 数值     | `3`      | 获取到其他用户观点后，如果最多项数量小于 opinionMin 则当成参考不足处理。（避免只有一个人投差就直接跟着投差）                                               |
 
 - 布尔值，`true` 表示开启，`false` 表示关闭
 
@@ -293,7 +295,7 @@ description: 功能开关
 
 ```json5
 {
-  manga: {
+  jury: {
     mode: 1,
     vote: [0, 1],
     once: true,
@@ -303,6 +305,30 @@ description: 功能开关
 ```
 
 :::
+
+## 大积分
+
+`[bigPoint]`
+
+| Key     | 值类型   | 默认值 | 说明                                                                          |
+| ------- | -------- | ------ | ----------------------------------------------------------------------------- |
+| isRetry | 布尔     | `true` | 是否在完成后等待 5s 再检查一次                                                |
+| isWatch | 布尔     | `true` | 是否完成观看视频的任务（模拟，不需要 30 分钟） ，会产生历史记录               |
+| epids   | 数值数组 | `[]`   | 视频的 epid （集数 id），需要目标长度大于 40 分钟，默认直接在西游记中随机一集 |
+
+注意：
+
+- 视频是正片，非 up 投稿，例如动画、纪录片、电影、电视剧、综艺等
+
+```json5
+{
+  bigPoint: {
+    isRetry: true,
+    isWatch: true,
+    epids: [],
+  },
+}
+```
 
 ## 参数说明
 

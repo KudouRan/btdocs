@@ -32,6 +32,8 @@
       giveGift: false,
       // 赛事竞猜
       matchGame: false,
+      // 取消关注
+      batchUnfollow: false,
       // 直播天选时刻
       liveLottery: false,
       // 粉丝牌等级
@@ -134,11 +136,11 @@
     intimacy: {
       // 直播弹幕
       liveSendMessage: true,
-      // 分享直播间
-      liveShare: true,
       // 点赞直播间
       liveLike: true,
-      // 30 分钟直播心跳（默认关闭）
+      // 每日亲密度上限 （系统 1500）
+      limitFeed: 1500,
+      // 耗时很长的直播心跳（默认关闭）
       liveHeart: false,
       // 白名单
       whiteList: [],

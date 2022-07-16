@@ -107,7 +107,8 @@ SESSDATA=b281131,167123189,1235294*21; PVID=3; b_timer={"ffp":{"333.851.fp.risk_
 
 ### 通过浏览器 cookie 获取
 
-缺点是无法获取 refresh_token，导致无法刷新 access_key。
+缺点是无法获取 refresh_token，导致无法刷新 access_key。  
+优点是搜集浏览器也能用。
 
 [操作详情点击](./get_access_key_pc.md)
 

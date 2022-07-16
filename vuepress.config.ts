@@ -174,6 +174,7 @@ export default defineUserConfig({
             '/guide/github_action.md',
             '/guide/action_scf.md',
             '/guide/video.md',
+            '/guide/update.md',
           ],
         },
       ],

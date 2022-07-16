@@ -14,7 +14,7 @@ description: 消息通知
 | email          | [点击了解](#email)        |                                                          |
 | pushplusToken  | 字符串                    | [官网](http://www.pushplus.plus/)获取 token              |
 | api            | 字符串或对象              | 自定义推送 API，[详见](#自定义推送-api)                  |
-| 从青龙面板移植 | [环境变量](#青龙面板相关) |                                                          |
+| 从青龙面板移植 | [环境变量](#来自青龙面板) |                                                          |
 
 ::: details 参考配置
 
