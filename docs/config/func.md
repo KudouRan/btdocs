@@ -247,8 +247,8 @@ description: 功能开关
 | mc          | 数组数组   | `[]`    | 购买漫画 id（优先级高）                                                                        |
 | name        | 字符串数组 | `[]`    | 购买漫画名称（优先级中）                                                                       |
 | love        | 布尔       | `true`  | 购买追漫（优先级低）                                                                           |
-| buyInterval | 数值       | `6`     | 执行购买漫画间隔时间（单位天），默认 6，即每月 1，7，13，19，25。设置为 0 表示关闭，1 表示每天 |
-| buyWeek     | 数值数组   | `[3]`   | 星期几执行购买漫画，默认星期 3，和上面的 buyInterval 不冲突                                    |
+| buyInterval | 数值       | `2`     | 执行购买漫画间隔时间（单位天），如果 6，即每月 1，7，13，19，25。设置为 0 表示关闭，1 表示每天 |
+| buyWeek     | 数值数组   | `[]`    | 星期几执行购买漫画，和上面的 buyInterval 不冲突                                                |
 
 - 布尔值，`true` 表示开启，`false` 表示关闭
 - mc 获取：<https://manga.bilibili.com/detail/mc29195> 这篇漫画的 mcId 就是 `29195`。[获取方式](#漫画-id)
@@ -269,9 +269,9 @@ description: 功能开关
     // 购买追漫（优先级低）
     love: true,
     // 执行购买漫画间隔时间（单位天），设置为 0 表示关闭，1 表示每天
-    buyInterval: 6,
+    buyInterval: 2,
     // 星期几执行购买漫画（与 buyInterval 都有效）
-    buyWeek: [3],
+    buyWeek: [],
   },
 }
 ```

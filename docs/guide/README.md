@@ -81,65 +81,12 @@ liveIntimacy 的直播心跳可能需要消耗比实际需要时间长很多的�
 
 支持获取在线代码运行，部署一次即可长期更新（逻辑不变的情况下），添加环境变量 `USE_NETWORK_CODE` 尝试，百度云不支持环境变量，可以在附加消息中添加 `USE_NETWORK_CODE` 字段。值为字符串，可以是任意值，但不能为空。
 
-## 赞助
+## 支持
 
-最好也是最简单的赞助就是为 <https://github.com/KudouRan/BiliTools> 点个 star，关注才能不迷路。非常感谢！
-
-当然你也可以请作者喝杯奶茶，吃根油条（虽然目前为 0.00000 元）
-
-备注昵称，将出现在感谢列表中。
-
-<el-button v-for="button in buttons" :key="button.text" :type="button.type" text @click="changeZZUrl(button)">{{ button.text }}</el-button>
-
-<img :class="zzClass" :src="zzUrl" alt="zz_three"/>
+<SponsorShip></SponsorShip>
 
 ### QQ 群
 
 扫码加入群，密码 catlair 最后一个字母（群号：759694670）：
 
 ![qq群](/images/qq_group.png)
-
-<script setup lang="ts">
-import zz_three from '@imgs/zz_three.png';
-import zz_alipay from '@imgs/zz_alipay.png';
-import zz_weixin from '@imgs/zz_weixin.png';
-import zz_qq from '@imgs/zz_qq.png';
-import { ref } from 'vue';
-import { storeToRefs } from 'pinia';
-import { useReleasesStore } from '@stores/releases';
-
-const { tagName, isRefreshed } = storeToRefs(useReleasesStore());
-
-
-const zzUrls = {
-  all: zz_three,
-  alipay: zz_alipay,
-  weixin: zz_weixin,
-  qq: zz_qq,
-}
-const zzUrl = ref(zz_three);
-const zzClass = ref('');
-
-const buttons = [
-  { type: 'primary', text: '全部' , url: 'all'},
-  { type: 'primary', text: '支付宝', url: 'alipay' },
-  { type: 'primary', text: '微信' , url: 'weixin'},
-  { type: 'primary', text: 'QQ' , url: 'qq'},
-] as const
-
-function changeZZUrl(button) {
-  zzUrl.value = zzUrls[button.url];
-  if (button.url === 'all') {
-    zzClass.value = '';
-  } else {
-    zzClass.value = 'zz'
-  }
-}
-</script>
-
-<style>
-img.zz{
-  display: block;
-  width: 400px;
-}
-</style>
