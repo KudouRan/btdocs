@@ -81,12 +81,12 @@ liveIntimacy 的直播心跳可能需要消耗比实际需要时间长很多的�
 
 支持获取在线代码运行，部署一次即可长期更新（逻辑不变的情况下），添加环境变量 `USE_NETWORK_CODE` 尝试，百度云不支持环境变量，可以在附加消息中添加 `USE_NETWORK_CODE` 字段。值为字符串，可以是任意值，但不能为空。
 
-## 支持
-
-<SponsorShip></SponsorShip>
-
 ### QQ 群
 
 扫码加入群，密码 catlair 最后一个字母（群号：759694670）：
 
 ![qq群](/images/qq_group.png)
+
+## 支持
+
+<SponsorShip></SponsorShip>

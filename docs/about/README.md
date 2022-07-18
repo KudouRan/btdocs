@@ -5,10 +5,6 @@ description: about
 sidebar: false
 ---
 
-## 支持
-
-<SponsorShip></SponsorShip>
-
 ## 联系方式
 
 ### QQ 群
@@ -16,6 +12,10 @@ sidebar: false
 扫码加入群，密码 catlair 最后一个字母：
 
 ![qq群](/images/qq_group.png)
+
+## 支持
+
+<SponsorShip></SponsorShip>
 
 ## 参考项目
 

@@ -8,26 +8,26 @@ description: 功能开关
 
 `[function]`
 
-| Key                 | 默认值  | 说明                    |
-| ------------------- | ------- | ----------------------- |
-| silver2Coin         | `true`  | 银瓜子兑换硬币          |
-| addCoins            | `true`  | 投币                    |
-| liveSignTask        | `true`  | 直播间签到              |
-| shareAndWatch       | `true`  | 观看和分享视频          |
-| supGroupSign        | `false` | 应援团签到              |
-| charging            | `false` | 给 UP 充电              |
-| getVipPrivilege     | `false` | 获取大会员权益          |
-| giveGift            | `false` | 赠送过期礼物            |
-| matchGame           | `false` | 赛事竞猜                |
-| batchUnfollow       | `false` | 取消关注（lottery）     |
-| liveLottery         | `false` | 直播天选时刻            |
-| liveIntimacy        | `false` | 牌子亲密度              |
-| mangaTask           | `false` | 漫画任务                |
-| bigPoint            | `false` | 大会员领取大积分        |
-| judgement           | `false` | 风纪委员                |
-| ~~mangaSign~~       | `false` | （请使用 mangaTask）    |
-| ~~liveRedPack~~     | `false` | ~~直播天选红包~~        |
-| ~~liveSendMessage~~ | `false` | （请使用 liveIntimacy） |
+| Key                 | 默认值  | 说明                            | 配置                |
+| ------------------- | ------- | ------------------------------- | ------------------- |
+| silver2Coin         | `true`  | 银瓜子兑换硬币                  |                     |
+| addCoins            | `true`  | 投币                            | [点击](#投币)       |
+| liveSignTask        | `true`  | 直播间签到                      |                     |
+| shareAndWatch       | `true`  | 观看和分享视频                  |                     |
+| supGroupSign        | `false` | 应援团签到 （目前也无意义了啊） |                     |
+| charging            | `false` | 给 UP 充电                      | [点击](#充电)       |
+| getVipPrivilege     | `false` | 获取大会员权益                  |                     |
+| giveGift            | `false` | 赠送过期礼物                    | [点击](#直播间礼物) |
+| matchGame           | `false` | 赛事竞猜（人人都是硬币慈善家）  | [点击](#竞猜)       |
+| batchUnfollow       | `false` | 取消关注（lottery）             | [点击](#天选时刻)   |
+| liveLottery         | `false` | 直播天选时刻                    | [点击](#天选时刻)   |
+| liveIntimacy        | `false` | 牌子亲密度                      | [点击](#粉丝亲密度) |
+| mangaTask           | `false` | 漫画任务                        | [点击](#漫画任务)   |
+| bigPoint            | `false` | 大会员领取大积分                | [点击](#大积分)     |
+| judgement           | `false` | 风纪委员                        | [点击](#风纪委员)   |
+| ~~mangaSign~~       | `false` | （请使用 mangaTask）            |                     |
+| ~~liveRedPack~~     | `false` | ~~直播天选红包~~                |                     |
+| ~~liveSendMessage~~ | `false` | （请使用 liveIntimacy）         |                     |
 
 注：只有将这些值设置为 `true` 才会生效，如果设置为 `false` ，具体的配置再怎么样也不会去执行。
 
@@ -288,9 +288,7 @@ description: 功能开关
 | vote       | 数组数组 | `[0, 1]` | 默认投票，0 为好，1 为普通，2 为差，3 为无法判断,填多个为随机投票，填一个为固定投票，可以填写多个增加概率，例如 `[0, 0, 1]` 投好是普通的两倍概率           |
 | once       | 布尔     | `true`   | true 为审满案件后退出，false 为获取不到新案件后退出                                                                                                        |
 | opinionMin | 数值     | `3`      | 获取到其他用户观点后，如果最多项数量小于 opinionMin 则当成参考不足处理。（避免只有一个人投差就直接跟着投差）                                               |
-| waitTime   | 数值     | `3`      | 没有案件后的等待时间（分），当 once 为 false 时会直接退出，这个配置也就无效。                                                                              |
-
-waitTime: 20,
+| waitTime   | 数值     | `20`     | 没有案件后的等待时间（分），当 once 为 false 时会直接退出，这个配置也就无效。                                                                              |
 
 - 布尔值，`true` 表示开启，`false` 表示关闭
 
@@ -303,6 +301,7 @@ waitTime: 20,
     vote: [0, 1],
     once: true,
     opinionMin: 3,
+    waitTime: 20,
   },
 }
 ```

@@ -27,7 +27,14 @@
     <img :class="zzClass" :src="zzUrl" alt="zz_three" />
 
     <p>感谢：</p>
-    <span>匿名用户的冰可乐。</span>
+    <ul>
+      <li>
+        <span>匿名用户的冰可乐。</span>
+      </li>
+      <li>
+        <span>Rie 的冰可乐。</span>
+      </li>
+    </ul>
     <!-- <el-divider border-style="dashed" /> -->
     <!-- <span>The language of eternal question.</span> -->
   </div>
