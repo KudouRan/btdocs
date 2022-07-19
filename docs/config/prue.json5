@@ -2,6 +2,7 @@
   {
     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0',
     apiDelay: [2, 6],
+    // 尽量使用双引号，避免你的 cookie 存在单引号
     cookie: "xxxxx",
     function: {
       silver2Coin: true,

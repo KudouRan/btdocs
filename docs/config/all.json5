@@ -1,5 +1,6 @@
 [
   // 配置第一个用户
+  // 注意 // 开头的是注释，没有实际意义
   {
     // 浏览器用户代理
     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0',
@@ -163,6 +164,30 @@
       buyInterval: 2,
       // 星期几执行购买漫画
       buyWeek: [],
+    },
+    // 风纪委员
+    jury: {
+      // 模式
+      mode: 1,
+      // 默认投票 0-3 好-无法判断
+      vote: [0, 1],
+      // 没有案件不退出，运行一次直到完成
+      once: true,
+      // 参考人数最少满足
+      opinionMin: 3,
+      // 没有案件后等待时间（分）
+      waitTime: 20,
+    },
+    // 大积分
+    bigPoint: {
+      // 是否间隔 5s 再重试一次
+      isRetry: true,
+      // 是否完成观看视频的任务
+      isWatch: true,
+      // 正片视频的 epid（集数id）
+      epids: [],
+      // 领取任务后的观看延时（秒）
+      watchDelay: 20,
     },
   },
   // 配置第二个用户，和上面一样的配置，

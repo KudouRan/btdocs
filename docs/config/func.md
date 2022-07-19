@@ -230,12 +230,19 @@ description: 功能开关
 
 ```json5
 {
+  // 亲密度
   intimacy: {
+    // 直播弹幕
     liveSendMessage: true,
+    // 点赞直播间
     liveLike: true,
-    liveHeart: false,
+    // 每日亲密度上限 （系统 1500）
     limitFeed: 1500,
+    // 耗时很长的直播心跳（默认关闭）
+    liveHeart: false,
+    // 白名单
     whiteList: [],
+    // 黑名单
     blackList: [],
   },
 }
@@ -264,6 +271,7 @@ description: 功能开关
 
 ```json5
 {
+  // 漫画
   manga: {
     // 签到
     sign: true,
@@ -303,11 +311,17 @@ description: 功能开关
 
 ```json5
 {
+  // 风纪委员
   jury: {
+    // 模式
     mode: 1,
+    // 默认投票 0-3 好-无法判断
     vote: [0, 1],
+    // 没有案件不退出，运行一次直到完成
     once: true,
+    // 参考人数最少满足
     opinionMin: 3,
+    // 没有案件后等待时间（分）
     waitTime: 20,
   },
 }
@@ -330,16 +344,25 @@ description: 功能开关
 
 - 视频是正片，非 up 投稿，例如动画、纪录片、电影、电视剧、综艺等
 
+::: details 参考写法
+
 ```json5
 {
+  // 大积分
   bigPoint: {
+    // 是否间隔 5s 再重试一次
     isRetry: true,
+    // 是否完成观看视频的任务
     isWatch: true,
+    // 正片视频的 epid（集数id）
     epids: [],
+    // 领取任务后的观看延时（秒）
     watchDelay: 20,
   },
 }
 ```
+
+:::
 
 ## 参数说明
 
