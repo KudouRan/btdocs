@@ -8,28 +8,35 @@ description: 功能开关
 
 `[function]`
 
-| Key                 | 默认值  | 说明                            | 配置                |
-| ------------------- | ------- | ------------------------------- | ------------------- |
-| silver2Coin         | `true`  | 银瓜子兑换硬币                  |                     |
-| addCoins            | `true`  | 投币                            | [点击](#投币)       |
-| liveSignTask        | `true`  | 直播间签到                      |                     |
-| shareAndWatch       | `true`  | 观看和分享视频                  |                     |
-| supGroupSign        | `false` | 应援团签到 （目前也无意义了啊） |                     |
-| charging            | `false` | 给 UP 充电                      | [点击](#充电)       |
-| getVipPrivilege     | `false` | 获取大会员权益                  |                     |
-| giveGift            | `false` | 赠送过期礼物                    | [点击](#直播间礼物) |
-| matchGame           | `false` | 赛事竞猜（人人都是硬币慈善家）  | [点击](#竞猜)       |
-| batchUnfollow       | `false` | 取消关注（lottery）             | [点击](#天选时刻)   |
-| liveLottery         | `false` | 直播天选时刻                    | [点击](#天选时刻)   |
-| liveIntimacy        | `false` | 牌子亲密度                      | [点击](#粉丝亲密度) |
-| mangaTask           | `false` | 漫画任务                        | [点击](#漫画任务)   |
-| bigPoint            | `false` | 大会员领取大积分                | [点击](#大积分)     |
-| judgement           | `false` | 风纪委员                        | [点击](#风纪委员)   |
-| ~~mangaSign~~       | `false` | （请使用 mangaTask）            |                     |
-| ~~liveRedPack~~     | `false` | ~~直播天选红包~~                |                     |
-| ~~liveSendMessage~~ | `false` | （请使用 liveIntimacy）         |                     |
+**注意：**
 
-注：只有将这些值设置为 `true` 才会生效，如果设置为 `false` ，具体的配置再怎么样也不会去执行。
+- 只有将这些值设置为 `true` 才会生效，如果设置为 `false` ，具体的配置再怎么样也不会去执行。
+- 表中排列顺序即为功能的调用顺序，内部设置顺序，与配置无关。
+- 带删除线的表示已经弃用或其它原因不使用，如果有替代的功能，查看说明。
+- 替代功能的相关配置开启时会自动关闭原废弃功能，防止重复运行，但是任然建议将废弃功能删除。
+
+| Key                 | 默认值  | 说明                                          | 配置                |
+| ------------------- | ------- | --------------------------------------------- | ------------------- |
+| loginTask           | `true`  | 获取个人信息（一般会自动调用，且无法关闭）    |                     |
+| liveSignTask        | `true`  | 直播间签到                                    |                     |
+| addCoins            | `true`  | 投币                                          | [点击](#投币)       |
+| bigPoint            | `false` | 大会员领取大积分                              | [点击](#大积分)     |
+| shareAndWatch       | `true`  | 观看和分享视频                                |                     |
+| silver2Coin         | `true`  | 银瓜子兑换硬币                                |                     |
+| ~~mangaSign~~       | `false` | （请使用 mangaTask，配置 sign 默认开启）      |                     |
+| mangaTask           | `false` | 漫画任务                                      | [点击](#漫画任务)   |
+| supGroupSign        | `false` | 应援团签到 （目前也无意义了啊）               |                     |
+| ~~liveSendMessage~~ | `false` | （请使用 liveIntimacy，配置 liveSendMessage） |                     |
+| getVipPrivilege     | `false` | 获取大会员权益                                |                     |
+| charging            | `false` | 给 UP 充电                                    | [点击](#充电)       |
+| matchGame           | `false` | 赛事竞猜（人人都是硬币慈善家）                | [点击](#竞猜)       |
+| giveGift            | `false` | 赠送过期礼物                                  | [点击](#直播间礼物) |
+| batchUnfollow       | `false` | 取消关注（lottery）                           | [点击](#天选时刻)   |
+| liveLottery         | `false` | 直播天选时刻                                  | [点击](#天选时刻)   |
+| ~~liveRedPack~~     | `false` | ~~直播天选红包~~                              |                     |
+| liveIntimacy        | `false` | 牌子亲密度 （非云函数为异步运行）             | [点击](#粉丝亲密度) |
+| ~~liveFamine~~      | `false` | 私人定制，无可奉告                            |                     |
+| judgement           | `false` | 风纪委员                                      | [点击](#风纪委员)   |
 
 ::: details 参考写法
 
