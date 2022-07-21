@@ -187,6 +187,7 @@ export default defineUserConfig({
             '/config/account.md',
             '/config/func.md',
             '/config/message.md',
+            '/config/logger.md',
             '/config/github_secrets.md',
             '/config/env.md',
           ],
