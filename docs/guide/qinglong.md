@@ -80,3 +80,15 @@ PS: 可以不执行 `pnpm remove -g @catlair/bilitools`，不过前一个版本�
 ## 配置文件
 
 <ConfigPath indexName="bilitools_npm" configName="cat_bili_config"/>
+
+## npm 参数
+
+讨论：<https://github.com/KudouRan/BiliTools/issues/90#issuecomment-1190364619>
+
+由于青龙面板也是通过 npm 运行的，所以理所应当的能够使用 npm 参数。
+
+`--config` 或者 `-c` 自定义配置文件的路径，可以是绝对路径，或者相对路径。
+
+`--item` 或者 `-i` 多用户配置执行指定的配置，下标 1 开始（倒数 -1 开始），使用英文逗号（,）分隔。逻辑错误：如果你的配置中有错误配置或者空缺是不计算在内的，所以配置就好好的配置。
+
+`--task` 或者 `-t` 执行指定的 task，使用英文逗号（,）分隔。注意很多任务（特别是需要判断大会员状态的任务）需要先执行 `loginTask` 任务。

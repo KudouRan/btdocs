@@ -80,3 +80,15 @@ exports.main_handler = require('@catlair/bilitools').scf_handler();
 ## 配置文件
 
 <ConfigPath />
+
+## 自定义任务
+
+讨论：<https://github.com/KudouRan/BiliTools/issues/90#issuecomment-1190976142>
+
+将触发器附加内容设置为：
+
+```json5
+{ task: 'xxxx,yyyy,zzzz' }
+```
+
+`任务 1,任务 2,任务 3`，部分任务需要前置 `loginTask`

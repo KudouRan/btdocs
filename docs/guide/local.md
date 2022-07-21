@@ -28,11 +28,34 @@ bilitools -h
 bilitools -c ./config.json
 ```
 
-更新代码
+更新代码：
 
 ```bash
 npm install -g @catlair/bilitools
 ```
+
+帮助详情：
+
+```bash
+Usage:
+  bilitools [options] [value]
+  bilitools [options]=[value]
+
+Options:
+  --version, -v             输出版本号
+  --help, -h                输出帮助信息
+  --config, -c <path>       配置文件路径
+    eg: --config=./config.json
+  --once, -o                每日任务只执行一次
+  --task, -t <taskString>   执行指定的 task，使用英文逗号（,）分隔
+    eg: --task=loginTask,judgement
+  --item, -i <item>         多用户配置执行指定的配置，下标 1 开始（倒数 -1 开始），使用英文逗号（,）分隔
+    eg: --item=2
+```
+
+注意：很多任务（特别是需要判断大会员状态的任务）需要先执行 `loginTask` 任务。
+
+讨论：<https://github.com/KudouRan/BiliTools/issues/90#issuecomment-1190364619>
 
 ## windows 下定时运行
 

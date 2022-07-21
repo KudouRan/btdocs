@@ -2,7 +2,7 @@
   <p>
     满足以下的目录结构的
     <code>{{ configName }}.json{5}</code>
-    都是符合要求的配置文件路径。
+    都是符合要求的配置文件位置，选则一个合适的位置即可。如果你创建了多个，那。。。。别创建多个啊。
   </p>
   <div class="language-bash ext-sh line-numbers-mode">
     <pre
