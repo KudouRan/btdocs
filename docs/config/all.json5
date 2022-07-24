@@ -132,6 +132,7 @@
     gift: {
       // 自定义投喂礼物 UP， 在所填中随机选取
       mids: [],
+      // 神略部分配置
     },
     // 亲密度
     intimacy: {
@@ -164,6 +165,8 @@
       buyInterval: 2,
       // 星期几执行购买漫画
       buyWeek: [],
+      // 打印可能中奖的消息
+      mayBeWinMsg: true,
     },
     // 风纪委员
     jury: {

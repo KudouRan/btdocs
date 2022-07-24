@@ -41,32 +41,47 @@ description: 简单介绍
 
 配置方式见顶部导航栏，点击配置[或者点击这里跳转](../config/)。
 
-为了方便管理，能使用 npm 包的地方都将使用 npm 包。目前还不支持的（平台原因）仅有：
-
-百度云函数、华为云函数（包括 FG、AGC）
-
-所有老方式都是支持的，但是建议使用 npm 包的方式。
-
 ### 重要提示
 
-请不要使用直播礼物红包 `liveRedPack`，经过测试发现，并不是参与即可获取红包，b 站可能存在其他机制。
-
-::: danger cookie 重要提示（关于频繁失效）
+::: danger cookie 重要提示（关于频繁失效），除了账号本身可能存在的风险外，可能时以下原因
 请务必查看 Cookie 的获取[点击这里跳转](../config/get_value.md)
 :::
 
 ## 更新
 
-::: tip v0.5.220716
-<Badge type="warning" text="修改" vertical="middle" /> b 站修改风纪委员 liveIntimacy 方式发生改变
-<br>
-<Badge type="tip" text="优化" vertical="middle" /> bigPoint 增加重试、取消观看视频和自定义视频（正片，非 up 投稿）的配置。
-<br>
-<Badge type="tip" text="优化" vertical="middle" /> judgement mode2。
-<br>
-:::
+::: tip v0.5.220724
+<Badge type="tip" text="修复" vertical="warning" /> 通过压缩的代码出现了 gc 这样的全局变量/保留字，暂时不压缩。vm gz 包从 40 变为 60kb。
+<br/>
 
-liveIntimacy 的直播心跳可能需要消耗比实际需要时间长很多的时间，这是因为目前对**刚**获取到的亲密度判断不准确，甚至已经发送弹幕和点赞了，但是依然会通过直播心跳去获取这多出来的 200 亲密度，浪费 10 分钟。
+<Badge type="tip" text="修复" vertical="warning" /> 观看和分享视频获取到 404。
+<br/>
+
+<Badge type="tip" text="新增" vertical="middle" /> exchangeCoupon 兑换漫读券（请用自己的方式定时到大约 12:00:30 左右）。
+<br/>
+
+<Badge type="tip" text="新增" vertical="middle" /> 增加 log 配置，暂时只开放了是否使用 Emoji，推送日志等级。
+<br/>
+
+<Badge type="tip" text="新增" vertical="middle" /> npm 全局命令增加 task 和 item 参数。
+<br/>
+
+<Badge type="tip" text="新增" vertical="middle" /> npm 青龙面板增加 task、item 和 config（自定义 config 路径） 参数。
+<br/>
+
+<Badge type="tip" text="新增" vertical="middle" /> 腾讯云函数/阿里云函数增加可配置附加信息 task。
+<br/>
+
+<Badge type="tip" text="新增" vertical="middle" /> 自动投喂可配置礼物。
+<br/>
+
+<Badge type="tip" text="优化" vertical="middle" /> bigPoint 观看视频增加间隔 20 s（可配置）。
+<br/>
+
+<Badge type="tip" text="优化" vertical="middle" /> judgement 休眠时间减少至 20 min （可配置）。
+<br/>
+
+<Badge type="tip" text="优化" vertical="middle" /> vm 增加运行 trycatch 失败后正常运行。
+:::
 
 [更多日志点击访问详情](./update.md)
 
@@ -75,11 +90,8 @@ liveIntimacy 的直播心跳可能需要消耗比实际需要时间长很多的�
 - 完善了 api 的部分 header 信息。
 - 增加两次任务直接的一点随机延时。
 - 将投票内容为空的日志补全。
+- mode2 保存先不接受案件。
 - 改变代码风格。
-
-直播获取小心心改版，且取消直播间弹幕功能，使用 `粉丝勋章/亲密度（测试）` 替代。
-
-支持获取在线代码运行，部署一次即可长期更新（逻辑不变的情况下），添加环境变量 `USE_NETWORK_CODE` 尝试，百度云不支持环境变量，可以在附加消息中添加 `USE_NETWORK_CODE` 字段。值为字符串，可以是任意值，但不能为空。
 
 ### QQ 群
 
