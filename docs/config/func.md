@@ -18,7 +18,7 @@ description: 功能开关
 | Key                 | 默认值 | 说明                                          | 配置                |
 | ------------------- | ------ | --------------------------------------------- | ------------------- |
 | loginTask           | `true` | 获取个人信息（一般会自动调用，且无法关闭）    |                     |
-| exchangeCoupon      |        | 兑换漫读券 （暂时~~只能~~通过指定 task 运行）     | [点击](#兑换漫读券) |
+| exchangeCoupon      |        | 兑换漫读券 （暂时~~只能~~通过指定 task 运行） | [点击](#兑换漫读券) |
 | liveSignTask        | `true` | 直播间签到                                    |                     |
 | addCoins            | `true` | 投币                                          | [点击](#投币)       |
 | bigPoint            |        | 大会员领取大积分                              | [点击](#大积分)     |
@@ -38,6 +38,7 @@ description: 功能开关
 | liveIntimacy        |        | 牌子亲密度 （非云函数为异步运行）             | [点击](#粉丝亲密度) |
 | ~~liveFamine~~      |        | 私人定制，无可奉告                            |                     |
 | judgement           |        | 风纪委员                                      | [点击](#风纪委员)   |
+| activityLottery     |        | 转盘抽奖                                      | [点击](#转盘抽奖)   |
 
 ::: details 参考写法
 
@@ -60,6 +61,7 @@ description: 功能开关
     supGroupSign: false,
     bigPoint: false,
     judgement: false,
+    activityLottery: false,
   },
 }
 ```
@@ -392,6 +394,49 @@ description: 功能开关
     epids: [],
     // 领取任务后的观看延时（秒）
     watchDelay: 20,
+  },
+}
+```
+
+:::
+
+## 转盘抽奖
+
+`[activityLottery]`
+
+| Key       | 值类型         | 默认值       | 说明                                                                      |
+| --------- | -------------- | ------------ | ------------------------------------------------------------------------- |
+| list      | 对象数组       | `[]`         | 自定义活动列表（如需使用，有效性请自行维护，不会删除过期配置），格式见 PS |
+| isRequest | 布尔           | `false`      | 是否从网络请求活动列表                                                    |
+| delay     | `[最低, 最高]` | `[1.8, 3.2]` | 随机抽奖延时（秒），只用于单个活动中多次机会的间隔                        |
+
+::: details 参考写法
+
+PS: `list` 写法（以下只是格式参考，不保证内容有效）
+
+```js
+[
+  {
+    sid: 'newLottery_c02888c9-0354-11ed-9251-a4ae12675bc2',
+    title: '美味之旅，由柠开启',
+  },
+  {
+    sid: 'newLottery_8b3e37a8-e30f-11ec-9251-a4ae12675bc2',
+    title: '正义的算法',
+  },
+];
+```
+
+```json5
+{
+  // 转盘抽奖
+  activityLottery: {
+    // 活动列表
+    list: [],
+    // 是否从网络请求活动列表
+    isRequest: false,
+    // 抽奖延时（秒）
+    delay: [1.8, 3.2],
   },
 }
 ```

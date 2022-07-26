@@ -6,9 +6,9 @@ description: 更新日志
 
 ## 0.5.220724
 
-- <Badge type="tip" text="修复" vertical="warning" /> 通过压缩的代码出现了 gc 这样的全局变量/保留字，暂时不压缩。vm gz 包从 40 变为 60kb。
-- <Badge type="tip" text="修复" vertical="warning" /> 观看和分享视频获取到 404。
-- <Badge type="tip" text="新增" vertical="middle" /> exchangeCoupon 兑换漫读券（请用自己的方式定时到大约 12:00:30 左右）。
+- <Badge type="warning" text="修复" vertical="middle" /> 通过压缩的代码出现了 gc 这样的全局变量/保留字，暂时不压缩。vm gz 包从 40 变为 60kb。
+- <Badge type="warning" text="修复" vertical="middle" /> 观看和分享视频获取到 404。
+- <Badge type="tip" text="新增" vertical="middle" /> exchangeCoupon 兑换漫读券（请用自己的方式定时到大约 12:00:02 左右）。
 - <Badge type="tip" text="新增" vertical="middle" /> 增加 log 配置，暂时只开放了是否使用 Emoji，推送日志等级。
 - <Badge type="tip" text="新增" vertical="middle" /> npm 全局命令增加 task 和 item 参数。
 - <Badge type="tip" text="新增" vertical="middle" /> npm 青龙面板增加 task、item 和 config（自定义 config 路径） 参数。

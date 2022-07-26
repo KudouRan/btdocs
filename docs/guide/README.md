@@ -31,6 +31,7 @@ description: 简单介绍
 - [x] 直播天选时刻（测试） <Badge type="warning" text="慎用" vertical="middle" />
 - [x] 粉丝勋章/亲密度（测试）
 - [ ] 大会员领取大积分（测试）<Badge type="warning" text="新增" vertical="middle" />
+- [ ] 转盘抽奖（测试）<Badge type="warning" text="新增" vertical="middle" />
 - [x] 支持 Docker 、腾讯 SCF 、阿里 FC、百度 CFC、华为 FG、青龙面板等方式运行，支持执行消息推送
 - [x] 代码自动在线更新，发包任你发 <Badge type="tip" text="推荐" vertical="middle" />
 - [x] 风纪委员（迁移，测试中），来自 [dd178/BILI_judgement](https://github.com/dd178/BILI_judgement/blob/master/judgement.py)，（我们不生产代码，我们只是代码的搬运工），慎用，如有不良后果，概不负责。
@@ -49,14 +50,18 @@ description: 简单介绍
 
 ## 更新
 
+::: tip 测试内容
+activityLottery 测试中，配置详见 [配置](../config/func.md)
+:::
+
 ::: tip v0.5.220724
-<Badge type="tip" text="修复" vertical="warning" /> 通过压缩的代码出现了 gc 这样的全局变量/保留字，暂时不压缩。vm gz 包从 40 变为 60kb。
+<Badge type="warning" text="修复" vertical="middle" /> 通过压缩的代码出现了 gc 这样的全局变量/保留字，暂时不压缩。vm gz 包从 40 变为 60kb。
 <br/>
 
-<Badge type="tip" text="修复" vertical="warning" /> 观看和分享视频获取到 404。
+<Badge type="warning" text="修复" vertical="middle" /> 观看和分享视频获取到 404。
 <br/>
 
-<Badge type="tip" text="新增" vertical="middle" /> exchangeCoupon 兑换漫读券（请用自己的方式定时到大约 12:00:30 左右）。
+<Badge type="tip" text="新增" vertical="middle" /> exchangeCoupon 兑换漫读券（请用自己的方式定时到大约 12:00:02 左右）。
 <br/>
 
 <Badge type="tip" text="新增" vertical="middle" /> 增加 log 配置，暂时只开放了是否使用 Emoji，推送日志等级。
