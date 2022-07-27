@@ -73,9 +73,7 @@ exports.main_handler = require('@catlair/bilitools').scf_handler();
 
 ## 视频参考
 
-帮忙录录？
-
-<!-- <BilibiliVideo bv="BV1VU4y1Q7zz"/> -->
+<BilibiliVideo bv="BV1eW4y127PM"/>
 
 ## 配置文件
 
