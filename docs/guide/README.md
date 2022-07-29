@@ -100,10 +100,6 @@ activityLottery 测试中，配置详见 [配置](../config/func.md)
 
 ### QQ 群
 
-扫码加入群，密码 catlair 最后一个字母（群号：759694670）：
+扫码加入群，没事别进去，进群瞎逼逼然后再退群你觉得你很帅？我只能说傻逼。（群号：759694670）：
 
 ![qq群](/images/qq_group.png)
-
-## 支持
-
-<SponsorShip></SponsorShip>

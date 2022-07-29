@@ -13,7 +13,9 @@
 
     <p>当然你也可以请作者喝杯奶茶。</p>
 
-    <p>备注昵称，将出现在感谢列表中。</p>
+    <p>
+      也没人备注昵称啊，那就不弄了。<del>备注昵称，将出现在感谢列表中。</del>
+    </p>
 
     <el-button
       v-for="button in buttons"
@@ -26,7 +28,7 @@
 
     <img :class="zzClass" :src="zzUrl" alt="zz_three" />
 
-    <p>感谢：</p>
+    <!-- <p>感谢：</p>
     <ul>
       <li>
         <span>匿名用户的冰可乐。</span>
@@ -34,7 +36,10 @@
       <li>
         <span>Rie 的冰可乐。</span>
       </li>
-    </ul>
+      <li>
+        <span>匿名用户的微信赞助。</span>
+      </li>
+    </ul> -->
     <!-- <el-divider border-style="dashed" /> -->
     <!-- <span>The language of eternal question.</span> -->
   </div>
