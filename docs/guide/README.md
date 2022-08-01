@@ -54,48 +54,41 @@ description: 简单介绍
 activityLottery 测试中，配置详见 [配置](../config/func.md)
 :::
 
-::: tip v0.5.220724
-<Badge type="warning" text="修复" vertical="middle" /> 通过压缩的代码出现了 gc 这样的全局变量/保留字，暂时不压缩。vm gz 包从 40 变为 60kb。
+<Badge type="warning" text="修复" vertical="middle" /> 企业微信推送失败的问题。
+<br/>
+<Badge type="tip" text="新增" vertical="middle" /> 部分日志配置。
+<br/>
+<Badge type="tip" text="新增" vertical="middle" /> 部分限制解除。
+<br/>
+<Badge type="tip" text="新增" vertical="middle" /> 增加内置 cron，参数 cron，详见命令行参数。
+<br/>
+<Badge type="tip" text="新增" vertical="middle" /> 增加启动随机延迟 delay 参数，详见命令行参数或青龙面板。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 大积分观看视频间隔增加至 40s （如若不行，请自行增加，这是可配置的）。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 风纪委员中参考观点是否选择【不会观看】纳入选择时的权重计算。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 部分情况的日志输出优化。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 新增了转盘抽奖的列表管理方式。
 <br/>
 
-<Badge type="warning" text="修复" vertical="middle" /> 观看和分享视频获取到 404。
-<br/>
+链接跳转：
 
-<Badge type="tip" text="新增" vertical="middle" /> exchangeCoupon 兑换漫读券（请用自己的方式定时到大约 12:00:02 左右）。
-<br/>
-
-<Badge type="tip" text="新增" vertical="middle" /> 增加 log 配置，暂时只开放了是否使用 Emoji，推送日志等级。
-<br/>
-
-<Badge type="tip" text="新增" vertical="middle" /> npm 全局命令增加 task 和 item 参数。
-<br/>
-
-<Badge type="tip" text="新增" vertical="middle" /> npm 青龙面板增加 task、item 和 config（自定义 config 路径） 参数。
-<br/>
-
-<Badge type="tip" text="新增" vertical="middle" /> 腾讯云函数/阿里云函数增加可配置附加信息 task。
-<br/>
-
-<Badge type="tip" text="新增" vertical="middle" /> 自动投喂可配置礼物。
-<br/>
-
-<Badge type="tip" text="优化" vertical="middle" /> bigPoint 观看视频增加间隔 20 s（可配置）。
-<br/>
-
-<Badge type="tip" text="优化" vertical="middle" /> judgement 休眠时间减少至 20 min （可配置）。
-<br/>
-
-<Badge type="tip" text="优化" vertical="middle" /> vm 增加运行 trycatch 失败后正常运行。
-:::
+[转盘抽奖](../config/func.md#转盘抽奖)  
+[风纪委员](../config/func.md#风纪委员)  
+[大积分](../config/func.md#大积分)  
+[解除限制](../config/account.md#解除限制)  
+[日志](../config/logger.md)
 
 [更多日志点击访问详情](./update.md)
 
 风纪委员（迁移，测试中），来自 [dd178/BILI_judgement](https://github.com/dd178/BILI_judgement/blob/master/judgement.py)，hash：[b74ebc81fb47d98b7008ccd662ab0c5c9e94707c](https://github.com/dd178/BILI_judgement/commit/b74ebc81fb47d98b7008ccd662ab0c5c9e94707c)（我们不生产代码，我们只是代码的搬运工），对原本的代码做了以下修改：
 
 - 完善了 api 的部分 header 信息。
-- 增加两次任务直接的一点随机延时。
+- 增加两次任务之间的一点随机延时。
 - 将投票内容为空的日志补全。
-- mode2 保存先不接受案件。
+- mode2 保存时，先不接受案件。
 - 改变代码风格。
 
 ### QQ 群

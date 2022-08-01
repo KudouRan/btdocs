@@ -51,6 +51,11 @@ Options:
     eg: --task=loginTask,judgement
   --item, -i <item>         多用户配置执行指定的配置，下标 1 开始（倒数 -1 开始），使用英文逗号（,）分隔
     eg: --item=2
+  --cron <cronString>       cron 表达式，see：https://github.com/node-cron/node-cron#allowed-fields
+    eg: --cron="0 0 0 * * *"
+  --delay <time[-time]>     不带单位是延迟 time 分钟后执行，单位可以为 ms（毫秒）、s（秒）、m（分）、h（小时）
+    eg: --delay=10 延迟 0-10 分钟后执行
+        --delay=10m-2h 延迟 10分钟-2小时后执行
 ```
 
 注意：很多任务（特别是需要判断大会员状态的任务）需要先执行 `loginTask` 任务。

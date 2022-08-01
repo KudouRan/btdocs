@@ -4,6 +4,26 @@ title: 更新日志
 description: 更新日志
 ---
 
+## 0.5.220801
+
+- <Badge type="warning" text="修复" vertical="middle" /> 企业微信推送失败的问题。
+- <Badge type="tip" text="新增" vertical="middle" /> 部分日志配置。
+- <Badge type="tip" text="新增" vertical="middle" /> 部分限制解除。
+- <Badge type="tip" text="新增" vertical="middle" /> 增加内置 cron，参数 cron，详见命令行参数。
+- <Badge type="tip" text="新增" vertical="middle" /> 增加启动随机延迟 delay 参数，详见命令行参数或青龙面板。
+- <Badge type="tip" text="优化" vertical="middle" /> 大积分观看视频间隔增加至 40s （如若不行，请自行增加，这是可配置的）。
+- <Badge type="tip" text="优化" vertical="middle" /> 风纪委员中参考观点是否选择【不会观看】纳入选择时的权重计算。
+- <Badge type="tip" text="优化" vertical="middle" /> 部分情况的日志输出优化。
+- <Badge type="tip" text="优化" vertical="middle" /> 新增了转盘抽奖的列表管理方式。
+
+链接跳转：
+
+[转盘抽奖](../config/func.md#转盘抽奖)  
+[风纪委员](../config/func.md#风纪委员)  
+[大积分](../config/func.md#大积分)  
+[解除限制](../config/account.md#解除限制)  
+[日志](../config/logger.md)
+
 ## 0.5.220724
 
 - <Badge type="warning" text="修复" vertical="middle" /> 通过压缩的代码出现了 gc 这样的全局变量/保留字，暂时不压缩。vm gz 包从 40 变为 60kb。

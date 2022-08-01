@@ -198,7 +198,7 @@
       // 正片视频的 epid（集数id）
       epids: [],
       // 领取任务后的观看延时（秒）
-      watchDelay: 20,
+      watchDelay: 40,
     },
     // 转盘抽奖
     activityLottery: {
