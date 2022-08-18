@@ -1,7 +1,9 @@
-function getCookieJSON(cookie: string | undefined): Record<string, string> {
+function getCookieJSON(
+  cookie: string | undefined
+): Record<string, string> | undefined {
   if (!cookie) return {};
   // 使用正则表达式获取 cookie 键值对，并转换为对象
-  return cookie.match(/([^;=]+)(?:=([^;]*))?/g).reduce((pre, cur) => {
+  return cookie.match(/([^;=]+)(?:=([^;]*))?/g)?.reduce((pre, cur) => {
     const [key, value] = cur.trim().split('=');
     pre[key] = value;
     return pre;
@@ -11,6 +13,7 @@ function getCookieJSON(cookie: string | undefined): Record<string, string> {
 function encodeCookieValue(val: string): string {
   return encodeURIComponent(val)
     .replace(/%7C/g, '|')
+    .replace(/'/g, `\'`)
     .replace(/%2B/g, '+')
     .replace(/%25/g, '%')
     .replace(/\*/g, '%2A');
@@ -18,7 +21,10 @@ function encodeCookieValue(val: string): string {
 
 export function encodeCookie(cookie: string) {
   const cookieJson = getCookieJSON(cookie);
-  Object.entries(cookieJson).forEach(([key, val]) => (cookieJson[key] = encodeCookieValue(val)));
+  if (!cookieJson) return 'cookie 存在错误！！！';
+  Object.entries(cookieJson).forEach(
+    ([key, val]) => (cookieJson[key] = encodeCookieValue(val))
+  );
   return getCookieString(cookieJson);
 }
 

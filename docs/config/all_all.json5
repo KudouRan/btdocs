@@ -25,8 +25,8 @@
       mangaTask: false,
       // 应援团签到
       supGroupSign: false,
-      // 充电
-      charging: false,
+      // 使用 b 币券
+      useCouponBp: false,
       // 获取 vip 权益
       getVipPrivilege: true,
       // 直播赠送礼物
@@ -81,12 +81,14 @@
       // 是否只投指定 up
       upperAccMatch: true,
     },
-    // 充电
-    charge: {
-      // 对象，默认自己
-      // mid: 0,
-      /** 充电预设时间，哪一天？ */
+    // 使用b币券
+    couponBalance: {
+      /** 充电的 up 默认自己 */
+      mid: 0,
+      /** 预设时间，哪一天？ */
       presetTime: [10, 20],
+      /** 使用的方式 充电/charge | 电池/battery */
+      use: '充电',
     },
     // 赛事竞猜
     match: {
@@ -191,7 +193,7 @@
     },
     // 大积分
     bigPoint: {
-      // 是否间隔 5s 再重试一次
+      // 是否间隔 5s 再重试一次，或者直接填写等待时间（秒）
       isRetry: true,
       // 是否完成观看视频的任务
       isWatch: true,
