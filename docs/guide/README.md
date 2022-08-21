@@ -56,32 +56,38 @@ activityLottery 测试中，配置详见 [配置](../config/func.md)
 useCouponBp 测试中，配置详见 [配置](../config/func.md)
 :::
 
-<Badge type="warning" text="修复" vertical="middle" /> 企业微信推送失败的问题。
+注意以下版本将在 star 200 后发布，目前可能还未完全跟新，请关注！
+
+<Badge type="warning" text="修复" vertical="middle" /> 某些情况下替换 cookie 导致配置文件格式错误（群友反馈）。
 <br/>
-<Badge type="tip" text="新增" vertical="middle" /> 部分日志配置。
+<Badge type="tip" text="新增" vertical="middle" /> 取消 charging，使用 useCouponBp 替代，并增加 b 币兑换电池（群友需求）。
 <br/>
-<Badge type="tip" text="新增" vertical="middle" /> 部分限制解除。
+<Badge type="tip" text="新增" vertical="middle" /> mangaTask 增加漫画自动领取奖励（阅读奖励，签到奖励，不过前提是这些已经做过了），暂时不需要开启，也不能关闭。
 <br/>
-<Badge type="tip" text="新增" vertical="middle" /> 增加内置 cron，参数 cron，详见命令行参数。
+<Badge type="tip" text="新增" vertical="middle" /> 转盘的爬虫增加追番选项，如有需要可以配置 [activityLottery.bangumi]，当然是否有用存在随机性。
 <br/>
-<Badge type="tip" text="新增" vertical="middle" /> 增加启动随机延迟 delay 参数，详见命令行参数或青龙面板。
+<Badge type="tip" text="新增" vertical="middle" /> addCoins 投币不再是固定 1 颗。
 <br/>
-<Badge type="tip" text="优化" vertical="middle" /> 大积分观看视频间隔增加至 40s （如若不行，请自行增加，这是可配置的）。
+<Badge type="tip" text="新增" vertical="middle" /> bigPoint 重试可配置等待时间。
 <br/>
-<Badge type="tip" text="优化" vertical="middle" /> 风纪委员中参考观点是否选择【不会观看】纳入选择时的权重计算。
+<Badge type="tip" text="新增" vertical="middle" /> npm 增加 --createCookie -cck 参数，可以使用 cookie 生成新 cookie，用处懂的都懂。
 <br/>
-<Badge type="tip" text="优化" vertical="middle" /> 部分情况的日志输出优化。
+<Badge type="tip" text="优化" vertical="middle" /> 完善 delay 参数。
 <br/>
-<Badge type="tip" text="优化" vertical="middle" /> 新增了转盘抽奖的列表管理方式。
+<Badge type="tip" text="优化" vertical="middle" /> 调整 matchGame 默认值（更加保守），防止有人不懂直接开启但不改配置，导致丢失大量硬币（冤大头群友）。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 部分情况的日志输出优化，增加中奖标题提示（例如：xxxxx-【转盘】）（Issue 92）。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> getPrivilege 的日志增加 73319 的解释（Issue 109）。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 优化输出的版本。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> tsconfig strictNullChecks 仅改变开发体验，增加稳定性，与程序最后运行结果无关。
 <br/>
 
 链接跳转：
 
-[转盘抽奖](../config/func.md#转盘抽奖)  
-[风纪委员](../config/func.md#风纪委员)  
-[大积分](../config/func.md#大积分)  
-[解除限制](../config/account.md#解除限制)  
-[日志](../config/logger.md)
+[转盘抽奖](../config/func.md#转盘抽奖)
 
 [更多日志点击访问详情](./update.md)
 
