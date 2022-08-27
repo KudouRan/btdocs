@@ -221,7 +221,7 @@ doing...
     // 是否在等待时处理关注用户（读取消息，移动）
     moveUpInWait: true,
     /** 天选时刻关注 UP 移动到分组 */
-    moveTag: 'rp关注',
+    moveTag: '天选时刻',
     /** 关注回复处理方式 参考天选 */
     actFollowMsg: 'read',
   },
