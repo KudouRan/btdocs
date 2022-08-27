@@ -36,7 +36,7 @@ description: 功能开关
 | liveIntimacy        |        | 牌子亲密度 （非云函数为异步运行）             | [点击](#粉丝亲密度)  |
 | batchUnfollow       |        | 取消关注（lottery）                           | [点击](#天选时刻)    |
 | liveLottery         |        | 直播天选时刻                                  | [点击](#天选时刻)    |
-| ~~liveRedPack~~     |        | ~~直播天选红包~~                              |                      |
+| liveRedPack         |        | 直播天选红包                                  | [点击](#天选红包)    |
 | activityLottery     |        | 转盘抽奖                                      | [点击](#转盘抽奖)    |
 | ~~liveFamine~~      |        | 私人定制，无可奉告                            |                      |
 | judgement           |        | 风纪委员                                      | [点击](#风纪委员)    |
@@ -197,6 +197,36 @@ description: 功能开关
 ```
 
 :::
+
+## 天选红包
+
+`[redPack]`
+
+doing...
+
+```json5
+{
+  redPack: {
+    // 中场休息时间，当每参加了几个直播间的时候，休息一下 [参加个数，休息时间（分，-1 为直接结束）]
+    restTime: [0, -1],
+    // 同时参与的直播间数量
+    linkRoomNum: 0,
+    // 疑似触发风控时休眠时间（分），-1 为直接结束
+    riskSleepTime: -1,
+    // 总参与次数，达到后不管结果如何，直接结束
+    totalNum: 0,
+    // 参与直播时发送的弹幕数量（与内置数量比，较小者生效）
+    // [固定值]，[最少,最多]
+    dmNum: [5],
+    // 是否在等待时处理关注用户（读取消息，移动）
+    moveUpInWait: true,
+    /** 天选时刻关注 UP 移动到分组 */
+    moveTag: 'rp关注',
+    /** 关注回复处理方式 参考天选 */
+    actFollowMsg: 'read',
+  },
+}
+```
 
 ## 直播间礼物
 
