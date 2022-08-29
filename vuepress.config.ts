@@ -9,6 +9,8 @@ import { path as vuepressPath } from '@vuepress/utils';
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
 import { docsearchPlugin } from '@vuepress/plugin-docsearch';
+import { pwaPlugin } from '@vuepress/plugin-pwa';
+import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup';
 
 const isProd = process.env.NODE_ENV === 'production';
 const basePath = process.env.BASE_PATH as '/';
@@ -255,6 +257,17 @@ export default defineUserConfig({
     googleAnalyticsPlugin({
       id: 'G-B2XSE83VR6',
     }),
+    // @ts-ignore
+    pwaPlugin({}),
+    // @ts-ignore
+    pwaPopupPlugin({
+      locales: {
+        '/': {
+          message: '发现有更新',
+          buttonText: '刷新',
+        },
+      },
+    }),
   ],
   bundler: viteBundler({
     viteOptions: {
@@ -281,4 +294,8 @@ export default defineUserConfig({
   define: {
     __GLOBAL_GHPROXY__: 'ghproxy.com',
   },
+  head: [
+    ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
+    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+  ],
 });
