@@ -54,7 +54,7 @@ description: 简单介绍
 ::: tip 测试内容
 b 币券兑换电池 useCouponBp 测试中，配置详见 [配置](../config/func.md)
 
-天选红包 redPack 测试中，配置详见 [配置](../config/func.md)
+天选红包 liveRedPack 测试中，配置详见 [配置](../config/func.md)
 
 新增自动删除 15 天前的文件日志，如果文件按月计算，则大约在月中删除上个月的日志。
 :::
@@ -65,7 +65,7 @@ b 币券兑换电池 useCouponBp 测试中，配置详见 [配置](../config/fun
 
 [更多日志点击访问详情](./update.md)
 
-### QQ 群
+## QQ 群
 
 扫码加入群，没事别进去，自己扫码进群以后哔哔谁把你拉进来的是什么意思（群号：759694670）：
 

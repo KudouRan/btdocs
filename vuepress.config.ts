@@ -11,7 +11,7 @@ import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
 import { docsearchPlugin } from '@vuepress/plugin-docsearch';
 
 const isProd = process.env.NODE_ENV === 'production';
-const basePath = process.env.BASE_PATH as '/' | `/${string}/`;
+const basePath = process.env.BASE_PATH as '/';
 
 export default defineUserConfig({
   lang: 'zh-CN',

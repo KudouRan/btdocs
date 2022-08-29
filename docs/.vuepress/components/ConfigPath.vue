@@ -45,7 +45,7 @@
   <ul>
     <li>
       如果还不知道怎么配置，可以<a
-        href="/config/#用户配置参考"
+        :href="`${baseURL}config/#用户配置参考`"
         rel="noopener noreferrer"
         >点击查看配置参考</a
       >
@@ -64,6 +64,8 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted, ref } from 'vue';
+
 const customNodeClass = (data, node) => {
   if (data.isPenultimate) {
     return 'is-penultimate';
@@ -71,8 +73,18 @@ const customNodeClass = (data, node) => {
   return null;
 };
 
+const baseURL = ref('');
+
+onMounted(() => {
+  if (window.location.hostname === 'localhost') {
+    baseURL.value = '/';
+  } else {
+    baseURL.value = location.href?.includes('vercel') ? '/' : '/BiliTools/';
+  }
+});
+
 const props = withDefaults(
-  defineProps<{ configName: string; indexName: string }>(),
+  defineProps<{ configName?: string; indexName?: string }>(),
   {
     configName: 'config',
     indexName: 'index',
