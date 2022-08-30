@@ -30,8 +30,8 @@ description: 简单介绍
 - [x] 自动使用 B 币券兑换电池（测试）
 - [x] 直播赠送即将过期的礼物
 - [x] 多账号独立配置
-- [x] 直播天选时刻（测试，不推荐） <Badge type="warning" text="慎用" vertical="middle" />
-- [ ] 直播礼物红包（测试，不推荐） <Badge type="warning" text="慎用" vertical="middle" />
+- [ ] ~~直播天选时刻（黑号，不推荐）~~ <Badge type="warning" text="慎用" vertical="middle" />
+- [x] 直播礼物红包（风控，测试，不推荐） <Badge type="warning" text="慎用" vertical="middle" />
 - [x] 粉丝勋章/亲密度
 - [ ] 大会员领取大积分 <Badge type="warning" text="新增" vertical="middle" />
 - [ ] 转盘抽奖 <Badge type="warning" text="新增" vertical="middle" />

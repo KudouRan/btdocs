@@ -35,10 +35,10 @@ description: 功能开关
 | giveGift            |        | 赠送过期礼物                                  | [点击](#直播间礼物)  |
 | liveIntimacy        |        | 牌子亲密度 （非云函数为异步运行）             | [点击](#粉丝亲密度)  |
 | batchUnfollow       |        | 取消关注                                      | [点击](#取关分组)    |
-| liveLottery         |        | 直播天选时刻                                  | [点击](#天选时刻)    |
+| ~~liveLottery~~     |        | ~~直播天选时刻~~（黑号风险）                  | [点击](#天选时刻)    |
 | liveRedPack         |        | 直播天选红包                                  | [点击](#天选红包)    |
 | activityLottery     |        | 转盘抽奖                                      | [点击](#转盘抽奖)    |
-| ~~liveFamine~~      |        | 私人定制，无可奉告                            |                      |
+| ~~liveFamine~~      |        | ~~私人定制，无可奉告~~                        |                      |
 | judgement           |        | 风纪委员                                      | [点击](#风纪委员)    |
 
 ::: details 参考写法
