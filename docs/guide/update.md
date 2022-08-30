@@ -6,8 +6,6 @@ description: 更新日志
 
 ## 0.5.220823
 
-<Badge type="warning" text="修复" vertical="middle" /> 某些情况下替换 cookie 导致配置文件格式错误（群友反馈）。
-<br/>
 <Badge type="tip" text="新增" vertical="middle" /> 取消 charging，使用 useCouponBp 替代，并增加 b 币兑换电池（群友需求）。
 <br/>
 <Badge type="tip" text="新增" vertical="middle" /> mangaTask 增加漫画自动领取奖励（阅读奖励，签到奖励，不过前提是这些已经做过了），暂时不需要开启，也不能关闭。
@@ -19,6 +17,8 @@ description: 更新日志
 <Badge type="tip" text="新增" vertical="middle" /> bigPoint 重试可配置等待时间。
 <br/>
 <Badge type="tip" text="新增" vertical="middle" /> npm 增加 --createCookie -cck 参数，可以使用 cookie 生成新 cookie，用处懂的都懂。
+<br/>
+<Badge type="warning" text="修复" vertical="middle" /> 某些情况下替换 cookie 导致配置文件格式错误（群友反馈）。
 <br/>
 <Badge type="tip" text="优化" vertical="middle" /> 完善 delay 参数。
 <br/>

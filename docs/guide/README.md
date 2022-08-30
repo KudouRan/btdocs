@@ -59,6 +59,17 @@ b 币券兑换电池 useCouponBp 测试中，配置详见 [配置](../config/fun
 新增自动删除 15 天前的文件日志，如果文件按月计算，则大约在月中删除上个月的日志。
 :::
 
+<Badge type="tip" text="新增" vertical="middle" /> liveRedPack。
+<br/>
+<Badge type="warning" text="修复" vertical="middle" /> 漫画领取奖励出现赛季错误的问题。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 部分日志。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 增加取关的配置。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 增加赠送直播间礼物 all 选项。
+<br/>
+
 链接跳转：
 
 [天选红包](../config/func.md#天选红包)
