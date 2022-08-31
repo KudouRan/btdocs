@@ -8,18 +8,43 @@ actions:
   - text: 配置详情
     link: /config/
     type: secondary
-features:
-  - title: 简洁至上
-    details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-  - title: Vue 驱动
-    details: 享受 Vue 的开发体验，可以在 Markdown 中使用 Vue 组件，又可以使用 Vue 来开发自定义主题。
-  - title: 高性能
-    details: VuePress 会为每个页面预渲染生成静态的 HTML，同时，每个页面被加载的时候，将作为 SPA 运行。
-  - title: 主题
-    details: 提供了一个开箱即用的默认主题。你也可以挑选一个社区主题，或者创建一个你自己的主题。
-  - title: 插件
-    details: 灵活的插件API，使得插件可以为你的站点提供许多即插即用的功能。
-  - title: 打包工具
-    details: 默认的打包工具是 Vite ，也同样支持 Webpack 。选一个你喜欢的来使用吧！
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
+
+<p style="text-align: center;">
+
+[**连文档都看不懂？那看这里，文档使用教程（用一篇文档去教怎么用文档？）**](/about/usage.md)
+
+</p>
+
+<div style="display: flex; justify-content:space-around;">
+<div>
+
+- [指南](/guide/README.md)
+  - [本地运行](/guide/local.md)
+  - [服务器运行](/guide/server.md)
+  - [青龙面板](/guide/qinglong.md)
+  - [Docker](/guide/docker.md)
+  - [腾讯云函数](/guide/tencent_scf.md)
+  - [阿里云函数](/guide/ali_fc.md)
+  - [百度云函数](/guide/baidu_cfc.md)
+  - [华为 AGC 云函数](/guide/huawei_agc.md)
+  - [华为云函数](/guide/huawei_fg.md)
+  - [Github Action](/guide/github_action.md)
+  - [更新日志](/guide/update.md)
+
+</div>
+
+<div>
+
+- [配置](/config/README.md)
+  - [必要值获取，如 cookie（必看）](/config/get_value.md)
+  - [配置总览](/config/account.md)
+  - [任务功能配置](/config/func.md)
+  - [消息推送/通知](/config/message.md)
+  - [日志配置](/config/logger.md)
+  - [Github Secrets](/config/github_secrets.md)
+  - [环境变量](/config/env.md)
+
+</div>
+</div>

@@ -5,49 +5,85 @@ description: 简单介绍
 ---
 
 ::: tip 参与贡献
-如果对与此文档有补充、改进意见或者修改，每个页面都可以直接点击末尾的`在 GitHub 上编辑此页`。非常感谢！
-:::
+如果对与此文档有补充、改进意见或者修改，每个页面都可以直接点击末尾的`在 GitHub 上编辑此页`，非常感谢！
 
-::: tip 参与贡献
 如果喜欢请为 <https://github.com/KudouRan/BiliTools> 点个 star，关注才能不迷路。非常感谢！
 :::
 
 ## 支持功能 <Badge v-if="isRefreshed" type="tip" :text="`版本${tagName}`" vertical="top" />
 
-- [x] 部分方式每日随机时间运行 <Badge type="tip" text="推荐" vertical="middle" />
-- [x] 每日签到/分享/播放
-- [x] 直播签到
-- [x] 漫画签到
-- [x] 12 点兑换漫画券（测试）
-- [ ] 自动使用即将过期的漫读券
-- [x] 每日自动投币（指定数量）
-- [x] 银瓜子兑换硬币
-- [x] 应援团签到
-- [x] 硬币赛事竞猜（不保证胜率，支持正压、反压和随机压）
-- [x] 直播间弹幕（每日首次获得 100 亲密度，自动点亮灰色勋章）
-- [x] 领取年度大会员权益/B 币券（无测试条件，更新为每日检测）
-- [x] 自动使用 B 币券充电
-- [x] 自动使用 B 币券兑换电池（测试）
-- [x] 直播赠送即将过期的礼物
-- [x] 多账号独立配置
-- [ ] ~~直播天选时刻（黑号，不推荐）~~ <Badge type="warning" text="慎用" vertical="middle" />
-- [x] 直播礼物红包（风控，测试，不推荐） <Badge type="warning" text="慎用" vertical="middle" />
-- [x] 粉丝勋章/亲密度
-- [ ] 大会员领取大积分 <Badge type="warning" text="新增" vertical="middle" />
-- [ ] 转盘抽奖 <Badge type="warning" text="新增" vertical="middle" />
-- [x] 支持 Docker 、腾讯 SCF 、阿里 FC、百度 CFC、华为 FG、青龙面板等方式运行，支持执行消息推送
-- [x] 代码自动在线更新，发包任你发 <Badge type="tip" text="推荐" vertical="middle" />
-- [ ] 风纪委员（迁移），来自 [dd178/BILI_judgement](https://github.com/dd178/BILI_judgement/blob/master/judgement.py)，（我们不生产代码，我们只是代码的搬运工），慎用，如有不良后果，概不负责。
+**注意：**
 
-## 使用说明
+- 表中排列顺序即为功能的调用顺序，内部设置顺序，与配置顺序无关。
+- 带删除线的表示已经弃用或其它原因不推荐使用，但是内容没有删除。
 
-配置方式见顶部导航栏，点击配置[或者点击这里跳转](../config/)。
+| 功能            | 默认值 | 说明                                          | 配置文档                              |
+| --------------- | ------ | --------------------------------------------- | ------------------------------------- |
+| exchangeCoupon  |        | 兑换漫读券 （暂时~~只能~~通过指定 task 运行） | [点击](../config/func.md#兑换漫读券)  |
+| liveSignTask    | `true` | 直播间签到                                    |                                       |
+| addCoins        | `true` | 投币                                          | [点击](../config/func.md#投币)        |
+| bigPoint        |        | 大会员领取大积分                              | [点击](../config/func.md#大积分)      |
+| shareAndWatch   | `true` | 观看和分享视频                                |                                       |
+| silver2Coin     | `true` | 银瓜子兑换硬币                                |                                       |
+| mangaTask       |        | 漫画任务                                      | [点击](../config/func.md#漫画任务)    |
+| supGroupSign    |        | 应援团签到 （目前也无意义了啊）               |                                       |
+| useCouponBp     |        | 使用 b 币券（充电/兑换电池）                  | [点击](../config/func.md#使用-b-币券) |
+| getVipPrivilege |        | 获取大会员权益                                |                                       |
+| matchGame       |        | 赛事竞猜（人人都是硬币慈善家）                | [点击](../config/func.md#竞猜)        |
+| giveGift        |        | 赠送过期礼物                                  | [点击](../config/func.md#直播间礼物)  |
+| liveIntimacy    |        | 牌子亲密度 （非云函数为异步运行）             | [点击](../config/func.md#粉丝亲密度)  |
+| batchUnfollow   |        | 取消关注                                      | [点击](../config/func.md#取关分组)    |
+| ~~liveLottery~~ |        | ~~直播天选时刻~~（黑号风险）                  | [点击](../config/func.md#天选时刻)    |
+| liveRedPack     |        | 直播天选红包                                  | [点击](../config/func.md#天选红包)    |
+| activityLottery |        | 转盘抽奖                                      | [点击](../config/func.md#转盘抽奖)    |
+| judgement       |        | 风纪委员                                      | [点击](../config/func.md#风纪委员)    |
+
+只有将这些值设置为 `true` 才会生效，如果设置为 `false` ，具体的配置再怎么样也不会去执行，下面是参考写法。
+
+::: details 参考写法
+
+```json5
+{
+  function: {
+    silver2Coin: true,
+    addCoins: true,
+    liveSignTask: true,
+    shareAndWatch: true,
+    mangaTask: false,
+    batchUnfollow: false,
+    supGroupSign: false,
+    useCouponBp: false,
+    getVipPrivilege: false,
+    giveGift: false,
+    matchGame: false,
+    liveRedPack: false,
+    supGroupSign: false,
+    bigPoint: false,
+    judgement: false,
+    activityLottery: false,
+  },
+}
+```
+
+:::
+
+**其它**
+
+- 阿里云函数/腾讯云函数每日随机时间运行。 <Badge type="tip" text="推荐" vertical="middle" />
+- 多账号独立配置。
+- 支持 Docker 、腾讯 SCF 、阿里 FC、百度 CFC、华为 FG、青龙面板等方式运行。（文档查看侧边栏，手机端点左上角）
+- 支持执行消息推送。
+- 部分平台代码自动在线更新，发包任你发。
 
 ### 重要提示
 
 ::: danger cookie 重要提示（关于频繁失效），除了账号本身可能存在的风险外（例如异地登录，大量的天选等），还可能是以下原因
 请务必查看 Cookie 的获取[点击这里跳转](../config/get_value.md)
 :::
+
+## 使用说明
+
+配置方式见顶部导航栏（移动端点左上角，上面部分是导航），点击配置[或者点击这里跳转](../config/)。
 
 ## 更新
 
