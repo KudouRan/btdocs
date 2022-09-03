@@ -1,7 +1,7 @@
 ---
 lang: zh-CN
-title: 功能开关
-description: 功能开关
+title: 功能配置
+description: 功能配置
 ---
 
 ## 功能配置
@@ -53,7 +53,7 @@ description: 功能开关
     mangaTask: false,
     batchUnfollow: false,
     supGroupSign: false,
-    charging: false,
+    useCouponBp: false,
     getVipPrivilege: false,
     giveGift: false,
     matchGame: false,
@@ -206,8 +206,6 @@ doing...
 
 由于活动拥有不同的赛季，赛季的接口不一样，可能更新不及时，因此可以自定义配置。
 
-`countDown` 是活动接口显示的开奖倒计时，这个值越大（不能超过红包的最大时间 3 分钟），在直播间活跃的时间越长，设置一个合适的值更有利于中奖。
-
 `intervalActive` 当活动接口的红包全部过期后，会再次请求活动接口获取新的。中间等待 `intervalActive` 用于降低风控概率。
 
 红包会一直运行，直到获得 20 次奖励为止。但这并不实现，为了避免因为无法获得奖励而一直不结束。通过 `totalNum`、`noWinNum` 和 `riskNum` 避免这种致命问题。
@@ -227,8 +225,6 @@ doing...
     source: 0,
     // 活动链接
     uri: 'https://api.live.bilibili.com/xlive/fuxi-interface/AugRedPacket2022Controller/redPocketPlaying',
-    // 【仅使用活动时有效】 参与的红包剩余开奖时间（秒），设置该值能增加直播间的活跃时间。
-    countDown: 60,
     // 【仅使用活动时有效】 每轮抢红包的间隔时间（秒）
     intervalActive: 60,
     // 中场休息时间，当每参加了几个直播间的时候，休息一下 [参加个数，休息时间（分，小于1为直接结束）]
