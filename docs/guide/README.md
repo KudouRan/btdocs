@@ -95,6 +95,10 @@ b 币券兑换电池 useCouponBp 测试中，配置详见 [配置](../config/fun
 新增自动删除 15 天前的文件日志，如果文件按月计算，则大约在月中删除上个月的日志。
 :::
 
+<Badge type="warning" text="优化" vertical="middle" /> 去除投币功能部分废弃的配置。
+<br/>
+<Badge type="warning" text="优化" vertical="middle" /> 转盘抽奖的在线链接支持自定义/代理前缀。
+<br/>
 <Badge type="warning" text="修复" vertical="middle" /> 漫画领取奖励出现赛季错误的问题。
 <br/>
 <Badge type="warning" text="修复" vertical="middle" /> 充电/兑换电池若干问题。
@@ -107,7 +111,7 @@ b 币券兑换电池 useCouponBp 测试中，配置详见 [配置](../config/fun
 <br/>
 <Badge type="tip" text="优化" vertical="middle" /> 增加赠送直播间礼物 all 选项。
 <br/>
-<Badge type="tip" text="优化" vertical="middle" /> 自动更新代码优化了依赖管理。对于本体，增加使用 fork 进行兜底并防止运行两次。
+<Badge type="warning" text="删除" vertical="middle" /> 去除自动更新。
 <br/>
 
 链接跳转：

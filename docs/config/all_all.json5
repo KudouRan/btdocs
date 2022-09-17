@@ -250,13 +250,17 @@
       // 活动列表
       list: [],
       // 是否从网络请求活动列表
-      isRequest: false,
+      isRequest: true,
       // 抽奖延时（秒）
       delay: [1.8, 3.2],
       // 与 isRequest 配合，是否通过追番增加次数（追番然后取消，不一定有用），云函数不建议开
       bangumi: false,
       // 同上，不过是关注，（未完成，配置了也没用）
       follow: false,
+      // 请求 GitHub 使用的代理前缀，例如 https://ghproxy.com/
+      proxyPrefix: '',
+      // 自定义活动列表链接
+      customUrl: '',
     },
     // 兑换漫读券
     exchangeCoupon: {
