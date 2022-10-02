@@ -25,7 +25,7 @@ description: 青龙面板运行
   <CodeGroupItem title="Gitee" active>
 
 ```bash
-ql raw https://gitee.com/Kudouran/BiliOutils/raw/main/tools/bilitools_npm.js
+ql raw https://gitee.com/catlair/BiliOutils/raw/main/tools/bilitools_npm.js
 ```
 
   </CodeGroupItem>
@@ -33,7 +33,7 @@ ql raw https://gitee.com/Kudouran/BiliOutils/raw/main/tools/bilitools_npm.js
   <CodeGroupItem title="Github">
 
 ```bash
-ql raw https://raw.githubusercontent.com/Kudouran/BiliOutils/main/tools/bilitools_npm.js
+ql raw https://raw.githubusercontent.com/catlair/BiliOutils/main/tools/bilitools_npm.js
 ```
 
   </CodeGroupItem>
@@ -83,7 +83,7 @@ PS: 可以不执行 `pnpm remove -g @catlair/bilitools`，不过前一个版本�
 
 ## npm 参数
 
-讨论：<https://github.com/KudouRan/BiliOutils/issues/90#issuecomment-1190364619>
+讨论：<https://github.com/catlair/BiliOutils/issues/90#issuecomment-1190364619>
 
 由于青龙面板也是通过 npm 运行的，所以理所应当的能够使用 npm 参数。
 

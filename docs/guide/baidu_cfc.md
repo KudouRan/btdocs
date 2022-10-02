@@ -6,9 +6,9 @@ description: 百度云函数 CFC
 
 ## 百度云函数 CFC 文档 <TestedVersion type="cfc" />
 
-下载最新版的[baidu_cfc.zip 压缩包](https://github.com/Kudouran/BiliOutils/releases/latest)
+下载最新版的[baidu_cfc.zip 压缩包](https://github.com/catlair/BiliOutils/releases/latest)
 
-[Gitee 备份下载地址](https://gitee.com/Kudouran/BiliOutils/releases/)
+[Gitee 备份下载地址](https://gitee.com/catlair/BiliOutils/releases/)
 
 加速下载：
 <MyLink :href="downloadUrl"></MyLink>
@@ -56,5 +56,5 @@ import { useReleasesStore } from '@stores/releases';
 
 const { tagName } = storeToRefs(useReleasesStore());
 const ghproxy = __GLOBAL_GHPROXY__
-const downloadUrl = `https://${ghproxy}/https://github.com/Kudouran/BiliOutils/releases/download/${tagName.value}/baidu_cfc.zip`
+const downloadUrl = `https://${ghproxy}/https://github.com/catlair/BiliOutils/releases/download/${tagName.value}/baidu_cfc.zip`
 </script>

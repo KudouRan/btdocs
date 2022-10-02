@@ -53,12 +53,12 @@ export default defineUserConfig({
         children: [
           {
             text: 'Github',
-            link: 'https://github.com/Kudouran/BiliOutils',
+            link: 'https://github.com/catlair/BiliOutils',
             target: '_blank',
           },
           {
             text: 'Gitee（国内）',
-            link: 'https://gitee.com/Kudouran/BiliOutils',
+            link: 'https://gitee.com/catlair/BiliOutils',
             target: '_blank',
           },
           {
@@ -108,12 +108,12 @@ export default defineUserConfig({
         children: [
           {
             text: 'Github',
-            link: 'https://github.com/Kudouran/BiliOutils/issues',
+            link: 'https://github.com/catlair/BiliOutils/issues',
             target: '_blank',
           },
           {
             text: 'Gitee（国内）',
-            link: 'https://gitee.com/Kudouran/BiliOutils/issues',
+            link: 'https://gitee.com/catlair/BiliOutils/issues',
             target: '_blank',
           },
           {

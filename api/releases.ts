@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 
 export default async (request: VercelRequest, response: VercelResponse) => {
   const res = await fetch(
-    'https://api.github.com/repos/Kudouran/BiliOutils/releases/latest',
+    'https://api.github.com/repos/catlair/BiliOutils/releases/latest',
     {
       method: 'GET',
     }

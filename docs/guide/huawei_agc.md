@@ -6,9 +6,9 @@ description: 华为 AGC 云函数
 
 ## 华为 AGC 云函数文档 <TestedVersion type="agc" />
 
-下载最新版的 [huawei_agc.zip 压缩包](https://github.com/Kudouran/BiliOutils/releases/latest)
+下载最新版的 [huawei_agc.zip 压缩包](https://github.com/catlair/BiliOutils/releases/latest)
 
-[Gitee 备份下载地址](https://gitee.com/Kudouran/BiliOutils/releases/)
+[Gitee 备份下载地址](https://gitee.com/catlair/BiliOutils/releases/)
 
 加速下载：
 <MyLink :href="downloadUrl"></MyLink>
@@ -61,5 +61,5 @@ import { useReleasesStore } from '@stores/releases';
 
 const { tagName } = storeToRefs(useReleasesStore());
 const ghproxy = __GLOBAL_GHPROXY__
-const downloadUrl = `https://${ghproxy}/https://github.com/Kudouran/BiliOutils/releases/download/${tagName.value}/huawei_agc.zip`
+const downloadUrl = `https://${ghproxy}/https://github.com/catlair/BiliOutils/releases/download/${tagName.value}/huawei_agc.zip`
 </script>

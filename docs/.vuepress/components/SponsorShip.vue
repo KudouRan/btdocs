@@ -3,10 +3,10 @@
     <p>
       最好也是最简单的支持就是为
       <a
-        href="https://github.com/KudouRan/BiliOutils"
+        href="https://github.com/catlair/BiliOutils"
         target="_blank"
         rel="noopener noreferrer"
-        >https://github.com/KudouRan/BiliOutils<ExternalLinkIcon
+        >https://github.com/catlair/BiliOutils<ExternalLinkIcon
       /></a>
       点个 star，关注才能不迷路。非常感谢！
     </p>
