@@ -18,8 +18,8 @@ const basePath = process.env.BASE_PATH as '/';
 export default defineUserConfig({
   lang: 'zh-CN',
   base: isProd ? basePath : '/',
-  title: 'BiliTools 使用说明',
-  description: '这是 BiliTools 使用说明文档站点',
+  title: 'BiliOutils 使用说明',
+  description: '这是 BiliOutils 使用说明文档站点',
   theme: defaultTheme({
     editLink: true,
     repo: 'kudouran/btdocs',
@@ -53,12 +53,12 @@ export default defineUserConfig({
         children: [
           {
             text: 'Github',
-            link: 'https://github.com/Kudouran/BiliTools',
+            link: 'https://github.com/Kudouran/BiliOutils',
             target: '_blank',
           },
           {
             text: 'Gitee（国内）',
-            link: 'https://gitee.com/Kudouran/BiliTools',
+            link: 'https://gitee.com/Kudouran/BiliOutils',
             target: '_blank',
           },
           {
@@ -108,12 +108,12 @@ export default defineUserConfig({
         children: [
           {
             text: 'Github',
-            link: 'https://github.com/Kudouran/BiliTools/issues',
+            link: 'https://github.com/Kudouran/BiliOutils/issues',
             target: '_blank',
           },
           {
             text: 'Gitee（国内）',
-            link: 'https://gitee.com/Kudouran/BiliTools/issues',
+            link: 'https://gitee.com/Kudouran/BiliOutils/issues',
             target: '_blank',
           },
           {

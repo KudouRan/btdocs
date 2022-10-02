@@ -1,6 +1,6 @@
 {
-  "name": "BiliTools",
-  "short_name": "BiliTools",
+  "name": "BiliOutils",
+  "short_name": "BiliOutils",
   "description": "Vue-powered Static Site Generator",
   "start_url": "/index.html",
   "display": "standalone",
