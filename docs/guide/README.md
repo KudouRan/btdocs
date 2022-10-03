@@ -91,9 +91,9 @@ description: 简单介绍
 b 币券兑换电池 useCouponBp 测试中，配置详见 [配置](../config/func.md)
 
 天选红包 liveRedPack 测试中，配置详见 [配置](../config/func.md)
-
-新增自动删除 15 天前的文件日志，如果文件按月计算，则大约在月中删除上个月的日志。
 :::
+
+[历史各版本配置对比](/config/version.md)
 
 **9-30 更新：**
 

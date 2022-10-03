@@ -192,6 +192,7 @@ export default defineUserConfig({
             '/config/logger.md',
             '/config/github_secrets.md',
             '/config/env.md',
+            '/config/version.md',
           ],
         },
       ],

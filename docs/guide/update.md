@@ -4,6 +4,10 @@ title: 更新日志
 description: 更新日志
 ---
 
+## 历史配置对比
+
+[历史配置对比](/config/version.md)
+
 ## 0.5.220823
 
 <Badge type="tip" text="新增" vertical="middle" /> 取消 charging，使用 useCouponBp 替代，并增加 b 币兑换电池（群友需求）。
