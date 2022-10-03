@@ -35,7 +35,20 @@ import { ref, onMounted, watch } from 'vue';
 import { useFetch } from '@vueuse/core';
 import { CodeDiff } from 'v-code-diff';
 
-const { data: versionOptions } = useFetch(`/data/version/version.json`).json();
+const baseURL = ref(),
+  versionUrl = ref();
+
+// 处理baseURL
+onMounted(() => {
+  if (window.location.hostname === 'localhost') {
+    baseURL.value = '';
+  } else {
+    baseURL.value = location.href?.includes('vercel') ? '' : '/BiliOutils';
+  }
+  versionUrl.value = `${baseURL.value}/data/version/version.json`;
+});
+
+const { data: versionOptions } = useFetch(versionUrl).json();
 
 const newValue = ref(),
   oldValue = ref(),
@@ -62,7 +75,7 @@ function updateUrl(urlRef, valueRef) {
   const name = Array.isArray(valueRef.value)
     ? valueRef.value[1]
     : valueRef.value;
-  urlRef.value = `/data/version/${name}.json5`;
+  urlRef.value = `${baseURL.value}/data/version/${name}.json5`;
 }
 
 function updateValue(value, type) {
