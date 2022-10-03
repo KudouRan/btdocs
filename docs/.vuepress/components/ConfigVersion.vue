@@ -19,21 +19,37 @@
       />
     </div>
   </div>
+  <div style="margin-bottom: 5px; position: relative">
+    <el-radio-group
+      v-model="outputFormatRadio"
+      size="small"
+      style="position: absolute; bottom: 0; right: 0"
+    >
+      <el-radio-button label="Split" name="outputFormat" />
+      <el-radio-button label="Unified" />
+    </el-radio-group>
+  </div>
   <div>
     <code-diff
       :old-string="oldJSON"
       :new-string="newJSON"
       file-name="test.txt"
       :context="5"
-      output-format="side-by-side"
+      :output-format="outputFormat"
     />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, watch } from 'vue';
+import { ref, onMounted, watch, computed } from 'vue';
 import { useFetch } from '@vueuse/core';
 import { CodeDiff } from 'v-code-diff';
+
+const outputFormatRadio = ref('Split');
+// 当 outputFormatRadio 为 Split 时 outputFormat 为 side-by-side，反之 line-by-line
+const outputFormat = computed(() =>
+  outputFormatRadio.value === 'Split' ? 'side-by-side' : 'line-by-line'
+);
 
 const baseURL = ref(),
   versionUrl = ref();
@@ -90,8 +106,46 @@ function cancelEmptyFetch({ url, cancel }) {
 </script>
 
 <style lang="scss">
-.config-version-page .page > div {
-  max-width: 90%;
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+.config-version-page {
+  .page > div {
+    max-width: 100%;
+  }
+
+  table {
+    margin: 0 auto;
+    display: table;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+  }
+
+  tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+  }
+
+  th,
+  td {
+    box-sizing: border-box;
+    padding: 1px;
+    border: 1px solid #fff;
+
+    &.d2h-cntx {
+      border-right: 1px solid #eee;
+    }
+  }
+
+  tr:nth-child(2n) {
+    background-color: inherit;
+  }
 }
 </style>
 
