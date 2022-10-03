@@ -282,7 +282,7 @@ export default defineUserConfig({
       ],
       // @ts-ignore
       ssr: {
-        noExternal: ['element-plus'],
+        noExternal: ['element-plus', 'v-code-diff', 'diff2html'],
       },
     },
     vuePluginOptions: {},

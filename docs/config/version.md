@@ -7,4 +7,6 @@ pageClass: config-version-page
 editLink: false
 ---
 
-<ConfigVersion></ConfigVersion>
+<ClientOnly>
+  <ConfigVersion></ConfigVersion>
+</ClientOnly>
