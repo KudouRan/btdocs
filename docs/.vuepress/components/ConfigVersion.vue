@@ -147,6 +147,7 @@ function cancelEmptyFetch({ url, cancel }) {
 .config-version-page {
   .page > div {
     max-width: 100%;
+    background: #fff;
   }
 
   table {
