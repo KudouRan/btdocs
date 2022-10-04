@@ -148,6 +148,7 @@ function cancelEmptyFetch({ url, cancel }) {
   .page > div {
     max-width: 100%;
     background: #fff;
+    color: #2c3e50;
   }
 
   table {
