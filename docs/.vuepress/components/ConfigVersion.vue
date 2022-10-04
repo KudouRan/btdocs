@@ -1,33 +1,31 @@
 <template>
-  <div style="display: flex">
-    <div class="example-block">
-      <span class="example-demonstration">比较版本：</span>
-      <el-cascader
-        placeholder="选择版本"
-        v-model="oldValue"
-        :options="versionOptions"
-        filterable
-      />
+  <div style="display: flex; flex-direction: column">
+    <div style="display: flex">
+      <div class="example-block">
+        <span class="example-demonstration">比较版本：</span>
+        <el-cascader
+          placeholder="选择版本"
+          v-model="oldValue"
+          :options="versionOptions"
+          filterable
+        />
+      </div>
+      <div class="example-block">
+        <span class="example-demonstration">当前版本：</span>
+        <el-cascader
+          placeholder="选择版本"
+          v-model="newValue"
+          :options="versionOptions"
+          filterable
+        />
+      </div>
     </div>
-    <div class="example-block">
-      <span class="example-demonstration">当前版本：</span>
-      <el-cascader
-        placeholder="选择版本"
-        v-model="newValue"
-        :options="versionOptions"
-        filterable
-      />
+    <div class="change-format">
+      <el-radio-group v-model="outputFormatRadio" size="small">
+        <el-radio-button label="Split" name="outputFormat" />
+        <el-radio-button label="Unified" />
+      </el-radio-group>
     </div>
-  </div>
-  <div style="margin-bottom: 5px; position: relative">
-    <el-radio-group
-      v-model="outputFormatRadio"
-      size="small"
-      style="position: absolute; bottom: 0; right: 0"
-    >
-      <el-radio-button label="Split" name="outputFormat" />
-      <el-radio-button label="Unified" />
-    </el-radio-group>
   </div>
   <div>
     <code-diff
@@ -42,10 +40,12 @@
 
 <script lang="ts" setup>
 import { ref, onMounted, watch, computed } from 'vue';
-import { useFetch } from '@vueuse/core';
+import { useFetch, useLocalStorage } from '@vueuse/core';
 import { CodeDiff } from 'v-code-diff';
 
-const outputFormatRadio = ref('Split');
+// const outputFormatRadio = ref('Split');
+const outputFormatRadio = useLocalStorage('outputFormatRadio', 'Split');
+
 // 当 outputFormatRadio 为 Split 时 outputFormat 为 side-by-side，反之 line-by-line
 const outputFormat = computed(() =>
   outputFormatRadio.value === 'Split' ? 'side-by-side' : 'line-by-line'
@@ -54,14 +54,18 @@ const outputFormat = computed(() =>
 const baseURL = ref(),
   versionUrl = ref();
 
-// 处理baseURL
 onMounted(() => {
+  // 处理baseURL
   if (window.location.hostname === 'localhost') {
     baseURL.value = '';
   } else {
     baseURL.value = location.href?.includes('vercel') ? '' : '/BiliOutils';
   }
   versionUrl.value = `${baseURL.value}/data/version/version.json`;
+  // 小屏幕时强制为 line-by-line
+  if (window.innerWidth < 768) {
+    outputFormatRadio.value = 'Unified';
+  }
 });
 
 const { data: versionOptions } = useFetch(versionUrl).json();
@@ -106,6 +110,35 @@ function cancelEmptyFetch({ url, cancel }) {
 </script>
 
 <style lang="scss">
+@media screen and (max-width: 768px) {
+  .config-version-page {
+    .theme-default-content {
+      padding: 0;
+    }
+
+    .change-format {
+      padding: 0 1em;
+    }
+
+    .d2h-code-linenumber {
+      width: 5em;
+    }
+
+    .d2h-code-line {
+      padding-left: 5.5em;
+    }
+
+    .line-num1 {
+      text-align: left;
+    }
+  }
+}
+
+.change-format {
+  margin: -1em 0 5px;
+  text-align: right;
+}
+
 *,
 ::after,
 ::before {

@@ -5,6 +5,8 @@ description: 历史配置对比
 sidebar: false
 pageClass: config-version-page
 editLink: false
+lastUpdated: false
+contributors: false
 ---
 
 <ClientOnly>
