@@ -164,6 +164,7 @@ export default defineUserConfig({
           text: '指南',
           children: [
             '/guide/README.md',
+            '/guide/qa.md',
             '/guide/local.md',
             '/guide/server.md',
             '/guide/qinglong.md',

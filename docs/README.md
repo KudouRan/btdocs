@@ -22,7 +22,6 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
 
 - [指南](/guide/README.md)
   - [本地运行](/guide/local.md)
-  - [服务器运行](/guide/server.md)
   - [青龙面板](/guide/qinglong.md)
   - [Docker](/guide/docker.md)
   - [腾讯云函数](/guide/tencent_scf.md)
@@ -32,6 +31,7 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
   - [华为云函数](/guide/huawei_fg.md)
   - [Github Action](/guide/github_action.md)
   - [更新日志](/guide/update.md)
+  - [常见问题](/guide/qa.md)
 
 </div>
 
@@ -45,6 +45,7 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
   - [日志配置](/config/logger.md)
   - [Github Secrets](/config/github_secrets.md)
   - [环境变量](/config/env.md)
+  - [配置对比](config/version.md)
 
 </div>
 </div>

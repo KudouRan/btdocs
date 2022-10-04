@@ -4,18 +4,16 @@ title: 必要值获取（必看）
 description: 必要值获取（必看）
 ---
 
-## PC 获取 Cookie 的方法
+## 必看
 
-以 PC 端浏览器举例（推荐使用 Firefox/Chrome/Chromium Edge）
-
-最终 Cookie 是这样的（为了演示方便换了行，实际只有一行）
+最终 Cookie 是这样的（为了演示方便换了行，实际只有一行），只有基础的三个用户信息也能用，但是并不推荐，且容易出现某些异常。
 
 ```text
 _uuid=D2282D0F-257B-845A-BDF5-C770ED288F4001440infoc; buvid3=BF17608E-FB87-4F49-A922-56FD2E284D6F18534infoc;
 fingerprint=5502cd4fe9637738de04bd9c3d1bdbc5;
 buvid_fp=BF17608E-FB87-4F49-A922-56FD2E284D6F18534infoc;
 SESSDATA=21607773%2C1631089673%2C71a42%2A31; bili_jct=dd92c55a6d67041ce2f3fb1650889ea8;
-DedeUserID=521268093; DedeUserID__ckMd5=47d541f04b605da9;
+DedeUserID=12324234243817316; DedeUserID__ckMd5=47d541f04b605da9;
 sid=ivie73r8; fingerprint3=792b32adfecbe31a4aca53ab7be1ad76;
 fingerprint_s=bb6736758e7344a295c2ed6070cc642e;
 buvid_fp_plain=BF17608E-FB87-4F49-A922-56FD2E284D6F18534infoc;
@@ -25,15 +23,21 @@ LIVE_BUVID=AUTO8016188357987702; bsource=search_baidu; PVID=2
 
 **为了避免 cookie 被刷新失效**（例如你时常使用浏览器访问 b 站，那就不要直接复制它的 cookie，因为目前存在 cookie 自动刷新的情况，你保留的就会失效了），你应该使用隐私窗口重新登录哔站，并获取新的 cookie。
 
-隐私窗口打开方式（举例）：
-
+::: details 隐私窗口打开方式（PC 举例）：
 ![隐私窗口](@imgs/br_ys.png)
+:::
 
 获取成功后应该直接关闭隐私窗口，而不是退出你的哔站账号，那样 cookie 立马失效。
 
-如下图所示，**这是错误的**，某些人喜欢退出后再登录第二个账号，这样第一个账号的 cookie 就会失效。你应该直接关闭隐私窗口，然后再打开一个新的隐私窗口。
+一些人使用多账号时喜欢退出后再登录第二个账号，这样第一个账号的 cookie 就会失效。你应该直接关闭隐私窗口，然后再打开一个新的隐私窗口。
 
+::: details 如图所示，这是错误的
 ![bili_exit](@imgs/bili_exit.png)
+:::
+
+## PC 获取 Cookie 的方法
+
+推荐使用 Firefox/Chrome/Chromium Edge/360 极速浏览器
 
 ### Firefox
 
@@ -60,7 +64,7 @@ LIVE_BUVID=AUTO8016188357987702; bsource=search_baidu; PVID=2
 在使用 Chromium 类的浏览器时复制时一定要选中**复制**，而不是使用自带的**复制值**功能。
 :::
 
-选中值，点击右键，选择 `复制`或者按键 `Ctrl + C`，得到结果会被编码（如下例）。
+选中值，点击右键，选择 `复制`或者按键 `Ctrl + C`，得到结果会被编码（下为可能被编码的部分）。
 
 ```
 SESSDATA=b2817085%2C1672313089%2C25294%2A71; PVID=3; b_timer=%7B%22ffp%22%3A%7B%22333.851.fp.risk_B0835BF0%22%3A%22181C34B87E8%22%2C%22777.5.0.0.fp.risk_B0835BF0%22%3A%22181C352F104%22%7D%7D

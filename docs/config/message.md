@@ -1,6 +1,6 @@
 ---
 lang: zh-CN
-title: 消息通知
+title: 消息通知/推送
 description: 消息通知
 ---
 

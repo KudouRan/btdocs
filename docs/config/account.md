@@ -32,13 +32,13 @@ description: 配置详情
 
 **重要配置说明**
 
-- cookie 详见 [获取 Cookie 的方法](./get_value.md#获取-cookie-的方法)。
+- cookie 详见 [获取 Cookie 的方法](./get_value.md)。
 - userAgent - 内置默认浏览器 UA，但请尽量自行设置为常用设备 UA。该浏览器的 UA 为：<code>{{ userAgent }}</code>
 
 ## 完整配置参考
 
 ::: tip
-由于消息推送较多，且没有默认值，所以下面并没有完全包含所有配置项。但是这里已经基本包含了配置。详情还是看 [配置详情](./func.md)。
+由于消息推送较多，且没有默认值，所以下面并没有完全包含所有配置项。但是这里已经基本包含了配置。
 :::
 
 ::: danger 注意
