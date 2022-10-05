@@ -73,8 +73,6 @@
     targetCoins: 5,
     // 自定义 up
     customizeUp: [],
-    // 当获取已投币数量失败，假设已投币数量
-    todayCoins: 0,
   },
   // 使用b币券
   couponBalance: {

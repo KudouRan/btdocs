@@ -78,10 +78,6 @@
       targetCoins: 5,
       // 自定义 up
       customizeUp: [],
-      // 当获取已投币数量失败，假设已投币数量
-      todayCoins: 0,
-      // 是否只投指定 up
-      upperAccMatch: true,
     },
     // 使用b币券
     couponBalance: {
@@ -288,7 +284,7 @@
       coins5: true,
     },
   },
-  // 配置第二个用户，和上面一样的配置，
+  // 配置第二个用户，和上面一样的配置。
   {
     // cookie: "xxxxxxxxxx"
   },
