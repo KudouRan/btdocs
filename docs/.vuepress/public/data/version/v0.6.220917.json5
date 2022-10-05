@@ -75,8 +75,6 @@
     customizeUp: [],
     // 当获取已投币数量失败，假设已投币数量
     todayCoins: 0,
-    // 是否只投指定 up
-    upperAccMatch: true,
   },
   // 使用b币券
   couponBalance: {

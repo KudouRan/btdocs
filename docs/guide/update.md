@@ -8,6 +8,35 @@ description: 更新日志
 
 [历史配置对比](/config/version.md)
 
+## 0.6.220930
+
+<Badge type="tip" text="优化" vertical="middle" /> 增加消息推送仅错误时推送。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 未登录时打印 id，方便为多账号检查。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 删除风纪委员的 mode 配置，仅支持原 mode=1。
+<br/>
+<Badge type="warning" text="修复" vertical="middle" /> 更新依赖。
+<br/>
+<Badge type="warning" text="修复" vertical="middle" /> 漫画领取奖励出现赛季错误的问题。
+<br/>
+<Badge type="warning" text="修复" vertical="middle" /> 充电/兑换电池若干问题。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 去除投币功能部分废弃的配置。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 转盘抽奖的在线链接支持自定义/代理前缀。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> liveRedPack 去除 countDown 配置。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 调整部分日志，增加错误标题。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 增加取关的配置。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 增加赠送直播间礼物 all 选项。
+<br/>
+<Badge type="warning" text="删除" vertical="middle" /> 去除自动更新。
+<br/>
+
 ## 0.5.220823
 
 <Badge type="tip" text="新增" vertical="middle" /> 取消 charging，使用 useCouponBp 替代，并增加 b 币兑换电池（群友需求）。

@@ -4,6 +4,10 @@
     "label": "0.6",
     "children": [
       {
+        "value": "all_all",
+        "label": "预览"
+      },
+      {
         "value": "v0.6.220930",
         "label": "220930",
         "isActive": "new"

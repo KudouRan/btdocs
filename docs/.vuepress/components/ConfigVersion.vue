@@ -88,7 +88,13 @@ watch(versionOptions, () => {
   updateValue(newValue, 'new');
   updateValue(oldValue, 'old');
 });
-watch(newValue, () => updateUrl(newUrl, newValue));
+watch(newValue, () => {
+  updateUrl(newUrl, newValue);
+  // 切换到预览时自定切换最新
+  if (Array.isArray(newValue.value) && newValue.value[1] === 'all_all') {
+    updateValue(oldValue, 'new');
+  }
+});
 watch(oldValue, () => updateUrl(oldUrl, oldValue));
 
 function updateUrl(urlRef, valueRef) {

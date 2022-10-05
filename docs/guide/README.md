@@ -95,6 +95,17 @@ b 币券兑换电池 useCouponBp 测试中，配置详见 [配置](../config/fun
 
 [历史各版本配置对比](/config/version.md)
 
+**下次更新预览：**
+
+<Badge type="tip" text="新增" vertical="middle" /> 漫画每日首次分享。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 获取指定类型稿件的方式由成功获取后进行判断，修改为只查找指定类型。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 稿件来源可自定优先顺序和去掉来源。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 多账号中错误的配置不再加载时直接跳过，改为运行时跳过。
+<br/>
+
 **9-30 更新：**
 
 <Badge type="tip" text="优化" vertical="middle" /> 增加消息推送仅错误时推送。
@@ -104,27 +115,6 @@ b 币券兑换电池 useCouponBp 测试中，配置详见 [配置](../config/fun
 <Badge type="tip" text="优化" vertical="middle" /> 删除风纪委员的 mode 配置，仅支持原 mode=1。
 <br/>
 <Badge type="warning" text="修复" vertical="middle" /> 更新依赖。
-<br/>
-
-**之前：**
-
-<Badge type="tip" text="优化" vertical="middle" /> 去除投币功能部分废弃的配置。
-<br/>
-<Badge type="tip" text="优化" vertical="middle" /> 转盘抽奖的在线链接支持自定义/代理前缀。
-<br/>
-<Badge type="warning" text="修复" vertical="middle" /> 漫画领取奖励出现赛季错误的问题。
-<br/>
-<Badge type="warning" text="修复" vertical="middle" /> 充电/兑换电池若干问题。
-<br/>
-<Badge type="tip" text="优化" vertical="middle" /> liveRedPack 去除 countDown 配置。
-<br/>
-<Badge type="tip" text="优化" vertical="middle" /> 调整部分日志，增加错误标题。
-<br/>
-<Badge type="tip" text="优化" vertical="middle" /> 增加取关的配置。
-<br/>
-<Badge type="tip" text="优化" vertical="middle" /> 增加赠送直播间礼物 all 选项。
-<br/>
-<Badge type="warning" text="删除" vertical="middle" /> 去除自动更新。
 <br/>
 
 链接跳转：

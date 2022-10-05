@@ -1,6 +1,6 @@
 {
   // 浏览器用户代理
-  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0',
   // 云函数随机运行用的时间段
   dailyRunTime: '17:30:00-23:40:00',
   // 通用 api 延迟时间（s）
@@ -77,6 +77,8 @@
     customizeUp: [],
     // 当获取已投币数量失败，假设已投币数量
     todayCoins: 0,
+    // 获取稿件的来源（排序），留空则来自 首页推荐
+    src: ['自定义UP', '特别关注', '关注', '首页推荐', '分区排行'],
   },
   // 使用b币券
   couponBalance: {
