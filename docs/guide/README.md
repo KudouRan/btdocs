@@ -99,22 +99,13 @@ b 币券兑换电池 useCouponBp 测试中，配置详见 [配置](../config/fun
 
 <Badge type="tip" text="新增" vertical="middle" /> 漫画每日首次分享。
 <br/>
+<Badge type="tip" text="新增" vertical="middle" /> 【合作视频】精准匹配用户，视频上传者必须是目标用户。这是曾经有过的功能，后来因为逻辑的变动和 api 的更改就废弃了。
+<br/>
 <Badge type="tip" text="优化" vertical="middle" /> 获取指定类型稿件的方式由成功获取后进行判断，修改为只查找指定类型。
 <br/>
 <Badge type="tip" text="优化" vertical="middle" /> 稿件来源可自定优先顺序和去掉来源。
 <br/>
 <Badge type="tip" text="优化" vertical="middle" /> 多账号中错误的配置不再加载时直接跳过，改为运行时跳过。
-<br/>
-
-**9-30 更新：**
-
-<Badge type="tip" text="优化" vertical="middle" /> 增加消息推送仅错误时推送。
-<br/>
-<Badge type="tip" text="优化" vertical="middle" /> 未登录时打印 id，方便为多账号检查。
-<br/>
-<Badge type="tip" text="优化" vertical="middle" /> 删除风纪委员的 mode 配置，仅支持原 mode=1。
-<br/>
-<Badge type="warning" text="修复" vertical="middle" /> 更新依赖。
 <br/>
 
 链接跳转：

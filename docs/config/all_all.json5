@@ -78,6 +78,10 @@
       targetCoins: 5,
       // 自定义 up
       customizeUp: [],
+      // 获取稿件的来源（排序），留空则来自 首页推荐
+      src: ['自定义UP', '特别关注', '关注', '首页推荐', '分区排行'],
+      // 合作视频精准匹配上传者
+      upperAccMatch: false,
     },
     // 使用b币券
     couponBalance: {

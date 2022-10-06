@@ -1,4 +1,19 @@
 <template>
+  <el-drawer v-model="drawer" size="100%" title="输入你的配置" direction="ttb">
+    <div>
+      <el-input
+        v-model="textarea"
+        :rows="2"
+        :autosize="{ minRows: 2 }"
+        type="textarea"
+        placeholder="简单测试一下，不搞那么复杂了"
+      />
+      <div style="margin-top: 10px">
+        <el-button @click="drawer = false">取消</el-button>
+        <el-button type="primary" @click="clickInputJSON">确定</el-button>
+      </div>
+    </div>
+  </el-drawer>
   <div style="display: flex; flex-direction: column">
     <div style="display: flex">
       <div class="example-block">
@@ -20,12 +35,13 @@
         />
       </div>
     </div>
-    <div class="change-format">
-      <el-radio-group v-model="outputFormatRadio" size="small">
-        <el-radio-button label="Split" name="outputFormat" />
-        <el-radio-button label="Unified" />
-      </el-radio-group>
-    </div>
+  </div>
+  <div class="change-format">
+    <el-button size="small" @click="drawer = true"> 输入内容 </el-button>
+    <el-radio-group v-model="outputFormatRadio" size="small">
+      <el-radio-button label="Split" name="outputFormat" />
+      <el-radio-button label="Unified" />
+    </el-radio-group>
   </div>
   <div>
     <code-diff
@@ -42,6 +58,9 @@
 import { ref, onMounted, watch, computed } from 'vue';
 import { useFetch, useLocalStorage } from '@vueuse/core';
 import { CodeDiff } from 'v-code-diff';
+
+const drawer = ref(false),
+  textarea = ref('');
 
 // const outputFormatRadio = ref('Split');
 const outputFormatRadio = useLocalStorage('outputFormatRadio', 'Split');
@@ -113,6 +132,11 @@ function updateValue(value, type) {
 function cancelEmptyFetch({ url, cancel }) {
   url || cancel();
 }
+
+function clickInputJSON() {
+  oldJSON.value = textarea.value;
+  drawer.value = false;
+}
 </script>
 
 <style lang="scss">
@@ -141,8 +165,9 @@ function cancelEmptyFetch({ url, cancel }) {
 }
 
 .change-format {
-  margin: -1em 0 5px;
-  text-align: right;
+  margin: -0.5em 0 5px;
+  display: flex;
+  justify-content: space-between;
 }
 
 *,

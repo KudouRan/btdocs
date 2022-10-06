@@ -78,6 +78,8 @@
       targetCoins: 5,
       // 自定义 up
       customizeUp: [],
+      // 合作视频精准匹配上传者
+      upperAccMatch: false,
     },
     // 使用b币券
     couponBalance: {

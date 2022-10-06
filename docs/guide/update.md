@@ -26,8 +26,6 @@ description: 更新日志
 <br/>
 <Badge type="tip" text="优化" vertical="middle" /> 转盘抽奖的在线链接支持自定义/代理前缀。
 <br/>
-<Badge type="tip" text="优化" vertical="middle" /> liveRedPack 去除 countDown 配置。
-<br/>
 <Badge type="tip" text="优化" vertical="middle" /> 调整部分日志，增加错误标题。
 <br/>
 <Badge type="tip" text="优化" vertical="middle" /> 增加取关的配置。
