@@ -37,7 +37,12 @@
     </div>
   </div>
   <div class="change-format">
-    <el-button size="small" @click="drawer = true"> 输入内容 </el-button>
+    <div>
+      <el-button size="small" @click="drawer = true"> 输入内容对比 </el-button>
+      <a :href="newUrl" style="margin-left: 0.4em"
+        ><el-button size="small"> 下载当前选择版本 </el-button></a
+      >
+    </div>
     <el-radio-group v-model="outputFormatRadio" size="small">
       <el-radio-button label="Split" name="outputFormat" />
       <el-radio-button label="Unified" />
@@ -70,7 +75,7 @@ const outputFormat = computed(() =>
   outputFormatRadio.value === 'Split' ? 'side-by-side' : 'line-by-line'
 );
 
-const baseURL = ref(),
+const baseURL = ref(''),
   versionUrl = ref();
 
 onMounted(() => {

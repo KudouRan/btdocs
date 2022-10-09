@@ -10,7 +10,8 @@ description: 消息通知
 
 | Key            | 值类型                    | 说明                                                     |
 | -------------- | ------------------------- | -------------------------------------------------------- |
-| br             | 换行符                    | 主要配合 api 使用，有的 api 换行是`\n`，有的是需要`\n\n` |
+| br             | 字符串                    | 主要配合 api 使用，有的 api 换行是`\n`，有的是需要`\n\n` |
+| onlyError      | 布尔值                    | 仅错误时发送                                             |
 | email          | [点击了解](#email)        |                                                          |
 | pushplusToken  | 字符串                    | [官网](http://www.pushplus.plus/)获取 token              |
 | api            | 字符串或对象              | 自定义推送 API，[详见](#自定义推送-api)                  |
@@ -22,6 +23,7 @@ description: 消息通知
 {
   message: {
     br: '\n',
+    onlyError: false,
     email: {
       from: 'xxxxxxxxx',
       to: 'xxxxxxxxx',
