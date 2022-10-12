@@ -46,6 +46,25 @@ npm config set registry https://registry.npmjs.org/
 yarn add @catlair/bilitools
 ```
 
+可能因为 node 版本出现类似的错误
+
+```bash
+warning package.json: No license field
+warning No license field
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+error responselike@3.0.0: The engine "node" is incompatible with this module. Expected version ">=14.16". Got "12.14.1"
+error Found incompatible module.
+info Visit https://yarnpkg.com/en/docs/cli/add for documentation about this command.
+```
+
+可以运行如下命令，忽略错误后安装/更新（因为安装和运行环境的版本不一样，所以不用担心）
+
+```bash
+yarn config set ignore-engines true
+yarn add @catlair/bilitools
+```
+
 修改 index.js 的代码
 
 ```javascript
