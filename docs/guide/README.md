@@ -97,6 +97,25 @@ b 币券兑换电池 useCouponBp 测试中，配置详见 [配置](../config/fun
 
 **下次更新预览：**
 
+无
+
+**221014：**
+
+<Badge type="warning" text="修复" vertical="middle" /> 【非云函数】，转盘抽奖错误的判断为今日已运行。
+<br/>
+<Badge type="tip" text="新增" vertical="middle" /> 为亲密度增加运行后检查运行情况，默认不开启，因为 b 站数据延迟可能会出现检查后从头运行。
+<br/>
+<Badge type="tip" text="新增" vertical="middle" /> 【仅云函数】，风纪委员在没有新案件需要休眠时，采用新建 Trigger 等待的方式（通过调用次数换取资源时间）。默认开启 [jury.newTrigger]。
+<br/>
+<Badge type="tip" text="新增" vertical="middle" /> 【非云函数】，避免出现某些人所说的莫名奇妙的 cookie 失效（当然只是尝试，本人并遇到过），配置 createCookieDay，运行通过当前 cookie 创建出新的 cookie，（非刷新，cookie 可以共存）。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 为亲密度减少某些情况下的 api 调用。
+<br/>
+
+注：以上内容随时可能发生变化，所以并没有写在文档中，相关配置可以直接看完整配置参考或历史版本配置对比。
+
+**221006：**
+
 <Badge type="tip" text="新增" vertical="middle" /> 漫画每日首次分享。
 <br/>
 <Badge type="tip" text="新增" vertical="middle" /> 【合作视频】精准匹配用户，视频上传者必须是目标用户。这是曾经有过的功能，后来因为逻辑的变动和 api 的更改就废弃了。

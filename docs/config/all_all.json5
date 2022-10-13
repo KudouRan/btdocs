@@ -11,6 +11,8 @@
     // b 站 cookie （登录信息）可能需要双引号
     // prettier-ignore
     cookie: "xxxxx",
+    // 间隔多少天创建一个新的 cookie（非刷新）
+    createCookieDay: -1,
     // 配置运行的功能
     function: {
       // 瓜子兑换硬币
@@ -205,6 +207,10 @@
       whiteList: [],
       // 黑名单
       blackList: [],
+      // 同时有多少个直播间已获取亲密度超过200时，强制跳过弹幕和点赞。小于 0 不跳过
+      skipNum: 10,
+      // 完成直播心跳后是否再检查一次，可能因为数据延迟而重复操作，不建议云函数开启
+      isRetryHeart: false,
     },
     // 漫画
     manga: {
@@ -233,6 +239,8 @@
       opinionMin: 3,
       // 没有案件后等待时间（分）
       waitTime: 20,
+      // 云函数下使用新的触发器进行休眠
+      newTrigger: true,
     },
     // 大积分
     bigPoint: {
