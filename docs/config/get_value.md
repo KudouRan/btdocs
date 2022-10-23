@@ -78,12 +78,7 @@ SESSDATA=b281131,167123189,1235294*21; PVID=3; b_timer={"ffp":{"333.851.fp.risk_
 
 当然你可以把其放到这里进行编码
 
-<el-space>
-<el-input v-model="cookie" placeholder="请输入 Cookie"></el-input>
-<el-button @click="encodeCookieClick">点击编码</el-button>
-</el-space>
-
-<code v-if="newCookie">{{ newCookie }}</code>
+<EncodeCookie></EncodeCookie>
 
 ## 移动端获取 cookie
 
@@ -122,17 +117,10 @@ SESSDATA=b281131,167123189,1235294*21; PVID=3; b_timer={"ffp":{"333.851.fp.risk_
 
 <script setup>
 import { ref, onMounted } from "vue";
-import { encodeCookie } from '@utils/cookie';
 
 const userAgent = ref('');
-const cookie = ref('');
-const newCookie = ref('');
 
 onMounted(() => {
   userAgent.value = navigator.userAgent;
 });
-
-function encodeCookieClick(){
-  newCookie.value = encodeCookie(cookie.value);
-}
 </script>

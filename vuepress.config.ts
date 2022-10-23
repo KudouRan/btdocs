@@ -82,6 +82,11 @@ export default defineUserConfig({
             target: '_blank',
           },
           {
+            text: 'Cookie 校验和编码',
+            link: '/config/encode_cookie.html',
+            target: '_blank',
+          },
+          {
             text: 'Gzip 压缩',
             link: 'https://www.baidufe.com/fehelper/en-decode/',
             target: '_blank',

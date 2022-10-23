@@ -34,3 +34,13 @@ function getCookieString(obj: object): string {
   }, '');
   return string.substring(0, string.length - 2 || 0);
 }
+
+export function isBiliCookie(cookie: string) {
+  return Boolean(
+    cookie &&
+      cookie.length > 90 &&
+      ['bili_jct', 'SESSDATA', 'DedeUserID'].every((str) =>
+        cookie.includes(str)
+      )
+  );
+}
