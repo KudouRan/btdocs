@@ -3,7 +3,7 @@ import { useFetch } from '@vueuse/core';
 import { ref } from 'vue';
 
 export const useReleasesStore = defineStore('releases', () => {
-  const tagName = ref('v0.5.7');
+  const tagName = ref('v0.6.221018');
   const isRefreshed = ref(false);
 
   useFetch<string>('/api/releases').then(({ data }) => {

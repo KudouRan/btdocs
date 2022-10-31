@@ -215,6 +215,10 @@
     sign: true,
     // 购买漫画
     buy: false,
+    // 每日阅读
+    read: false,
+    // 阅读的抓包信息
+    readSign: [],
     // 购买漫画 id（优先级高）
     mc: [],
     // 购买漫画名称（优先级中）
