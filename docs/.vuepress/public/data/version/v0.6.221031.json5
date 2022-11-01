@@ -225,6 +225,10 @@
     name: [],
     // 购买追漫（优先级低）
     love: true,
+    // 执行购买漫画间隔时间（单位天）
+    buyInterval: 2,
+    // 星期几执行购买漫画
+    buyWeek: [],
   },
   // 风纪委员
   jury: {
@@ -252,7 +256,7 @@
   // 大积分
   bigPoint: {
     // 是否间隔 5s 再重试一次，或者直接填写等待时间（秒）
-    isRetry: 20,
+    isRetry: true,
     // 是否完成观看视频的任务
     isWatch: true,
     // 正片视频的 epid（集数id）

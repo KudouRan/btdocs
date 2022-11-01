@@ -83,7 +83,7 @@ export default defineUserConfig({
           },
           {
             text: 'Cookie 校验和编码',
-            link: '/config/encode_cookie.md',
+            link: '/config/encode_cookie/',
             target: '_blank',
           },
           {

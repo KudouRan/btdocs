@@ -146,7 +146,7 @@
       // 直播间来源方式 1 活动（活动链接可能更新不及时），2 扫描。其它值 所有方式依次尝试。
       source: 0,
       // 活动链接
-      uri: 'https://api.live.bilibili.com/xlive/fuxi-interface/AugRedPacket2022Controller/redPocketPlaying',
+      uri: '',
       // 仅使用活动时有效，每轮抢红包的间隔时间（秒）
       intervalActive: 60,
       // 中场休息时间，当每参加了几个直播间的时候，休息一下 [参加个数，休息时间（分，小于1为直接结束）]
@@ -218,6 +218,10 @@
       sign: true,
       // 购买漫画
       buy: false,
+      // 每日阅读
+      read: false,
+      // 阅读手动输入抓包信息
+      readSign: [],
       // 购买漫画 id（优先级高）
       mc: [],
       // 购买漫画名称（优先级中）
@@ -233,6 +237,14 @@
     jury: {
       // 默认投票 0-3 好-无法判断，从中随机
       vote: [0, 0, 1],
+      // 是否采用参考投票，不采用就使用默认投票
+      opinion: true,
+      // 排除投票 0-3 好-无法判断，用于配合参考投票，不影响【默认投票】配置
+      notOpinion: [3],
+      // 是否观看视频 0 不观看，1 观看，从中随机
+      insiders: [0, 1],
+      // 是否匿名 0 不匿名，1 匿名，从中随机
+      anonymous: [0, 1],
       // 没有案件不退出，运行一次直到完成
       once: true,
       // 参考人数最少满足
@@ -241,6 +253,8 @@
       waitTime: 20,
       // 云函数下使用新的触发器进行休眠
       newTrigger: true,
+      // 计算 opinionMin 值时，目标用户投没有观看的权重，观看了是 1
+      insiderWeight: 0.8,
     },
     // 大积分
     bigPoint: {
@@ -266,7 +280,7 @@
       // 同上，不过是关注，（未完成，配置了也没用）
       follow: false,
       // 请求 GitHub 使用的代理前缀，例如 https://ghproxy.com/
-      proxyPrefix: '',
+      proxyPrefix: 'https://ghproxy.com/',
       // 自定义活动列表链接
       customUrl: '',
     },

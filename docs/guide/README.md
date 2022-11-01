@@ -88,48 +88,30 @@ description: 简单介绍
 ## 更新
 
 ::: tip 测试内容
-b 币券兑换电池 useCouponBp 测试中，配置详见 [配置](../config/func.md)
-
-天选红包 liveRedPack 测试中，配置详见 [配置](../config/func.md)
+漫画阅读时长任务：[点击查看](../config/manga.md)
 :::
 
 [历史各版本配置对比](/config/version.md)
 
 **下次更新预览：**
 
-漫画阅读时长任务：[点击查看](./manga.md)
+停更
 
-**221014：**
+**221031：**
 
-<Badge type="warning" text="修复" vertical="middle" /> 【非云函数】，转盘抽奖错误的判断为今日已运行。
+<Badge type="warning" text="修复" vertical="middle" /> 【非云函数】，cookie 存在单引号时重新保存错误。
 <br/>
-<Badge type="tip" text="新增" vertical="middle" /> 为亲密度增加运行后检查运行情况，默认不开启，因为 b 站数据延迟可能会出现检查后从头运行。
+<Badge type="warning" text="修复" vertical="middle" /> 【云函数】，阿里云内不打印错误日志。
 <br/>
-<Badge type="tip" text="新增" vertical="middle" /> 【仅云函数】，风纪委员在没有新案件需要休眠时，采用新建 Trigger 等待的方式（通过调用次数换取资源时间）。默认开启 [jury.newTrigger]。
+<Badge type="tip" text="新增" vertical="middle" /> 漫画每日阅读任务，[manga.read] 开启。但是需要自己手动抓包配置请求体。
 <br/>
-<Badge type="tip" text="新增" vertical="middle" /> 【非云函数】，避免出现某些人所说的莫名奇妙的 cookie 失效（当然只是尝试，本人并遇到过），配置 createCookieDay，运行通过当前 cookie 创建出新的 cookie，（非刷新，cookie 可以共存）。
+<Badge type="tip" text="优化" vertical="middle" /> 增加风纪任务的可配置项，参考观点时默认屏蔽 [放弃投票]。
 <br/>
-<Badge type="tip" text="优化" vertical="middle" /> 为亲密度减少某些情况下的 api 调用。
+<Badge type="tip" text="优化" vertical="middle" /> 清除默认配置中过期的活动链接。
 <br/>
-
-注：以上内容随时可能发生变化，所以并没有写在文档中，相关配置可以直接看完整配置参考或历史版本配置对比。
-
-**221006：**
-
-<Badge type="tip" text="新增" vertical="middle" /> 漫画每日首次分享。
-<br/>
-<Badge type="tip" text="新增" vertical="middle" /> 【合作视频】精准匹配用户，视频上传者必须是目标用户。这是曾经有过的功能，后来因为逻辑的变动和 api 的更改就废弃了。
-<br/>
-<Badge type="tip" text="优化" vertical="middle" /> 获取指定类型稿件的方式由成功获取后进行判断，修改为只查找指定类型。
-<br/>
-<Badge type="tip" text="优化" vertical="middle" /> 稿件来源可自定优先顺序和去掉来源。
-<br/>
-<Badge type="tip" text="优化" vertical="middle" /> 多账号中错误的配置不再加载时直接跳过，改为运行时跳过。
-<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 【非云函数】，默认日志也会清空 15 日前的记录。
 
 链接跳转：
-
-[天选红包](../config/func.md#天选红包)
 
 [更多日志点击访问详情](./update.md)
 
