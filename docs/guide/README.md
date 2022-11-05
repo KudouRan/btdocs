@@ -88,7 +88,7 @@ description: 简单介绍
 ## 更新
 
 ::: tip 测试内容
-漫画阅读时长任务：[点击查看](../config/manga.md)
+漫画阅读时长任务已经重新编写，现在无需抓包，开启即可使用，[manga.read]
 :::
 
 [历史各版本配置对比](/config/version.md)

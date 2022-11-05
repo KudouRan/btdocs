@@ -220,18 +220,12 @@
       buy: false,
       // 每日阅读
       read: false,
-      // 阅读手动输入抓包信息
-      readSign: [],
       // 购买漫画 id（优先级高）
       mc: [],
       // 购买漫画名称（优先级中）
       name: [],
       // 购买追漫（优先级低）
       love: true,
-      // 执行购买漫画间隔时间（单位天）
-      buyInterval: 2,
-      // 星期几执行购买漫画
-      buyWeek: [],
     },
     // 风纪委员
     jury: {
