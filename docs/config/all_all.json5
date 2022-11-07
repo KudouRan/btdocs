@@ -62,7 +62,7 @@
         to: '',
         pass: '',
         host: 'smtp.163.com',
-        part: 465,
+        port: 465,
       },
       // push+
       pushplusToken: '',
@@ -308,6 +308,6 @@
   },
   // 配置第二个用户，和上面一样的配置。
   {
-    // cookie: "xxxxxxxxxx"
+    cookie: 'xxxxxxxxxx',
   },
 ]

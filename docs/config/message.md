@@ -29,7 +29,7 @@ description: 消息通知
       to: 'xxxxxxxxx',
       pass: 'xxxxxxxxx',
       host: 'smtp.xxx.com',
-      part: 465,
+      port: 465,
     },
     pushplusToken: 'xxxxxxxxxxxxxxx',
     SCKEY: 'xxxxxxxx',

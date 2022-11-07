@@ -57,7 +57,7 @@
       to: '',
       pass: '',
       host: 'smtp.163.com',
-      part: 465,
+      port: 465,
     },
     // push+
     pushplusToken: '',
