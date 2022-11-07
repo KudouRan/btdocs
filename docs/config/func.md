@@ -37,6 +37,7 @@ description: 功能配置
 | batchUnfollow       |        | 取消关注                                      | [点击](#取关分组)    |
 | ~~liveLottery~~     |        | ~~直播天选时刻~~（黑号风险）                  | [点击](#天选时刻)    |
 | liveRedPack         |        | 直播天选红包                                  | [点击](#天选红包)    |
+| dailyBattery        |        | 每日电池任务                                  |                      |
 | activityLottery     |        | 转盘抽奖                                      | [点击](#转盘抽奖)    |
 | ~~liveFamine~~      |        | ~~私人定制，无可奉告~~                        |                      |
 | judgement           |        | 风纪委员                                      | [点击](#风纪委员)    |
@@ -63,11 +64,14 @@ description: 功能配置
     bigPoint: false,
     judgement: false,
     activityLottery: false,
+    dailyBattery: false,
   },
 }
 ```
 
 :::
+
+- dailyBattery 于亲密度和红包任务完成后执行，可以减少弹幕的发送。
 
 ## 投币
 

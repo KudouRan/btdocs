@@ -45,6 +45,8 @@
       judgement: false,
       // 转盘抽奖
       activityLottery: false,
+      // 每日电池
+      dailyBattery: false,
     },
     // 消息推送
     message: {
