@@ -35,6 +35,7 @@ description: 简单介绍
 | batchUnfollow   |        | 取消关注                                      | [点击](../config/func.md#取关分组)    |
 | ~~liveLottery~~ |        | ~~直播天选时刻~~（黑号风险）                  | [点击](../config/func.md#天选时刻)    |
 | liveRedPack     |        | 直播天选红包                                  | [点击](../config/func.md#天选红包)    |
+| dailyBattery    |        | 每日电池任务                                  |                                       |
 | activityLottery |        | 转盘抽奖                                      | [点击](../config/func.md#转盘抽奖)    |
 | judgement       |        | 风纪委员                                      | [点击](../config/func.md#风纪委员)    |
 
@@ -67,14 +68,6 @@ description: 简单介绍
 
 :::
 
-**其它**
-
-- 阿里云函数/腾讯云函数每日随机时间运行。 <Badge type="tip" text="推荐" vertical="middle" />
-- 多账号独立配置。
-- 支持 Docker 、腾讯 SCF 、阿里 FC、百度 CFC、华为 FG、青龙面板等方式运行。（文档查看侧边栏，手机端点左上角）
-- 支持执行消息推送。
-- 部分平台代码自动在线更新，发包任你发。
-
 ### 重要提示
 
 ::: danger cookie 重要提示（关于频繁失效），除了账号本身可能存在的风险外（例如异地登录，大量的天选等），还可能是以下原因
@@ -97,19 +90,15 @@ description: 简单介绍
 
 停更
 
-**221031：**
+**221107：**
 
-<Badge type="warning" text="修复" vertical="middle" /> 【非云函数】，cookie 存在单引号时重新保存错误。
+<Badge type="tip" text="新增" vertical="middle" /> 新增 dailyBattery 每日电池任务，发送 5 条弹幕获取 1 电池。
 <br/>
-<Badge type="warning" text="修复" vertical="middle" /> 【云函数】，阿里云内不打印错误日志。
+<Badge type="tip" text="新增" vertical="middle" /> 新增多用户配置支持公共配置。
 <br/>
-<Badge type="tip" text="新增" vertical="middle" /> 漫画每日阅读任务，[manga.read] 开启。但是需要自己手动抓包配置请求体。
+<Badge type="tip" text="优化" vertical="middle" /> 漫画每日阅读无需额外配置，开启即可使用。
 <br/>
-<Badge type="tip" text="优化" vertical="middle" /> 增加风纪任务的可配置项，参考观点时默认屏蔽 [放弃投票]。
-<br/>
-<Badge type="tip" text="优化" vertical="middle" /> 清除默认配置中过期的活动链接。
-<br/>
-<Badge type="tip" text="优化" vertical="middle" /> 【非云函数】，默认日志也会清空 15 日前的记录。
+<Badge type="tip" text="优化" vertical="middle" /> 优化自定义推送 API 的替换逻辑。
 
 链接跳转：
 

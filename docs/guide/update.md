@@ -8,6 +8,20 @@ description: 更新日志
 
 [历史配置对比](/config/version.md)
 
+**221031：**
+
+<Badge type="warning" text="修复" vertical="middle" /> 【非云函数】，cookie 存在单引号时重新保存错误。
+<br/>
+<Badge type="warning" text="修复" vertical="middle" /> 【云函数】，阿里云内不打印错误日志。
+<br/>
+<Badge type="tip" text="新增" vertical="middle" /> 漫画每日阅读任务，[manga.read] 开启。但是需要自己手动抓包配置请求体。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 增加风纪任务的可配置项，参考观点时默认屏蔽 [放弃投票]。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 清除默认配置中过期的活动链接。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 【非云函数】，默认日志也会清空 15 日前的记录。
+
 ## 0.6.221014
 
 <Badge type="warning" text="修复" vertical="middle" /> 【非云函数】，转盘抽奖错误的判断为今日已运行。

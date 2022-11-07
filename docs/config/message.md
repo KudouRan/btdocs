@@ -15,7 +15,7 @@ description: 消息通知
 | email          | [点击了解](#email)        |                                                          |
 | pushplusToken  | 字符串                    | [官网](http://www.pushplus.plus/)获取 token              |
 | api            | 字符串或对象              | 自定义推送 API，[详见](#自定义推送-api)                  |
-| 从青龙面板移植 | [环境变量](#来自青龙面板) |                                                          |
+| 从青龙面板移植 | [环境变量](#来自青龙面板) | 你在找微信，tg，serverChan？不妨看这里                   |
 
 ::: details 参考配置
 
@@ -56,9 +56,54 @@ description: 消息通知
 
 ## 来自青龙面板
 
-例如 serverChan 直接使用的青龙面板
+> 下列环境变量来自 `青龙面板`
+>
+> 具体介绍看这里 <https://github.com/whyour/qinglong/blob/develop/sample/config.sample.sh>
+> 支持 serverChan（Server 酱）、Telegram（Telegram）、Wechat（微信）等
 
-[配置项详见](./env.md#青龙面板相关)
+支持以下三种方式填写：
+
+- 环境变量，如 `PUSH_PLUS_TOKEN`
+- 通过在配置中的 message 字段中配置，以下两种方式都可以。
+  ```json
+  {
+    "message": {
+      "PUSH_PLUS_TOKEN": "xxxxxxxx",
+      "pushPlusToken": "xxxxxxxx",
+      "SCKEY": "xxxxxxxx",
+      "sckey": "xxxxxxxx"
+    }
+  }
+  ```
+
+由于青龙面板在不断更新，但是这里可能没有更，下面列出支持的列表：
+
+```js
+{
+  'GOBOT_URL',
+  'GOBOT_TOKEN',
+  'GOBOT_QQ',
+  'SCKEY': 'server酱',
+  'QQ_SKEY',
+  'QQ_MODE',
+  'BARK_PUSH',
+  'BARK_SOUND',
+  'BARK_GROUP',
+  'TG_BOT_TOKEN': 'telegram',
+  'TG_USER_ID',
+  'TG_PROXY_AUTH',
+  'TG_PROXY_HOST',
+  'TG_PROXY_PORT',
+  'TG_API_HOST',
+  'DD_BOT_TOKEN',
+  'DD_BOT_SECRET',
+  'QYWX_KEY': '企业微信',
+  'QYWX_AM': '企业微信应用消息',
+  'IGOT_PUSH_KEY': 'iGot',
+  'PUSH_PLUS_TOKEN',
+  'PUSH_PLUS_USER',
+};
+```
 
 ## 自定义推送 API
 

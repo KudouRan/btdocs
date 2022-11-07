@@ -27,9 +27,7 @@ description: 功能配置
 | ~~mangaSign~~       |        | （请使用 mangaTask，配置 sign 默认开启）      |                      |
 | mangaTask           |        | 漫画任务                                      | [点击](#漫画任务)    |
 | supGroupSign        |        | 应援团签到 （目前也无意义了啊）               |                      |
-| ~~liveSendMessage~~ |        | （请使用 liveIntimacy，配置 liveSendMessage） |                      |
 | useCouponBp         |        | 使用 b 币券（充电/兑换电池）                  | [点击](#使用-b-币券) |
-| ~~charging~~        |        | （请使用 useCouponBp，并配置为充电）          | [点击](#使用-b-币券) |
 | getVipPrivilege     |        | 获取大会员权益                                |                      |
 | matchGame           |        | 赛事竞猜（人人都是硬币慈善家）                | [点击](#竞猜)        |
 | giveGift            |        | 赠送过期礼物                                  | [点击](#直播间礼物)  |
@@ -39,7 +37,6 @@ description: 功能配置
 | liveRedPack         |        | 直播天选红包                                  | [点击](#天选红包)    |
 | dailyBattery        |        | 每日电池任务                                  |                      |
 | activityLottery     |        | 转盘抽奖                                      | [点击](#转盘抽奖)    |
-| ~~liveFamine~~      |        | ~~私人定制，无可奉告~~                        |                      |
 | judgement           |        | 风纪委员                                      | [点击](#风纪委员)    |
 
 ::: details 参考写法
