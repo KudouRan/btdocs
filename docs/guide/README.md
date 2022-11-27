@@ -88,7 +88,9 @@ description: 简单介绍
 
 **下次更新预览：**
 
-停更
+<Badge type="warning" text="修复" vertical="middle" /> 修复 dailyBattery 任务部分完成的问题。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 大积分每日 75 调整到 65。
 
 **221107：**
 
