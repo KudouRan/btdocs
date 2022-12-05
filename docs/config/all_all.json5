@@ -228,6 +228,8 @@
       name: [],
       // 购买追漫（优先级低）
       love: true,
+      // 猜拳
+      guess: false,
     },
     // 风纪委员
     jury: {
@@ -251,15 +253,15 @@
       newTrigger: true,
       // 计算 opinionMin 值时，目标用户投没有观看的权重，观看了是 1
       insiderWeight: 0.8,
+      // 异步，非云函数下使用。不支持推送结果
+      async: false,
     },
     // 大积分
     bigPoint: {
-      // 是否间隔 5s 再重试一次，或者直接填写等待时间（秒）
-      isRetry: true,
+      // 是否间隔 20s 再重试一次，或者直接填写等待时间（秒）
+      isRetry: 20,
       // 是否完成观看视频的任务
       isWatch: true,
-      // 正片视频的 epid（集数id）
-      epids: [],
       // 领取任务后的观看延时（秒）
       watchDelay: 40,
     },
@@ -282,10 +284,12 @@
     },
     // 兑换漫读券
     exchangeCoupon: {
-      // 兑换漫读券数量
+      // 兑换漫读券数量，小于 1 为自动
       num: 1,
       // 间隔时间，单位 ms，随机误差 -50 ~ 150
       delay: 2000,
+      // 保留积分数
+      keepAmount: 0,
     },
     log: {
       // 推送日志等级，'error' | 'warn' | 'info' | 'verbose' | 'debug'，或者 false 关闭

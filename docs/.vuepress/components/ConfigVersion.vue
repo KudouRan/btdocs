@@ -114,7 +114,7 @@ watch(versionOptions, () => {
 });
 watch(newValue, () => {
   updateUrl(newUrl, newValue);
-  // 切换到预览时自定切换最新
+  // 切换到预览时自动切换最新
   if (Array.isArray(newValue.value) && newValue.value[1] === 'all_all') {
     updateValue(oldValue, 'new');
   }
@@ -129,9 +129,13 @@ function updateUrl(urlRef, valueRef) {
 }
 
 function updateValue(value, type) {
-  value.value = versionOptions.value[0].children.find(
-    (el) => el.isActive === type
-  ).value;
+  versionOptions.value.some((el) => {
+    const active = el.children.find((el) => el.isActive === type);
+    if (active) {
+      value.value = active.value;
+      return true;
+    }
+  });
 }
 
 function cancelEmptyFetch({ url, cancel }) {
