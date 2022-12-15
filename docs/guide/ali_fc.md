@@ -77,6 +77,22 @@ exports.handler = require('@catlair/bilitools').fc_handler();
 
 <!-- <ServerlessCommon/> -->
 
+## 更新 Cookie
+
+可能需要安装一个依赖
+
+```bash
+yarn add @catlair/blogin
+```
+
+然后执行如下命令
+
+```bash
+npx bilitools -l
+```
+
+再使用手机扫码，如果 mid 存在于配置文件中，会自动更新，否则获取到的 cookie 会打印到控制台，以及 log 文件，请自行复制到配置文件中。
+
 ## 随机时间运行（可选）
 
 获取 ARM ID 和 KEY

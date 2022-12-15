@@ -73,6 +73,48 @@ pnpm remove -g @catlair/bilitools && pnpm add -g @catlair/bilitools
 
 PS: 可以不执行 `pnpm remove -g @catlair/bilitools`，不过前一个版本就会一直保留在磁盘中。
 
+## 更新 cookie
+
+添加 node 依赖 `@catlair/blogin`
+
+然后拉取青龙面板运行的代码
+
+<CodeGroup>
+
+  <CodeGroupItem title="Gitee" active>
+
+```bash
+ql raw https://gitee.com/catlair/BiliOutils/raw/main/tools/bilitools_login.js
+```
+
+  </CodeGroupItem>
+
+  <CodeGroupItem title="Github">
+
+```bash
+ql raw https://raw.githubusercontent.com/catlair/BiliOutils/main/tools/bilitools_login.js
+```
+
+  </CodeGroupItem>
+
+  <CodeGroupItem title="手动">
+
+```js
+require('@catlair/bilitools').sacnLogin();
+```
+
+手动创建一个 `任意名称.js` 文件，并且把上面的代码拷贝进去
+
+然后手动创建一个任务， `task 任意名称.js`
+
+再使用手机扫码，如果 mid 存在于配置文件中，会自动更新，否则获取到的 cookie 会打印到控制台，以及 log 文件，请自行复制到配置文件中。
+
+之后可以选择禁用任务，不要它自动运行。
+
+  </CodeGroupItem>
+
+</CodeGroup>
+
 ## 参考视频
 
 <BilibiliVideo bv="BV1fB4y1i7hL" />

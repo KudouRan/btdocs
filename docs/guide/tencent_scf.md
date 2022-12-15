@@ -55,6 +55,22 @@ exports.main_handler = require('@catlair/bilitools').scf_handler();
 
 <!-- <ServerlessCommon/> -->
 
+## 更新 Cookie
+
+可能需要安装一个依赖
+
+```bash
+yarn add @catlair/blogin
+```
+
+然后执行如下命令
+
+```bash
+npx bilitools -l
+```
+
+再使用手机扫码，如果 mid 存在于配置文件中，会自动更新，否则获取到的 cookie 会打印到控制台，以及 log 文件，请自行复制到配置文件中。
+
 ## 新建配置文件并测试是否可用
 
 **部署后**点击运行，查看是否运行成功，如若失败，请根据输出内容修改后重试

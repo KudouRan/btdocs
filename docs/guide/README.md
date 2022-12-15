@@ -24,8 +24,8 @@ description: 简单介绍
 | addCoins        | `true` | 投币                                          | [点击](../config/func.md#投币)        |
 | bigPoint        |        | 大会员领取大积分                              | [点击](../config/func.md#大积分)      |
 | shareAndWatch   | `true` | 观看和分享视频                                |                                       |
-| silver2Coin     | `true` | 银瓜子兑换硬币                                |                                       |
-| mangaTask       |        | 漫画任务                                      | [点击](../config/func.md#漫画任务)    |
+| silver2Coin     | `true` | 银瓜子兑换硬币（配合直播签到用）              |                                       |
+| mangaTask       |        | 漫画任务（包含签到，分享，阅读，小游戏）      | [点击](../config/func.md#漫画任务)    |
 | supGroupSign    |        | 应援团签到 （目前也无意义了啊）               |                                       |
 | useCouponBp     |        | 使用 b 币券（充电/兑换电池）                  | [点击](../config/func.md#使用-b-币券) |
 | getVipPrivilege |        | 获取大会员权益                                |                                       |
@@ -35,7 +35,7 @@ description: 简单介绍
 | batchUnfollow   |        | 取消关注                                      | [点击](../config/func.md#取关分组)    |
 | ~~liveLottery~~ |        | ~~直播天选时刻~~（黑号风险）                  | [点击](../config/func.md#天选时刻)    |
 | liveRedPack     |        | 直播天选红包                                  | [点击](../config/func.md#天选红包)    |
-| dailyBattery    |        | 每日电池任务                                  |                                       |
+| dailyBattery    |        | 每日电池任务（电池+1）                        |                                       |
 | activityLottery |        | 转盘抽奖                                      | [点击](../config/func.md#转盘抽奖)    |
 | judgement       |        | 风纪委员                                      | [点击](../config/func.md#风纪委员)    |
 
@@ -86,9 +86,25 @@ description: 简单介绍
 
 [历史各版本配置对比](/config/version.md)
 
-**下次更新预览：**
+**下次更新预览（预计 2023 年或者农历 2023）：**
 
-预计版本 1203：
+<Badge type="danger" text="警告" vertical="middle" /> 删除部分旧配置兼容。
+<br/>
+<Badge type="danger" text="警告" vertical="middle" /> 不再提供打包可执行文件。
+<br/>
+<Badge type="tip" text="新增" vertical="middle" /> 通过扫码获取 Cookie，二维码可打印到青龙日志，云函数控制台，本地控制台。
+<br/>
+<Badge type="tip" text="新增" vertical="middle" /> Docker 可以传递参数。
+<br/>
+<Badge type="warning" text="修复" vertical="middle" /> 漫画阅读额外使用了非即将过期的漫读券。
+<br/>
+<Badge type="warning" text="修复" vertical="middle" /> 大积分任务未全部完成的情况下没有日志输出。
+
+**在做但没有思路的：**
+
+修改 json5 文件。操作 json5 和 json 不一样，因为 json5 有注释，目前 json5 官方提供的 js 包并不支持修改后保留注释。comment-json 倒是有这种功能，但奈何不是 json5。从一开始就选错了？可能只有在 json5 官方库的基础上自己写一个了。
+
+**上一个版本 1203：**
 
 <Badge type="danger" text="警告" vertical="middle" /> 删除大部分旧配置兼容。
 <br/>
