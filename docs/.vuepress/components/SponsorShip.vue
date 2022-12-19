@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>
+    <!-- <p>
       最好也是最简单的支持就是为
       <a
         href="https://github.com/catlair/BiliOutils"
@@ -9,14 +9,14 @@
         >https://github.com/catlair/BiliOutils<ExternalLinkIcon
       /></a>
       点个 star，关注才能不迷路。非常感谢！
-    </p>
+    </p> -->
 
-    <p>当然你也可以请作者喝杯奶茶。</p>
+    <!-- <p>当然你也可以请作者喝杯奶茶。</p> -->
 
-    <p>
-      也没人备注昵称啊，那就不弄了。<del>备注昵称，将出现在感谢列表中。</del>
-    </p>
-
+    <!-- <p> -->
+    <!-- 也没人备注昵称啊，那就不弄了。<del>备注昵称，将出现在感谢列表中。</del> -->
+    <!-- </p> -->
+    <!-- 
     <el-button
       v-for="button in buttons"
       :key="button.text"
@@ -24,9 +24,9 @@
       text
       @click="changeZZUrl(button)"
       >{{ button.text }}</el-button
-    >
+    > -->
 
-    <img :class="zzClass" :src="zzUrl" alt="zz_three" />
+    <!-- <img :class="zzClass" :src="zzUrl" alt="zz_three" /> -->
 
     <!-- <p>感谢：</p>
     <ul>

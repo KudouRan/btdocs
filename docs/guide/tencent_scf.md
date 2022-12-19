@@ -97,7 +97,7 @@ npx bilitools -l
 
 ## 自定义任务
 
-讨论：<https://github.com/catlair/BiliOutils/issues/90#issuecomment-1190976142>
+~~讨论：<https://github.com/catlair/BiliOutils/issues/90#issuecomment-1190976142>~~
 
 将触发器附加内容设置为：
 

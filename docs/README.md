@@ -11,12 +11,6 @@ actions:
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
 
-<p style="text-align: center;">
-
-[**连文档都看不懂？那看这里，文档使用教程（用一篇文档去教怎么用文档？）**](/about/usage.md)
-
-</p>
-
 <div style="display: flex; justify-content:space-around;">
 <div>
 

@@ -22,22 +22,6 @@ description: 青龙面板运行
 
 <CodeGroup>
 
-  <CodeGroupItem title="Gitee" active>
-
-```bash
-ql raw https://gitee.com/catlair/BiliOutils/raw/main/tools/bilitools_npm.js
-```
-
-  </CodeGroupItem>
-
-  <CodeGroupItem title="Github">
-
-```bash
-ql raw https://raw.githubusercontent.com/catlair/BiliOutils/main/tools/bilitools_npm.js
-```
-
-  </CodeGroupItem>
-
   <CodeGroupItem title="手动">
 
 ```js
@@ -80,22 +64,6 @@ PS: 可以不执行 `pnpm remove -g @catlair/bilitools`，不过前一个版本�
 然后拉取青龙面板运行的代码
 
 <CodeGroup>
-
-  <CodeGroupItem title="Gitee" active>
-
-```bash
-ql raw https://gitee.com/catlair/BiliOutils/raw/main/tools/bilitools_login.js
-```
-
-  </CodeGroupItem>
-
-  <CodeGroupItem title="Github">
-
-```bash
-ql raw https://raw.githubusercontent.com/catlair/BiliOutils/main/tools/bilitools_login.js
-```
-
-  </CodeGroupItem>
 
   <CodeGroupItem title="手动">
 

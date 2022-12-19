@@ -6,9 +6,11 @@ description: 华为 AGC 云函数
 
 ## 华为 AGC 云函数文档 <TestedVersion type="agc" />
 
-下载最新版的 [huawei_agc.zip 压缩包](https://github.com/catlair/BiliOutils/releases/latest)
+**不再开源，故不再提供打包好的内容**
 
-[Gitee 备份下载地址](https://gitee.com/catlair/BiliOutils/releases/)
+~~下载最新版的 [huawei_agc.zip 压缩包](https://github.com/catlair/BiliOutils/releases/latest)~~
+
+~~[Gitee 备份下载地址](https://gitee.com/catlair/BiliOutils/releases/)~~
 
 加速下载：
 <MyLink :href="downloadUrl"></MyLink>

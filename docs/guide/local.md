@@ -61,7 +61,7 @@ Options:
 
 注意：很多任务（特别是需要判断大会员状态的任务）需要先执行 `loginTask` 任务。
 
-讨论：<https://github.com/catlair/BiliOutils/issues/90#issuecomment-1190364619>
+~~讨论：<https://github.com/catlair/BiliOutils/issues/90#issuecomment-1190364619>~~
 
 ## windows 下定时运行
 
