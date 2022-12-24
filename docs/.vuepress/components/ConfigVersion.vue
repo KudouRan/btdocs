@@ -83,7 +83,7 @@ onMounted(() => {
   if (window.location.hostname === 'localhost') {
     baseURL.value = '';
   } else {
-    baseURL.value = location.href?.includes('vercel') ? '' : '/BiliOutils';
+    baseURL.value = location.href?.includes('BiliOutils') ? '/BiliOutils' : '';
   }
   versionUrl.value = `${baseURL.value}/data/version/version.json`;
   // 小屏幕时强制为 line-by-line

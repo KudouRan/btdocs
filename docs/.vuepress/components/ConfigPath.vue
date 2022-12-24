@@ -79,7 +79,7 @@ onMounted(() => {
   if (window.location.hostname === 'localhost') {
     baseURL.value = '/';
   } else {
-    baseURL.value = location.href?.includes('vercel') ? '/' : '/BiliOutils/';
+    baseURL.value = location.href?.includes('BiliOutils') ? '/BiliOutils' : '/';
   }
 });
 
