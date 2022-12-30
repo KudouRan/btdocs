@@ -145,7 +145,7 @@
     // 直播间来源方式 1 活动（活动链接可能更新不及时），2 扫描。其它值 所有方式依次尝试。
     source: 0,
     // 活动链接
-    uri: 'https://api.live.bilibili.com/xlive/fuxi-interface/RedPacketController/redPocketPlaying',
+    uri: 'https://api.live.bilibili.com/xlive/fuxi-interface/RedPacketController/redPocketPlaying?_ts_rpc_args_=[101181]',
     // 仅使用活动时有效，每轮抢红包的间隔时间（秒）
     intervalActive: 60,
     // 中场休息时间，当每参加了几个直播间的时候，休息一下 [参加个数，休息时间（分，小于1为直接结束）]

@@ -96,7 +96,7 @@ cookie 重要提示（关于频繁失效），除了账号本身可能存在的�
 
 **手动更新**
 
-红包活动链接已经有新的了，如有需要请手动更新：`https://api.live.bilibili.com/xlive/fuxi-interface/RedPacketController/redPocketPlaying`
+红包活动链接已经有新的了，如有需要请手动更新：`https://api.live.bilibili.com/xlive/fuxi-interface/RedPacketController/redPocketPlaying?_ts_rpc_args_=[101181]`
 
 **下次更新预览（预计 2023 年或者农历 2023）：**
 
