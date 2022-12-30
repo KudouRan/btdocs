@@ -8,6 +8,37 @@ description: 更新日志
 
 [历史配置对比](/config/version.md)
 
+**221203**
+
+<Badge type="danger" text="警告" vertical="middle" /> 删除大部分旧配置兼容。
+<br/>
+<Badge type="danger" text="警告" vertical="middle" /> 删除 serverless 部署工具。
+<br/>
+<Badge type="tip" text="新增" vertical="middle" /> [manga.guess] 漫画每日猜拳（间隔太小会出现未知问题，故运行时长较长。收益存在随机性，也可能赔本，但基本上不存在赔本）。
+<br/>
+<Badge type="tip" text="新增" vertical="middle" /> 每月会员福利会领取 [漫画商城优惠]。
+<br/>
+<Badge type="tip" text="新增" vertical="middle" /> 多账户下风纪委员长期没案件会阻塞后期运行，现可以配置为异步执行。
+<br/>
+<Badge type="tip" text="新增" vertical="middle" /> 漫画券兑换配置更改，增加保留积分数、兑换数在原基础上增加自动数量。
+<br/>
+<Badge type="warning" text="修复" vertical="middle" /> 修复 dailyBattery 任务只部分完成的问题。
+<br/>
+<Badge type="warning" text="修复" vertical="middle" /> 粉丝亲密度 intimacy 错误的结束、错误的重试机制。
+<br/>
+
+::: details 优化
+<Badge type="tip" text="优化" vertical="middle" /> 大积分每日 75 调整到 65（官方删除一个任务）。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 大积分视频观看：去掉自定义 epid（如有自定义需要可以提，没人需要就不加了）、默认西游记随机一集改为四大名著 5 个正剧中随机、完善接口数据，更加还原真实请求。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 漫画券兑换未到达 12 点时进行等待，超过 12:02 自动退出，故可提前启动。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 漫画阅读快速完成。
+<br/>
+<Badge type="tip" text="优化" vertical="middle" /> 当然还有每次更新的保留节目：日志调整。
+:::
+
 **221107：**
 
 <Badge type="tip" text="新增" vertical="middle" /> 新增 dailyBattery 每日电池任务，发送 5 条弹幕获取 1 电池。

@@ -78,6 +78,10 @@ cookie 重要提示（关于频繁失效），除了账号本身可能存在的�
 不管你是否注意到，但是我很高兴的告诉，本项目不再开源，当然下载到的内容能够直接看到代码。开源与不开源无所谓，因为到闭源为止，通过 issue 和 pr 提供代码或文档帮助的一共只有 5 位， star 有 263 个。如果你还想再来到这里，记住 `btdocs.vercel.app` 才是一直不变的链接。
 :::
 
+::: tip
+获取直播间 -412 错误，暂时不知道怎么解决。影响功能：liveLottery、liveRedPack，liveRedPack 展示可以通过使用活动链接的方式获取直播间（手动添加配置即可）。
+:::
+
 ## 使用说明
 
 配置方式见顶部导航栏（移动端点左上角，上面部分是导航），点击配置[或者点击这里跳转](../config/)。
@@ -90,6 +94,10 @@ cookie 重要提示（关于频繁失效），除了账号本身可能存在的�
 
 [历史各版本配置对比](/config/version.md)
 
+**手动更新**
+
+红包活动链接已经有新的了，如有需要请手动更新：`https://api.live.bilibili.com/xlive/fuxi-interface/RedPacketController/redPocketPlaying`
+
 **下次更新预览（预计 2023 年或者农历 2023）：**
 
 <Badge type="danger" text="警告" vertical="middle" /> 删除部分旧配置兼容。
@@ -100,6 +108,10 @@ cookie 重要提示（关于频繁失效），除了账号本身可能存在的�
 <br/>
 <Badge type="tip" text="新增" vertical="middle" /> Docker 可以传递参数。
 <br/>
+<Badge type="tip" text="新增" vertical="middle" /> 利用 vercel 检测是否更新，同时增加公告。
+<br/>
+<Badge type="tip" text="新增" vertical="middle" /> 增加开源声明打印。
+<br/>
 <Badge type="warning" text="修复" vertical="middle" /> 漫画阅读额外使用了非即将过期的漫读券。
 <br/>
 <Badge type="warning" text="修复" vertical="middle" /> 大积分任务未全部完成的情况下没有日志输出。
@@ -107,37 +119,6 @@ cookie 重要提示（关于频繁失效），除了账号本身可能存在的�
 **在做但没有思路的：**
 
 修改 json5 文件。操作 json5 和 json 不一样，因为 json5 有注释，目前 json5 官方提供的 js 包并不支持修改后保留注释。comment-json 倒是有这种功能，但奈何不是 json5。从一开始就选错了？可能只有在 json5 官方库的基础上自己写一个了。
-
-**上一个版本 1203：**
-
-<Badge type="danger" text="警告" vertical="middle" /> 删除大部分旧配置兼容。
-<br/>
-<Badge type="danger" text="警告" vertical="middle" /> 删除 serverless 部署工具。
-<br/>
-<Badge type="tip" text="新增" vertical="middle" /> [manga.guess] 漫画每日猜拳（间隔太小会出现未知问题，故运行时长较长。收益存在随机性，也可能赔本，但基本上不存在赔本）。
-<br/>
-<Badge type="tip" text="新增" vertical="middle" /> 每月会员福利会领取 [漫画商城优惠]。
-<br/>
-<Badge type="tip" text="新增" vertical="middle" /> 多账户下风纪委员长期没案件会阻塞后期运行，现可以配置为异步执行。
-<br/>
-<Badge type="tip" text="新增" vertical="middle" /> 漫画券兑换配置更改，增加保留积分数、兑换数在原基础上增加自动数量。
-<br/>
-<Badge type="warning" text="修复" vertical="middle" /> 修复 dailyBattery 任务只部分完成的问题。
-<br/>
-<Badge type="warning" text="修复" vertical="middle" /> 粉丝亲密度 intimacy 错误的结束、错误的重试机制。
-<br/>
-
-::: details 优化
-<Badge type="tip" text="优化" vertical="middle" /> 大积分每日 75 调整到 65（官方删除一个任务）。
-<br/>
-<Badge type="tip" text="优化" vertical="middle" /> 大积分视频观看：去掉自定义 epid（如有自定义需要可以提，没人需要就不加了）、默认西游记随机一集改为四大名著 5 个正剧中随机、完善接口数据，更加还原真实请求。
-<br/>
-<Badge type="tip" text="优化" vertical="middle" /> 漫画券兑换未到达 12 点时进行等待，超过 12:02 自动退出，故可提前启动。
-<br/>
-<Badge type="tip" text="优化" vertical="middle" /> 漫画阅读快速完成。
-<br/>
-<Badge type="tip" text="优化" vertical="middle" /> 当然还有每次更新的保留节目：日志调整。
-:::
 
 链接跳转：
 

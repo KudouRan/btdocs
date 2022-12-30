@@ -4,10 +4,6 @@
   {
     // 浏览器用户代理
     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0',
-    // 云函数随机运行用的时间段
-    dailyRunTime: '17:30:00-23:40:00',
-    // 通用 api 延迟时间（s）
-    apiDelay: [2, 6],
     // b 站 cookie （登录信息）可能需要双引号
     // prettier-ignore
     cookie: "xxxxx",
@@ -291,6 +287,25 @@
       // 保留积分数
       keepAmount: 0,
     },
+    limit: {
+      // 获取经验限制为 6 级
+      level6: true,
+      // 投币限制为 5 颗
+      coins5: true,
+    },
+  },
+  // 配置第二个用户，复制上面的配置即可，但是 cookie 是必要的。
+  {
+    cookie: 'xxxxxxxxxx',
+  },
+  {
+    // 公共配置，上面的配置会覆盖这里的配置（下面是举例，如果不需要公共配置，直接删除这个 {} 即可）
+    __common__: true,
+    // 云函数随机运行用的时间段
+    dailyRunTime: '17:30:00-23:40:00',
+    // 通用 api 延迟时间（s）
+    apiDelay: [2, 6],
+    // 日志配置推荐写到公共里，后期可能只有公共里的配置生效
     log: {
       // 推送日志等级，'error' | 'warn' | 'info' | 'verbose' | 'debug'，或者 false 关闭
       pushLevel: 'debug',
@@ -303,15 +318,5 @@
       // 拆分日志文件，单位 'day', 'month'
       fileSplit: 'day',
     },
-    limit: {
-      // 获取经验限制为 6 级
-      level6: true,
-      // 投币限制为 5 颗
-      coins5: true,
-    },
-  },
-  // 配置第二个用户，和上面一样的配置。
-  {
-    cookie: 'xxxxxxxxxx',
   },
 ]
