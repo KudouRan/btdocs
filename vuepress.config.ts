@@ -22,7 +22,7 @@ export default defineUserConfig({
   description: '这是 BiliOutils 使用说明文档站点',
   theme: defaultTheme({
     editLink: true,
-    repo: 'kudouran/btdocs',
+    repo: 'catlair/BiliOutils',
     docsDir: 'docs',
     editLinkText: '在 GitHub 上编辑此页',
     lastUpdatedText: '上次更新',
@@ -48,31 +48,31 @@ export default defineUserConfig({
         text: '配置',
         link: '/config/',
       },
-      // {
-      //   text: '仓库',
-      //   children: [
-      // {
-      //   text: 'Github',
-      //   link: 'https://github.com/catlair/BiliOutils',
-      //   target: '_blank',
-      // },
-      // {
-      //   text: 'Gitee（国内）',
-      //   link: 'https://gitee.com/catlair/BiliOutils',
-      //   target: '_blank',
-      // },
-      // {
-      //   text: 'Dockerhub',
-      //   link: 'https://hub.docker.com/repository/docker/catlair/bilitools',
-      //   target: '_blank',
-      // },
-      // {
-      //   text: 'npm package',
-      //   link: 'https://www.npmjs.com/package/@catlair/bilitools',
-      //   target: '_blank',
-      // },
-      // ],
-      // },
+      {
+        text: '仓库',
+        children: [
+          {
+            text: 'Github',
+            link: 'https://github.com/catlair/BiliOutils',
+            target: '_blank',
+          },
+          {
+            text: 'Gitee（国内）',
+            link: 'https://gitee.com/catlair/BiliOutils',
+            target: '_blank',
+          },
+          {
+            text: 'Dockerhub',
+            link: 'https://hub.docker.com/repository/docker/catlair/bilitools',
+            target: '_blank',
+          },
+          {
+            text: 'npm package',
+            link: 'https://www.npmjs.com/package/@catlair/bilitools',
+            target: '_blank',
+          },
+        ],
+      },
       {
         text: '工具',
         children: [
@@ -111,16 +111,16 @@ export default defineUserConfig({
       {
         text: '关于和反馈',
         children: [
-          // {
-          //   text: 'Github',
-          //   link: 'https://github.com/catlair/BiliOutils/issues',
-          //   target: '_blank',
-          // },
-          // {
-          //   text: 'Gitee（国内）',
-          //   link: 'https://gitee.com/catlair/BiliOutils/issues',
-          //   target: '_blank',
-          // },
+          {
+            text: 'Github',
+            link: 'https://github.com/catlair/BiliOutils/issues',
+            target: '_blank',
+          },
+          {
+            text: 'Gitee（国内）',
+            link: 'https://gitee.com/catlair/BiliOutils/issues',
+            target: '_blank',
+          },
           {
             text: 'QQ 群等其他方式',
             link: '/about/',
