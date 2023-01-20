@@ -3,3 +3,5 @@ node_modules
 .cache
 dist
 !docs/.vuepress/.temp/vite-root/auto-imports.d.ts
+.vercel
+.yarn

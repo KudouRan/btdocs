@@ -94,11 +94,7 @@ cookie 重要提示（关于频繁失效），除了账号本身可能存在的�
 
 [历史各版本配置对比](/config/version.md)
 
-**手动更新**
-
-红包活动链接已经有新的了，如有需要请手动更新：`https://api.live.bilibili.com/xlive/fuxi-interface/RedPacketController/redPocketPlaying?_ts_rpc_args_=[101181]`
-
-**下次更新预览（预计 2023 年或者农历 2023）：**
+**v0.23.0118**
 
 <Badge type="danger" text="警告" vertical="middle" /> 删除部分旧配置兼容。
 <br/>
@@ -115,10 +111,6 @@ cookie 重要提示（关于频繁失效），除了账号本身可能存在的�
 <Badge type="warning" text="修复" vertical="middle" /> 漫画阅读额外使用了非即将过期的漫读券。
 <br/>
 <Badge type="warning" text="修复" vertical="middle" /> 大积分任务未全部完成的情况下没有日志输出。
-
-**在做但没有思路的：**
-
-修改 json5 文件。操作 json5 和 json 不一样，因为 json5 有注释，目前 json5 官方提供的 js 包并不支持修改后保留注释。comment-json 倒是有这种功能，但奈何不是 json5。从一开始就选错了？可能只有在 json5 官方库的基础上自己写一个了。
 
 链接跳转：
 
