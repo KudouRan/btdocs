@@ -14,10 +14,15 @@ export default async (request: VercelRequest, response: VercelResponse) => {
       return obj;
     }, {});
 
-  const res = await fetch(process.env.VERCEL_TJ_URL + '?' + query, {
+  const options = {
     method: request.method,
-    body: request.body,
     headers,
-  });
+  };
+
+  if (request.method !== 'GET') {
+    options.body = request.body;
+  }
+
+  const res = await fetch(process.env.VERCEL_TJ_URL + '?' + query, options);
   return response.status(200).json(await res.json());
 };
