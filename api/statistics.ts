@@ -1,3 +1,4 @@
+//@ts-nocheck
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import fetch from 'node-fetch';
 
@@ -8,11 +9,13 @@ export default async (request: VercelRequest, response: VercelResponse) => {
     query += `${key}=${Array.isArray(value) ? value.join(',') : value}&`;
   });
   const headers = Object.keys(request.headers)
-    .filter((key) => key.startsWith('x-'))
+    .filter((key) => !key.startsWith('x-'))
     .reduce((obj, key) => {
       obj[key] = request.headers[key];
       return obj;
     }, {});
+
+  delete headers.host;
 
   const options = {
     method: request.method,
