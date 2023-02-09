@@ -8,6 +8,24 @@ description: 更新日志
 
 [历史配置对比](/config/version.md)
 
+**v0.23.0118**
+
+<Badge type="danger" text="警告" vertical="middle" /> 删除部分旧配置兼容。
+<br/>
+<Badge type="danger" text="警告" vertical="middle" /> 不再提供打包可执行文件。
+<br/>
+<Badge type="tip" text="新增" vertical="middle" /> 通过扫码获取 Cookie，二维码可打印到青龙日志，云函数控制台，本地控制台。
+<br/>
+<Badge type="tip" text="新增" vertical="middle" /> Docker 可以传递参数。
+<br/>
+<Badge type="tip" text="新增" vertical="middle" /> 利用 vercel 检测是否更新，同时增加公告。
+<br/>
+<Badge type="tip" text="新增" vertical="middle" /> 增加开源声明打印。
+<br/>
+<Badge type="warning" text="修复" vertical="middle" /> 漫画阅读额外使用了非即将过期的漫读券。
+<br/>
+<Badge type="warning" text="修复" vertical="middle" /> 大积分任务未全部完成的情况下没有日志输出。
+
 **221203**
 
 <Badge type="danger" text="警告" vertical="middle" /> 删除大部分旧配置兼容。

@@ -5,10 +5,46 @@ description: 简单介绍
 ---
 
 ::: tip 参与贡献
-~~如果对与此文档有补充、改进意见或者修改，每个页面都可以直接点击末尾的`在 GitHub 上编辑此页`，非常感谢！~~
+如果对与此文档有补充、改进意见或者修改，每个页面都可以直接点击末尾的`在 GitHub 上编辑此页`。
 
-~~如果喜欢请为 <https://github.com/catlair/BiliOutils> 点个 star，关注才能不迷路。非常感谢！~~
+如果喜欢请为 <https://github.com/catlair/BiliOutils> 点个 star，关注才能不迷路。
 :::
+
+## 致谢
+
+### 开发支持（~~暗杀名单~~）
+
+提供 PR、代码 Issue 或者较为完整的逻辑建议。
+
+- [vtroisWhite](https://github.com/vtroisWhite)
+- [wdssfff00](https://github.com/wdssfff00)
+- [iiwenwen](https://github.com/iiwenwen)
+- [HowerL](https://github.com/HowerL)
+
+### 参考项目
+
+GitHub 上的开源项目：
+
+- [SocialSisterYi/bilibili-API-collect](https://github.com/SocialSisterYi/bilibili-API-collect)
+- [catlair/bili-task-puppeteer](https://github.com/catlair/bili-task-puppeteer)
+- [lzghzr/TampermonkeyJS](https://github.com/lzghzr/TampermonkeyJS)
+- [whyour/qinglong](https://github.com/whyour/qinglong)
+- [RayWangQvQ/BiliBiliToolPro](https://github.com/RayWangQvQ/BiliBiliToolPro)
+- [dd178/BILI_judgement](https://github.com/dd178/BILI_judgement)
+
+同时感谢所有被依赖的开源项目，详见 package.json。包括没有依赖的 https://github.com/lodash
+
+### 技术支持
+
+- [吾爱破解](https://www.52pojie.cn/)
+- [MDN](https://www.52pojie.cn//)
+
+### 捐赠者
+
+- 网友（春风肩上停）
+- [JetBrains](https://www.jetbrains.com/zh-cn/community/opensource)
+- [vtroisWhite](https://github.com/vtroisWhite)
+- [wdssfff00](https://github.com/wdssfff00)
 
 ## 支持功能 <Badge v-if="isRefreshed" type="tip" :text="`版本${tagName}`" vertical="top" />
 
@@ -75,11 +111,11 @@ cookie 重要提示（关于频繁失效），除了账号本身可能存在的�
 
 请务必查看 Cookie 的获取[点击这里跳转](../config/get_value.md)
 
-不管你是否注意到，但是我很高兴的告诉，本项目不再开源，当然下载到的内容能够直接看到代码。开源与不开源无所谓，因为到闭源为止，通过 issue 和 pr 提供代码或文档帮助的一共只有 5 位， star 有 263 个。如果你还想再来到这里，记住 `btdocs.vercel.app` 才是一直不变的链接。
+~~不管你是否注意到，但是我很高兴的告诉，本项目不再开源，当然下载到的内容能够直接看到代码。开源与不开源无所谓，因为到闭源为止，通过 issue 和 pr 提供代码或文档帮助的一共只有 5 位， star 有 263 个。~~如果你还想再来到这里，记住 `btdocs.vercel.app` 才是一直不变的链接。
 :::
 
 ::: tip
-获取直播间 -412 错误，暂时不知道怎么解决。影响功能：liveLottery、liveRedPack，liveRedPack 展示可以通过使用活动链接的方式获取直播间（手动添加配置即可）。
+获取直播间 -412 错误，暂时不知道怎么解决。影响功能：liveLottery、liveRedPack。
 :::
 
 ## 使用说明
@@ -94,23 +130,7 @@ cookie 重要提示（关于频繁失效），除了账号本身可能存在的�
 
 [历史各版本配置对比](/config/version.md)
 
-**v0.23.0118**
-
-<Badge type="danger" text="警告" vertical="middle" /> 删除部分旧配置兼容。
-<br/>
-<Badge type="danger" text="警告" vertical="middle" /> 不再提供打包可执行文件。
-<br/>
-<Badge type="tip" text="新增" vertical="middle" /> 通过扫码获取 Cookie，二维码可打印到青龙日志，云函数控制台，本地控制台。
-<br/>
-<Badge type="tip" text="新增" vertical="middle" /> Docker 可以传递参数。
-<br/>
-<Badge type="tip" text="新增" vertical="middle" /> 利用 vercel 检测是否更新，同时增加公告。
-<br/>
-<Badge type="tip" text="新增" vertical="middle" /> 增加开源声明打印。
-<br/>
-<Badge type="warning" text="修复" vertical="middle" /> 漫画阅读额外使用了非即将过期的漫读券。
-<br/>
-<Badge type="warning" text="修复" vertical="middle" /> 大积分任务未全部完成的情况下没有日志输出。
+- <Badge type="tip" text="新增" vertical="middle" /> 亲密任务发送弹幕可自定义内容。（已发布，现仅更新文档。详见对比配置）
 
 链接跳转：
 
@@ -118,7 +138,7 @@ cookie 重要提示（关于频繁失效），除了账号本身可能存在的�
 
 ## QQ 群
 
-~~如果需要反馈，尽量选择 issue，而不是进群。~~（目前是唯一途径了）
+~~如果需要反馈，尽量选择 issue，而不是进群。~~
 
 扫码加入群，没事别进去，自己扫码进群以后哔哔谁把你拉进来的是什么意思（群号：759694670）：
 

@@ -4,12 +4,23 @@
     "label": "22",
     "children": [
       {
+        "value": "v0.22.1203",
+        "label": "221203",
+        "isActive": "old"
+      }
+    ]
+  },
+  {
+    "value": "0.23",
+    "label": "23",
+    "children": [
+      {
         "value": "all_all",
         "label": "预览"
       },
       {
-        "value": "v0.22.1203",
-        "label": "221203",
+        "value": "v0.23.126",
+        "label": "126",
         "isActive": "new"
       }
     ]
@@ -20,8 +31,7 @@
     "children": [
       {
         "value": "v0.6.221031",
-        "label": "221031",
-        "isActive": "old"
+        "label": "221031"
       },
       {
         "value": "v0.6.221014",

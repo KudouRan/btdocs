@@ -10,6 +10,7 @@
     "docs:api": "vercel dev"
   },
   "devDependencies": {
+    "@vercel/frameworks": "^1.2.4",
     "@vercel/node": "^1.15.4",
     "@vuepress/plugin-docsearch": "^2.0.0-beta.48",
     "@vuepress/plugin-google-analytics": "^2.0.0-beta.46",
@@ -28,5 +29,6 @@
     "element-plus": "^2.2.2",
     "pinia": "^2.0.14",
     "v-code-diff": "^0.3.12"
-  }
+  },
+  "packageManager": "yarn@1.22.19"
 }

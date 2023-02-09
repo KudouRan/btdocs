@@ -5,3 +5,4 @@ dist
 !docs/.vuepress/.temp/vite-root/auto-imports.d.ts
 .vercel
 .yarn
+.env
