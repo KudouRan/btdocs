@@ -5,9 +5,9 @@ description: 简单介绍
 ---
 
 ::: tip 参与贡献
-如果对与此文档有补充、改进意见或者修改，每个页面都可以直接点击末尾的`在 GitHub 上编辑此页`。
+~~如果对与此文档有补充、改进意见或者修改，每个页面都可以直接点击末尾的`在 GitHub 上编辑此页`。~~
 
-如果喜欢请为 <https://github.com/catlair/BiliOutils> 点个 star，关注才能不迷路。
+~~如果喜欢请为 <https://github.com/catlair/BiliOutils> 点个 star，关注才能不迷路。~~
 :::
 
 ## 致谢

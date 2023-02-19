@@ -46,6 +46,8 @@
     activityLottery: false,
     // 每日电池
     dailyBattery: false,
+    // 直播挂机
+    watchLink: true,
   },
   // 消息推送
   message: {
@@ -293,6 +295,13 @@
     delay: 2000,
     // 保留积分数
     keepAmount: 0,
+  },
+  // 直播挂机
+  watchLink: {
+    // 目标的 uid （非直播间 id）
+    uid: [],
+    // 挂机时长，分钟
+    time: 65,
   },
   log: {
     // 推送日志等级，'error' | 'warn' | 'info' | 'verbose' | 'debug'，或者 false 关闭

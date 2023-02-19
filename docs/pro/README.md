@@ -1,3 +1,25 @@
+---
+lang: zh-CN
+title: 介绍
+description: 简单介绍
+---
+
+## 安装
+
+```bash
+npm install -g bilioutils
+```
+
+## 使用
+
+```bash
+bilioutils -v
+bilioutils -h
+```
+
+## 配置
+
+```json5
 {
   // 浏览器用户代理
   userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0',
@@ -46,6 +68,8 @@
     activityLottery: false,
     // 每日电池
     dailyBattery: false,
+    // 直播挂机
+    watchLink: true,
   },
   // 消息推送
   message: {
@@ -294,6 +318,13 @@
     // 保留积分数
     keepAmount: 0,
   },
+  // 直播挂机
+  watchLink: {
+    // 目标的 uid （非直播间 id）
+    uid: [],
+    // 挂机时长，分钟
+    time: 65
+  },
   log: {
     // 推送日志等级，'error' | 'warn' | 'info' | 'verbose' | 'debug'，或者 false 关闭
     pushLevel: 'debug',
@@ -313,3 +344,4 @@
     coins5: true,
   },
 }
+```
