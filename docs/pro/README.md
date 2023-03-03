@@ -17,6 +17,14 @@ bilioutils -v
 bilioutils -h
 ```
 
+## 更新
+
+新增
+
+- 直播
+- 直播周任务
+- 自定义直播心跳
+
 ## 配置
 
 ```json5
@@ -68,8 +76,12 @@ bilioutils -h
     activityLottery: false,
     // 每日电池
     dailyBattery: false,
-    // 直播挂机
-    watchLink: true,
+    // 每日直播任务
+    liveWeekTask: false,
+    // 直播
+    blink: false,
+    // 直播间心跳
+    watchLink: false,
   },
   // 消息推送
   message: {
@@ -323,7 +335,7 @@ bilioutils -h
     // 目标的 uid （非直播间 id）
     uid: [],
     // 挂机时长，分钟
-    time: 65
+    time: 65,
   },
   log: {
     // 推送日志等级，'error' | 'warn' | 'info' | 'verbose' | 'debug'，或者 false 关闭

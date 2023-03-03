@@ -68,12 +68,15 @@ GitHub 上的开源项目：
 | matchGame       |        | 赛事竞猜（人人都是硬币慈善家）                | [点击](../config/func.md#竞猜)        |
 | giveGift        |        | 赠送过期礼物                                  | [点击](../config/func.md#直播间礼物)  |
 | liveIntimacy    |        | 牌子亲密度 （非云函数为异步运行）             | [点击](../config/func.md#粉丝亲密度)  |
+| watchLink       |        | 直播心跳/直播间监听【pro】                    |                                       |
 | batchUnfollow   |        | 取消关注                                      | [点击](../config/func.md#取关分组)    |
 | ~~liveLottery~~ |        | ~~直播天选时刻~~（黑号风险）                  | [点击](../config/func.md#天选时刻)    |
 | liveRedPack     |        | 直播天选红包                                  | [点击](../config/func.md#天选红包)    |
 | dailyBattery    |        | 每日电池任务（电池+1）                        |                                       |
 | activityLottery |        | 转盘抽奖                                      | [点击](../config/func.md#转盘抽奖)    |
 | judgement       |        | 风纪委员                                      | [点击](../config/func.md#风纪委员)    |
+| liveWeekTask    |        | 直播周任务 【pro】                            |                                       |
+| blink           |        | 直播 【pro】                                  |                                       |
 
 只有将这些值设置为 `true` 才会生效，如果设置为 `false` ，具体的配置再怎么样也不会去执行，下面是参考写法。
 
@@ -140,7 +143,7 @@ cookie 重要提示（关于频繁失效），除了账号本身可能存在的�
 
 ~~如果需要反馈，尽量选择 issue，而不是进群。~~
 
-扫码加入群，没事别进去，自己扫码进群以后哔哔谁把你拉进来的是什么意思（群号：759694670）：
+扫码加入群，群不提供使用帮助，自行看文档，别问，文就拉黑（群号：759694670）：
 
 ![qq群](/images/qq_group.png)
 
