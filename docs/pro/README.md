@@ -25,6 +25,77 @@ bilioutils -h
 - 直播周任务
 - 自定义直播心跳
 
+## 直播任务
+
+需要安装 ffmpeg，[下载地址](https://ffmpeg.org/download.html)，过程略。
+
+直播使用的视频放在 /config/video 目录下（也可能是其他路径，取决于你的配置文件，配置文件同级的 video 目录下即可），视频的名字随意。
+
+播放会从中随机选择并从头开始播放，播放完毕会重新选择（不会重复选择）。
+
+```json5
+{
+  function: {
+    blink: true,
+  },
+  blink: {
+    // 直播间标题
+    title: '',
+    // 直播分区，例如 3,321 为手游-原神
+    parentId: 0,
+    areaId: 0,
+    // 自己的直播间 id，如果没有配置则会尝试主动请求获取，所以非必须
+    roomid: 0,
+    // 直播时间，单位分钟
+    time: 33,
+  },
+}
+```
+
+## 直播周任务
+
+基于直播任务，注意事项和配置同上。不过需要注意的是，无须配置直播时间，直播时间会根据任务情况自动调整。
+
+```json5
+{
+  function: {
+    liveWeekTask: true,
+  },
+  blink: {
+    // 直播间标题
+    title: '',
+    // 直播分区，例如 3,321 为手游-原神
+    parentId: 0,
+    areaId: 0,
+    // 自己的直播间 id，如果没有配置则会尝试主动请求获取，所以非必须
+    roomid: 0,
+  },
+}
+```
+
+## 自定义直播心跳
+
+```json5
+{
+  function: {
+    watchLink: true,
+  },
+  watchLink: {
+    // 用户 uid，非直播间 id
+    uid: [],
+    // 直播心跳
+    heart: true,
+    // 运行时间，单位分钟
+    time: 30,
+    // 直播分区，例如 3,321 为手游-原神
+    parentId: 3,
+    areaId: 321,
+    // 直播弹幕监听
+    ws: false,
+  },
+}
+```
+
 ## 配置
 
 ```json5
@@ -303,6 +374,30 @@ bilioutils -h
     isWatch: true,
     // 领取任务后的观看延时（秒）
     watchDelay: 40,
+  },
+  blink: {
+    // 直播间标题
+    title: '',
+    // 直播分区，例如 3,321 为手游-原神
+    parentId: 0,
+    areaId: 0,
+    // 自己的直播间 id，如果没有配置则会尝试主动请求获取，所以非必须
+    roomid: 0,
+    // 直播时间，单位分钟
+    time: 33,
+  },
+  watchLink: {
+    // 用户 uid，非直播间 id
+    uid: [],
+    // 直播心跳
+    heart: true,
+    // 运行时间，单位分钟
+    time: 30,
+    // 直播弹幕监听
+    ws: false,
+    // 直播分区，例如 3,321 为手游-原神
+    parentId: 3,
+    areaId: 321,
   },
   // 转盘抽奖
   activityLottery: {
