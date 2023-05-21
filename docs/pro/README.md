@@ -83,15 +83,30 @@ bilioutils -h
   watchLink: {
     // 用户 uid，非直播间 id
     uid: [],
+    // 直播间 id，会覆盖 uid
+    roomid: [],
     // 直播心跳
     heart: true,
     // 运行时间，单位分钟
     time: 30,
-    // 直播分区，例如 3,321 为手游-原神
-    parentId: 3,
-    areaId: 321,
     // 直播弹幕监听
     ws: false,
+    // 直播分区，例如 3,321 为手游-原神
+    area: [[3, 321]],
+  },
+}
+```
+
+## 直播弹幕发送
+
+```json5
+{
+  function: {
+    liveDm: true,
+  },
+  watchLink: {
+    // 直播间 id
+    roomid: [],
   },
 }
 ```
@@ -153,6 +168,8 @@ bilioutils -h
     blink: false,
     // 直播间心跳
     watchLink: false,
+    // 直播弹幕
+    liveDm: false,
   },
   // 消息推送
   message: {
@@ -389,6 +406,8 @@ bilioutils -h
   watchLink: {
     // 用户 uid，非直播间 id
     uid: [],
+    // 直播间 id，会覆盖 uid
+    roomid: [],
     // 直播心跳
     heart: true,
     // 运行时间，单位分钟
@@ -396,8 +415,7 @@ bilioutils -h
     // 直播弹幕监听
     ws: false,
     // 直播分区，例如 3,321 为手游-原神
-    parentId: 3,
-    areaId: 321,
+    area: [[3, 321]],
   },
   // 转盘抽奖
   activityLottery: {
@@ -424,13 +442,6 @@ bilioutils -h
     delay: 2000,
     // 保留积分数
     keepAmount: 0,
-  },
-  // 直播挂机
-  watchLink: {
-    // 目标的 uid （非直播间 id）
-    uid: [],
-    // 挂机时长，分钟
-    time: 65,
   },
   log: {
     // 推送日志等级，'error' | 'warn' | 'info' | 'verbose' | 'debug'，或者 false 关闭

@@ -5,8 +5,7 @@
     "children": [
       {
         "value": "v0.22.1203",
-        "label": "221203",
-        "isActive": "old"
+        "label": "221203"
       }
     ]
   },
@@ -20,11 +19,16 @@
       },
       {
         "value": "v0.23.126",
-        "label": "126",
+        "label": "126"
+      },
+      {
+        "value": "v0.23.521",
+        "label": "521",
         "isActive": "new"
       },
       {
         "value": "v0.23.220",
+        "isActive": "old",
         "label": "220"
       }
     ]
