@@ -15,7 +15,7 @@ description: 青龙面板运行
 安装 Node 依赖（侧边栏中依赖管理）
 
 ```txt
-@catlair/bilitools
+@catlair/bilioutils
 ```
 
 然后拉取青龙面板运行的代码
@@ -25,7 +25,7 @@ description: 青龙面板运行
   <CodeGroupItem title="手动">
 
 ```js
-require('@catlair/bilitools').ql();
+require('@catlair/bilioutils').ql();
 ```
 
 手动创建一个 `bilitools_npm.js` 文件，并且把上面的代码拷贝进去
@@ -52,10 +52,10 @@ require('@catlair/bilitools').ql();
 ![ql_update](/images/ql_update.png)
 
 ```bash
-pnpm remove -g @catlair/bilitools && pnpm add -g @catlair/bilitools
+pnpm remove -g @catlair/bilioutils && pnpm add -g @catlair/bilioutils
 ```
 
-PS: 可以不执行 `pnpm remove -g @catlair/bilitools`，不过前一个版本就会一直保留在磁盘中。
+PS: 可以不执行 `pnpm remove -g @catlair/bilioutils`，不过前一个版本就会一直保留在磁盘中。
 
 ## 更新 cookie
 
@@ -68,7 +68,7 @@ PS: 可以不执行 `pnpm remove -g @catlair/bilitools`，不过前一个版本�
   <CodeGroupItem title="手动">
 
 ```js
-require('@catlair/bilitools').sacnLogin();
+require('@catlair/bilioutils').sacnLogin();
 ```
 
 手动创建一个 `任意名称.js` 文件，并且把上面的代码拷贝进去

@@ -68,7 +68,7 @@ export default defineUserConfig({
           },
           {
             text: 'npm package',
-            link: 'https://www.npmjs.com/package/@catlair/bilitools',
+            link: 'https://www.npmjs.com/package/@catlair/bilioutils',
             target: '_blank',
           },
         ],
@@ -199,6 +199,16 @@ export default defineUserConfig({
             '/config/github_secrets.md',
             '/config/env.md',
             '/config/version.md',
+          ],
+        },
+      ],
+      '/pro/': [
+        {
+          text: '使用',
+          children: [
+            '/pro/README.md',
+            '/pro/liveWeekTask.md',
+            '/pro/watchLink.md',
           ],
         },
       ],

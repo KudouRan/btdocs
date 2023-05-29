@@ -43,7 +43,7 @@ npm config set registry https://registry.npmjs.org/
 安装/更新依赖，都是同样的
 
 ```bash
-yarn add @catlair/bilitools
+yarn add @catlair/bilioutils
 ```
 
 可能因为 node 版本出现类似的错误
@@ -62,13 +62,13 @@ info Visit https://yarnpkg.com/en/docs/cli/add for documentation about this comm
 
 ```bash
 yarn config set ignore-engines true
-yarn add @catlair/bilitools
+yarn add @catlair/bilioutils
 ```
 
 修改 index.js 的代码
 
 ```javascript
-exports.handler = require('@catlair/bilitools').fc_handler();
+exports.handler = require('@catlair/bilioutils').fc_handler();
 ```
 
 最后参考图中位置，添加配置文件，再点击部署
