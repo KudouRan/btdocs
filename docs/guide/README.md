@@ -128,13 +128,11 @@ cookie 重要提示（关于频繁失效），除了账号本身可能存在的�
 
 ## 更新
 
-::: tip 测试内容
-漫画基本上获取积分的方法都有了，兑换也有了，使用也有。相当于来了个更高级的等免功能
-:::
-
 [历史各版本配置对比](/config/version.md)
 
-- <Badge type="tip" text="新增" vertical="middle" /> 亲密任务发送弹幕可自定义内容。（已发布，现仅更新文档。详见对比配置）
+- <Badge type="warning" text="修复" vertical="middle" /> 直播心跳使用 uid 获取直播间号错误。
+- <Badge type="warning" text="修复" vertical="middle" /> 漫画每日阅读无法获取漫画列表。
+- <Badge type="danger" text="警告" vertical="middle" /> 漫画猜拳小游戏下线。
 
 链接跳转：
 
