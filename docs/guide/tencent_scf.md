@@ -38,7 +38,7 @@ npm config set registry https://registry.npmjs.org/
 
 ```bash
 cd src
-yarn add @catlair/bilioutils
+yarn add bilioutils
 ```
 
 如果是需要随机运行，还需要 `yarn add tencentcloud-sdk-nodejs`
@@ -46,7 +46,7 @@ yarn add @catlair/bilioutils
 修改 index.js 的代码
 
 ```javascript
-exports.main_handler = require('@catlair/bilioutils').scf_handler();
+exports.main_handler = require('bilioutils').scf_handler();
 ```
 
 最后参考图中位置，添加配置文件

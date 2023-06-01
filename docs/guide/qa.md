@@ -53,7 +53,7 @@ node:internal/modules/cjs/loader:936
   throw err;
   ^
 
-Error: Cannot find module '@catlair/bilioutils'
+Error: Cannot find module 'bilioutils'
 Require stack:
 - /home/catlair/github/btdoc/demo.js
     at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
@@ -71,4 +71,4 @@ Require stack:
 
 ```
 
-特指 `@catlair/bilioutils` 包，其它包出现问题可能就是程序本身导致的，请提交反馈。
+特指 `bilioutils` 包，其它包出现问题可能就是程序本身导致的，请提交反馈。

@@ -68,7 +68,7 @@ export default defineUserConfig({
           },
           {
             text: 'npm package',
-            link: 'https://www.npmjs.com/package/@catlair/bilioutils',
+            link: 'https://www.npmjs.com/package/bilioutils',
             target: '_blank',
           },
         ],

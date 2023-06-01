@@ -21,7 +21,7 @@ Node.js 首先需要本地的运行环境：
 
 ```bash
 # 安装
-npm install -g @catlair/bilioutils
+npm install -g bilioutils
 # 查看帮助
 bilitools -h
 # 指定配置路径运行
@@ -31,7 +31,7 @@ bilitools -c ./config.json
 更新代码：
 
 ```bash
-npm install -g @catlair/bilioutils
+npm install -g bilioutils
 ```
 
 帮助详情：
