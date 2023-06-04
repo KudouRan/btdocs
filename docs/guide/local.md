@@ -23,9 +23,9 @@ Node.js 首先需要本地的运行环境：
 # 安装
 npm install -g bilioutils
 # 查看帮助
-bilitools -h
+bilioutils -h
 # 指定配置路径运行
-bilitools -c ./config.json
+bilioutils -c ./config.json
 ```
 
 更新代码：
@@ -38,8 +38,8 @@ npm install -g bilioutils
 
 ```bash
 Usage:
-  bilitools [options] [value]
-  bilitools [options]=[value]
+  bilioutils [options] [value]
+  bilioutils [options]=[value]
 
 Options:
   --version, -v             输出版本号
