@@ -45,6 +45,14 @@
       activityLottery: false,
       // 每日电池
       dailyBattery: false,
+      // 每日直播任务
+      liveWeekTask: false,
+      // 直播
+      blink: false,
+      // 直播间心跳
+      watchLink: false,
+      // 直播弹幕
+      liveDm: false,
     },
     // 消息推送
     message: {
@@ -209,6 +217,12 @@
       skipNum: 10,
       // 完成直播心跳后是否再检查一次，可能因为数据延迟而重复操作，不建议云函数开启
       isRetryHeart: false,
+      // 专属弹幕
+      dm: {
+        // id 为 up 主 mid，非直播间 id。用于某些直播间可能有机器人玩法
+        // '11111': '打卡',
+        // '22222': ['打卡', '签到']
+      },
     },
     // 漫画
     manga: {
@@ -261,6 +275,31 @@
       // 领取任务后的观看延时（秒）
       watchDelay: 40,
     },
+    blink: {
+      // 直播间标题
+      title: '',
+      // 直播分区，例如 3,321 为手游-原神
+      parentId: 0,
+      areaId: 0,
+      // 自己的直播间 id，如果没有配置则会尝试主动请求获取，所以非必须
+      roomid: 0,
+      // 直播时间，单位分钟
+      time: 33,
+    },
+    watchLink: {
+      // 用户 uid，非直播间 id
+      uid: [],
+      // 直播间 id，会覆盖 uid
+      roomid: [],
+      // 直播心跳
+      heart: true,
+      // 运行时间，单位分钟
+      time: 30,
+      // 直播弹幕监听
+      ws: false,
+      // 直播分区，例如 3,321 为手游-原神
+      area: [[3, 321]],
+    },
     // 转盘抽奖
     activityLottery: {
       // 活动列表
@@ -286,6 +325,8 @@
       delay: 2000,
       // 保留积分数
       keepAmount: 0,
+      // 兑换开始时间，0、10、12
+      startHour: 0,
     },
     limit: {
       // 获取经验限制为 6 级

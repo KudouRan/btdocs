@@ -22,14 +22,18 @@
         "label": "126"
       },
       {
-        "value": "v0.23.521",
-        "label": "521",
-        "isActive": "new"
+        "value": "v0.23.220",
+        "label": "220"
       },
       {
-        "value": "v0.23.220",
+        "value": "v0.23.521",
         "isActive": "old",
-        "label": "220"
+        "label": "521"
+      },
+      {
+        "value": "v0.23.605",
+        "isActive": "new",
+        "label": "605"
       }
     ]
   },
