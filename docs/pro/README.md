@@ -104,9 +104,13 @@ bilioutils -h
   function: {
     liveDm: true,
   },
-  watchLink: {
+  liveDm: {
     // 直播间 id
     roomid: [],
+    // 延时 s
+    delay: [8, 13],
+    // 次数
+    num: 0,
   },
 }
 ```
@@ -269,7 +273,7 @@ bilioutils -h
     // 直播间来源方式 1 活动（活动链接可能更新不及时），2 扫描。其它值 所有方式依次尝试。
     source: 0,
     // 活动链接
-    uri: 'https://api.live.bilibili.com/xlive/fuxi-interface/RedPacketController/redPocketPlaying?_ts_rpc_args_=[101181]',
+    uri: '',
     // 仅使用活动时有效，每轮抢红包的间隔时间（秒）
     intervalActive: 60,
     // 中场休息时间，当每参加了几个直播间的时候，休息一下 [参加个数，休息时间（分，小于1为直接结束）]
@@ -417,6 +421,14 @@ bilioutils -h
     // 直播分区，例如 3,321 为手游-原神
     area: [[3, 321]],
   },
+  liveDm: {
+    // 直播间 id
+    roomid: [],
+    // 延时 s
+    delay: [8, 13],
+    // 次数
+    num: 0,
+  },
   // 转盘抽奖
   activityLottery: {
     // 活动列表
@@ -442,6 +454,8 @@ bilioutils -h
     delay: 2000,
     // 保留积分数
     keepAmount: 0,
+    // 兑换开始时间，0、10、12
+    startHour: 0,
   },
   log: {
     // 推送日志等级，'error' | 'warn' | 'info' | 'verbose' | 'debug'，或者 false 关闭
