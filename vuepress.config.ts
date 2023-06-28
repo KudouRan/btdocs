@@ -22,7 +22,7 @@ export default defineUserConfig({
   description: '这是 BiliOutils 使用说明文档站点',
   theme: defaultTheme({
     editLink: true,
-    repo: 'catlair/BiliOutils',
+    repo: 'kudouran/btdocs',
     docsDir: 'docs',
     editLinkText: '在 GitHub 上编辑此页',
     lastUpdatedText: '上次更新',
@@ -199,16 +199,6 @@ export default defineUserConfig({
             '/config/github_secrets.md',
             '/config/env.md',
             '/config/version.md',
-          ],
-        },
-      ],
-      '/pro/': [
-        {
-          text: '使用',
-          children: [
-            '/pro/README.md',
-            '/pro/liveWeekTask.md',
-            '/pro/watchLink.md',
           ],
         },
       ],

@@ -239,8 +239,6 @@
     name: [],
     // 购买追漫（优先级低）
     love: true,
-    // 猜拳
-    guess: false,
   },
   // 风纪委员
   jury: {

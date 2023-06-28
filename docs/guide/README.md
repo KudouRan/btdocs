@@ -68,15 +68,15 @@ GitHub 上的开源项目：
 | matchGame          |        | 赛事竞猜（人人都是硬币慈善家）                                             | [点击](../config/func.md#竞猜)        |
 | giveGift           |        | 赠送过期礼物                                                               | [点击](../config/func.md#直播间礼物)  |
 | liveIntimacy       |        | 牌子亲密度 （非云函数为异步运行）                                          | [点击](../config/func.md#粉丝亲密度)  |
-| liveDm             |        | 直播弹幕 【pro】                                                           |                                       |
-| watchLink          |        | 直播心跳/直播间监听【pro】                                                 |                                       |
+| liveDm             |        | 直播弹幕                                                                   | [点击](../config/func.md#直播弹幕)    |
+| watchLink          |        | 直播心跳/直播间监听                                                        | [点击](../config/func.md#直播心跳)    |
 | batchUnfollow      |        | 取消关注                                                                   | [点击](../config/func.md#取关分组)    |
 | ~~liveLottery~~    |        | ~~直播天选时刻~~（黑号风险）                                               | [点击](../config/func.md#天选时刻)    |
 | liveRedPack        |        | 直播天选红包                                                               | [点击](../config/func.md#天选红包)    |
 | dailyBattery       |        | 每日电池任务（电池+1）                                                     |                                       |
 | activityLottery    |        | 转盘抽奖                                                                   | [点击](../config/func.md#转盘抽奖)    |
 | judgement          |        | 风纪委员                                                                   | [点击](../config/func.md#风纪委员)    |
-| ~~liveWeekTask~~   |        | 直播周任务 【pro】                                                         | 已结束                                |
+| ~~liveWeekTask~~   |        | 直播周任务 【pro】                                                         | 已结束?                               |
 | blink              |        | 直播 【pro】                                                               |                                       |
 
 只有将这些值设置为 `true` 才会生效，如果设置为 `false` ，具体的配置再怎么样也不会去执行，下面是参考写法。
