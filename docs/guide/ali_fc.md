@@ -20,15 +20,11 @@ description: 阿里云函数 FC
 
 ![FC基础配置](/images/fc-base-config.png)
 
+![FC基础配置](/images/fc_gaoji_config.png)
+
 ### 触发器配置
 
 ![fc-create-trigger](/images/fc-create-trigger.png)
-
-### 高级配置
-
-设置超时时间
-
-![fc-timeout](/images/fc-timeout.png)
 
 ## 安装或更新
 
@@ -40,10 +36,10 @@ description: 阿里云函数 FC
 npm config set registry https://registry.npmjs.org/
 ```
 
-安装/更新依赖，都是同样的
+然后执行（安装/更新依赖，都是同样的）
 
 ```bash
-yarn add bilioutils
+npm install bilioutils
 ```
 
 可能因为 node 版本出现类似的错误
@@ -61,8 +57,8 @@ info Visit https://yarnpkg.com/en/docs/cli/add for documentation about this comm
 可以运行如下命令，忽略错误后安装/更新（因为安装和运行环境的版本不一样，所以不用担心）
 
 ```bash
-yarn config set ignore-engines true
-yarn add bilioutils
+npm config set ignore-engines true
+npm install bilioutils
 ```
 
 修改 index.js 的代码
@@ -82,7 +78,7 @@ exports.handler = require('bilioutils').fc_handler();
 可能需要安装一个依赖
 
 ```bash
-yarn add @catlair/blogin
+npm install @catlair/blogin
 ```
 
 然后执行如下命令
