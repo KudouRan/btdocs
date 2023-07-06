@@ -27,13 +27,17 @@
       },
       {
         "value": "v0.23.521",
-        "isActive": "old",
         "label": "521"
       },
       {
         "value": "v0.23.605",
-        "isActive": "new",
+        "isActive": "old",
         "label": "605"
+      },
+      {
+        "value": "v0.23.706",
+        "isActive": "new",
+        "label": "706"
       }
     ]
   },
