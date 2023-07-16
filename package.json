@@ -11,24 +11,26 @@
   },
   "devDependencies": {
     "@vercel/frameworks": "^1.2.4",
-    "@vercel/node": "^1.15.4",
+    "@vercel/node": "^2.15.5",
     "@vuepress/plugin-docsearch": "^2.0.0-beta.48",
-    "@vuepress/plugin-google-analytics": "^2.0.0-beta.46",
-    "@vuepress/plugin-pwa": "2.0.0-beta.46",
-    "@vuepress/plugin-pwa-popup": "2.0.0-beta.46",
+    "@vuepress/plugin-google-analytics": "^2.0.0-beta.48",
     "node-fetch": "2.6.7",
-    "unplugin-auto-import": "^0.8.6",
-    "unplugin-vue-components": "^0.19.6",
-    "vercel": "^24.2.5",
-    "vuepress": "^2.0.0-beta.46",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-vue-components": "^0.25.1",
+    "vercel": "^31.0.3",
+    "vuepress": "^2.0.0-beta.48",
     "vuepress-plugin-copy-code2": "^2.0.0-beta.75"
   },
   "dependencies": {
     "@vuepress/plugin-register-components": "^2.0.0-beta.46",
-    "@vueuse/core": "^8.6.0",
+    "@vueuse/core": "^10.2.1",
     "element-plus": "^2.2.2",
     "pinia": "^2.0.14",
     "v-code-diff": "^0.3.12"
   },
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@1.22.19",
+  "description": "```bash   yarn install   yarn docs:build ```",
+  "directories": {
+    "doc": "docs"
+  }
 }

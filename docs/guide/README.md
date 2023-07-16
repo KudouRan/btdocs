@@ -121,6 +121,8 @@ cookie 重要提示（关于频繁失效），除了账号本身可能存在的�
 
 ::: tip
 获取直播间 -412 错误，暂时不知道怎么解决。影响功能：liveLottery、liveRedPack。
+
+通过半年实测，createCookieDay 配置确实有延长 cookie 时效的效果。
 :::
 
 ## 使用说明
@@ -131,9 +133,11 @@ cookie 重要提示（关于频繁失效），除了账号本身可能存在的�
 
 [历史各版本配置对比](/config/version.md)
 
-- <Badge type="warning" text="修复" vertical="middle" /> 直播心跳使用 uid 获取直播间号错误。
-- <Badge type="warning" text="修复" vertical="middle" /> 漫画每日阅读无法获取漫画列表。
-- <Badge type="danger" text="警告" vertical="middle" /> 漫画猜拳小游戏下线。
+- <Badge type="warning" text="修复" vertical="middle" /> 创建新 cookie 仅仅只有第一个配置生效。
+- <Badge type="warning" text="修复" vertical="middle" /> 莫名其妙的 24 点。
+- <Badge type="tip" text="新增" vertical="middle" /> exchangeBigPoint 大积分兑换。
+- <Badge type="tip" text="新增" vertical="middle" /> dailyBattery 旧版任务下线，新版任务替换（测试中，配置详见历史各版本配置对比）。
+- <Badge type="tip" text="新增" vertical="middle" /> [app.http]配置项，解决部分 api 在不同版本下结果不同的问题。
 
 链接跳转：
 
@@ -143,7 +147,7 @@ cookie 重要提示（关于频繁失效），除了账号本身可能存在的�
 
 ~~如果需要反馈，尽量选择 issue，而不是进群。~~
 
-扫码加入群，群不提供使用帮助，自行看文档，别问，文就拉黑（群号：759694670）：
+扫码加入群，群不提供使用帮助，自行看文档，别问，问就拉黑（群号：759694670）：
 
 ![qq群](/images/qq_group.png)
 

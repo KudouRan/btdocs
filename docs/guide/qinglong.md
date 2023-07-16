@@ -22,6 +22,22 @@ bilioutils
 
 <CodeGroup>
 
+  <CodeGroupItem title="Gitee" active>
+
+```bash
+ql raw https://gitee.com/catlair/BiliOutils/raw/main/tools/bilitools_npm.js
+```
+
+  </CodeGroupItem>
+
+  <CodeGroupItem title="Github">
+
+```bash
+ql raw https://raw.githubusercontent.com/catlair/BiliOutils/main/tools/bilitools_npm.js
+```
+
+  </CodeGroupItem>
+
   <CodeGroupItem title="手动">
 
 ```js
@@ -65,10 +81,26 @@ PS: 可以不执行 `pnpm remove -g bilioutils`，不过前一个版本就会一
 
 <CodeGroup>
 
+  <CodeGroupItem title="Gitee" active>
+
+```bash
+ql raw https://gitee.com/catlair/BiliOutils/raw/main/tools/bilitools_login.js
+```
+
+  </CodeGroupItem>
+
+  <CodeGroupItem title="Github">
+
+```bash
+ql raw https://raw.githubusercontent.com/catlair/BiliOutils/main/tools/bilitools_login.js
+```
+
+  </CodeGroupItem>
+
   <CodeGroupItem title="手动">
 
 ```js
-require('bilioutils').sacnLogin();
+require('@catlair/bilitools').sacnLogin();
 ```
 
 手动创建一个 `任意名称.js` 文件，并且把上面的代码拷贝进去

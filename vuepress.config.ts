@@ -9,8 +9,6 @@ import { path as vuepressPath } from '@vuepress/utils';
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
 import { docsearchPlugin } from '@vuepress/plugin-docsearch';
-import { pwaPlugin } from '@vuepress/plugin-pwa';
-import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup';
 
 const isProd = process.env.NODE_ENV === 'production';
 const basePath = process.env.BASE_PATH as '/';
@@ -255,6 +253,7 @@ export default defineUserConfig({
         },
       },
     }),
+    // @ts-ignore
     registerComponentsPlugin({
       componentsDir: vuepressPath.resolve(
         __dirname,
@@ -263,17 +262,6 @@ export default defineUserConfig({
     }),
     googleAnalyticsPlugin({
       id: 'G-B2XSE83VR6',
-    }),
-    // @ts-ignore
-    pwaPlugin({}),
-    // @ts-ignore
-    pwaPopupPlugin({
-      locales: {
-        '/': {
-          message: '发现有更新',
-          buttonText: '刷新',
-        },
-      },
     }),
   ],
   bundler: viteBundler({

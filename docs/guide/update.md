@@ -8,6 +8,12 @@ description: 更新日志
 
 [历史配置对比](/config/version.md)
 
+**v0.23.715**
+
+<Badge type="warning" text="修复" vertical="middle" /> 直播心跳使用 uid 获取直播间号错误。
+<Badge type="warning" text="修复" vertical="middle" /> 漫画每日阅读无法获取漫画列表。
+<Badge type="danger" text="警告" vertical="middle" /> 漫画猜拳小游戏下线。
+
 **v0.23.0118**
 
 <Badge type="danger" text="警告" vertical="middle" /> 删除部分旧配置兼容。

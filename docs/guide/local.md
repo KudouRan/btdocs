@@ -37,26 +37,21 @@ npm install -g bilioutils
 帮助详情：
 
 ```bash
-Usage:
-  bilioutils [options] [value]
-  bilioutils [options]=[value]
+Usage: bin.ts [options]
+
+BiliOutils 哔哩哔哩自动化工具箱
 
 Options:
-  --version, -v             输出版本号
-  --help, -h                输出帮助信息
-  --config, -c <path>       配置文件路径
-    eg: --config=./config.json
-  --once, -o                每日任务只执行一次
-  --task, -t <taskString>   执行指定的 task，使用英文逗号（,）分隔
-    eg: --task=loginTask,judgement
-  --item, -i <item>         多用户配置执行指定的配置，下标 1 开始（倒数 -1 开始），使用英文逗号（,）分隔
-    eg: --item=2
-  --cron <cronString>       cron 表达式，see：https://github.com/node-cron/node-cron#allowed-fields
-    eg: --cron="0 0 0 * * *"
-  --delay <time[-time]>     不带单位是延迟 time 分钟后执行，单位可以为 ms（毫秒）、s（秒）、m（分）、h（小时）
-    eg: --delay=10 延迟 0-10 分钟后执行
-        --delay=10m-2h 延迟 10分钟-2小时后执行
-  --login, -l               扫码登录，使用 --config 指定配置文件
+  -v, --version                输出版本号
+  -c, --config <path>          配置文件路径
+  -i, --item <item>            多用户配置执行指定的配置，下标 1 开始（倒数 -1 开始），使用英文逗号（,）分隔
+  -cck, --createCookie <path>  输出新的 cookie 到控制台
+  -o, --once                   每日任务只执行一次 (default: false)
+  -t, --task <task>            执行指定的 task，使用英文逗号（,）分隔
+  --cron <cron>                cron 表达式
+  --delay <time1[-time2]>      不带单位是延迟 time 分钟后执行，单位可以为 ms（毫秒）、s（秒）、m（分）、h（小时）
+  -l, --login                  扫码登录，可以配合 --config 使用
+  -h, --help                   输出帮助信息
 ```
 
 注意：很多任务（特别是需要判断大会员状态的任务）需要先执行 `loginTask` 任务。

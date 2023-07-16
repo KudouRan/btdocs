@@ -16,16 +16,16 @@ const props = defineProps<{
 }>();
 
 const testedMap = {
-  scf: '1.0.2',
-  fc: '1.0.2',
+  scf: '0.23.708',
+  fc: '0.23.708',
   cfc: '0.4.0',
   agc: '0.4.0',
   fg: '0.4.0',
-  npm: '1.0.2',
-  docker: '0.5.3',
-  ql: '0.5.0',
+  npm: '0.23.708',
+  docker: '1.0.2',
+  ql: '0.23.708',
   action: '1.0.2',
-  'local-index': '1.0.2',
+  'local-index': '0.23.708',
 };
 
 const testedVeriosn = testedMap[props.type];
